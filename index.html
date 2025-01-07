@@ -33,7 +33,7 @@
                     <a class="nav-link active" href="#accueil">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#a-propos">À propos</a>
+                    <a class="nav-link" href="#propos">À propos</a>
                 </li>
                 <!-- Menu avec sous-menus -->
                 <li class="nav-item dropdown">
@@ -145,47 +145,119 @@
     </div>
 </section>
 
-<section id="contact"></section>
-</body>
-
-    <!-- Pied de page -->
-    <footer class="bg-dark text-white mt-5">
-        <div class="container py-4">
-            <div class="row">
-                <!-- Liens de navigation rapide -->
-                <div class="col-md-4 mb-3">
-                    <h5>Navigation rapide</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#accueil" class="text-white text-decoration-none">Accueil</a></li>
-                        <li><a href="#a-propos" class="text-white text-decoration-none">À propos</a></li>
-                        <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
-                        <li><a href="#portfolio" class="text-white text-decoration-none">Portfolio</a></li>
-                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
-                    </ul>
+<!-- blog.html -->
+<section class="py-5" id="blog">
+      <div class="container my-5">
+        <h1 class="text-center mb-5">Blog sur le Développement Logiciel</h1>
+        <div class="row">
+            <!-- Projet 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="./assets/img/SOLID.jpg" class="card-img-top" alt="Projet 1">
+                    <div class="card-body">
+                        <h2 class="blog-title">Les principes SOLID en programmation</h2>
+                        <p class="blog-text">
+                            Apprenez à appliquer les principes SOLID pour écrire un code propre, maintenable et évolutif dans vos projets logiciels.
+                        </p>
+                        <a href="#blog2" class="read-more">Lire la suite...</a>                    </div>
                 </div>
+            </div>
 
-                <!-- Réseaux sociaux -->
-                <div class="col-md-4 mb-3">
-                    <h5>Suivez-nous</h5>
-                    <a href="https://facebook.com" class="text-white me-3">
-                        <i class="bi bi-facebook"></i> Facebook
-                    </a><br>
-                    <a href="https://twitter.com" class="text-white me-3">
-                        <i class="bi bi-twitter"></i> Twitter
-                    </a><br>
-                    <a href="https://instagram.com" class="text-white me-3">
-                        <i class="bi bi-instagram"></i> Instagram
-                    </a><br>
-                    <a href="https://linkedin.com" class="text-white">
-                        <i class="bi bi-linkedin"></i> LinkedIn
-                    </a>
+            <!-- Projet 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/img/react.jpg" class="card-img-top" alt="Projet 2">
+                    <div class="card-body">
+                        <h2 class="blog-title">Introduction à ReactJS</h2>
+                        <p class="blog-text">
+                            Découvrez les bases de ReactJS, une bibliothèque JavaScript populaire pour créer des interfaces utilisateur modernes et dynamiques.
+                        </p>
+                        <a href="#blog1" class="read-more">Lire la suite...</a>
+                    </div>
                 </div>
+            </div>
 
-                <!-- Copyright -->
-                <div class="col-md-4 mb-3 text-md-end">
-                    <h5>Copyright</h5>
-                    <p class="mb-0">&copy; 2025 MonAgence. Tous droits réservés.</p>
+            <!-- Projet 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="assets/img/node.png" class="card-img-top" alt="Projet 3">
+                    <div class="card-body">
+                       
+                        <h2 class="blog-title">Node.js et la puissance du backend</h2>
+                        <p class="blog-text">
+                            Plongez dans l'univers de Node.js et découvrez comment construire des applications backend performantes et évolutives.
+                        </p>
+                        <a href="#blog3" class="read-more">Lire la suite...</a>                    </div>
                 </div>
             </div>
         </div>
-    </footer></html>
+    </div>
+</section>
+
+    <!-- contact.html -->
+<section class="py-5" id="contact">
+    <div class="container">
+        <h2 class="text-center mb-4">Contactez-nous</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="name" placeholder="Votre nom">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Votre email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+        <div class="mt-4">
+            <h5>Coordonnées</h5>
+            <p>Adresse : Monji slim Ariana</p>
+            <p>Téléphone : +216 25625656</p>
+            <div id="map" class="mt-3">
+                <!-- Intégrer Google Maps -->
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about.html -->
+<section id="propos" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">À Propos de Nous</h2>
+        <p>Nous sommes une agence spécialisée dans Developper solutions informatique. Fondée en 2020, nous nous efforçons de fournir des solutions innovantes et personnalisées.</p>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <img src="/assets/img/equipe.jpg" class="img-fluid" alt="Notre équipe">
+            </div>
+            <div class="col-md-6">
+                <h3>Nos Valeurs</h3>
+                <ul>
+                    <li>Excellence</li>
+                    <li>Innovation</li>
+                    <li>Engagement client</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+
+    <!-- Pied de page -->
+        <footer class="py-4 bg-dark text-center text-white">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="text-white mx-2">Facebook</a>
+                    <a href="#" class="text-white mx-2">Twitter</a>
+                    <a href="#" class="text-white mx-2">LinkedIn</a>
+                </div>
+                <p>&copy; 2025 Naceur. Tous droits réservés.</p>
+
+            </div>
+        </footer>
+        
+</html>

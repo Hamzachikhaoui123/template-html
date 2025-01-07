@@ -38,3 +38,36 @@
         font-size: 2rem;
     }
 }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.blog-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.blog-card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.blog-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.blog-text {
+    font-size: 1rem;
+    color: #666;
+}
+.read-more {
+    text-decoration: none;
+    color: #007bff;
+}
+.read-more:hover {
+    text-decoration: underline;
+}
