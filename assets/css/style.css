@@ -71,3 +71,35 @@ body {
 .read-more:hover {
     text-decoration: underline;
 }
+#temoignages{
+    width: 50%;
+    margin-left: 25%;
+}
+
+.carousel-inner {
+    height: 500px; /* Définissez la hauteur souhaitée */
+  }
+  
+  .carousel-item img {
+    height: 100%; /* La hauteur occupe tout l'espace disponible */
+    object-fit: cover; /* Ajuste l'image sans la déformer */
+    width: 100%; /* S'assure que l'image occupe toute la largeur */
+  }
+  .testimonial-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+  }
+  .testimonial-card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  .testimonial-text {
+    font-style: italic;
+    color: #555;
+  }
+  .carousel-indicators [data-bs-target] {
+    background-color: #007bff;
+  }

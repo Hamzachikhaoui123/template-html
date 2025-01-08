@@ -1,263 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
     <!-- index.html -->
-<header class="banner">
-    <div class="container text-center py-5">
-        <h1 class="display-4">Bienvenue chez Naceur</h1>
-        <p class="lead">Votre partenaire de confiance pour Developement mobile</p>
-        <a href="#services" class="btn btn-primary btn-lg">Découvrez nos services</a>
-    </div>
-</header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">MonAgence</a>
-
-        <!-- Bouton pour le menu mobile -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menu principal -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#accueil">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#propos">À propos</a>
-                </li>
-                <!-- Menu avec sous-menus -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Services
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <li><a class="dropdown-item" href="#service1">Service 1</a></li>
-                        <li><a class="dropdown-item" href="#service2">Service 2</a></li>
-                        <li><a class="dropdown-item" href="#service3">Service 3</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#temoignages">Témoignages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+    <header class="banner">
+        <div class="container text-center py-5">
+            <h1 class="display-4">Bienvenue chez Coding</h1>
+            <p class="lead">Votre partenaire de confiance pour Developement plateformes informatique</p>
+            <a href="#services" class="btn btn-primary btn-lg">Découvrez nos services</a>
         </div>
-    </div>
-</nav>
-<section id="services" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Nos Services</h2>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <i class="bi bi-gear-fill display-4 text-primary"></i>
-                <h4 class="mt-3">Service 1</h4>
-                <p>Une brève description du service.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <i class="bi bi-graph-up display-4 text-primary"></i>
-                <h4 class="mt-3">Service 2</h4>
-                <p>Une brève description du service.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <i class="bi bi-person-circle display-4 text-primary"></i>
-                <h4 class="mt-3">Service 3</h4>
-                <p>Une brève description du service.</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">Coding</a>
 
-<section id="testimonials" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Témoignages de nos clients</h2>
-        <div id="carouselTestimonials" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <blockquote class="blockquote text-center">
-                        <p>"Un service exceptionnel, je recommande vivement !"</p>
-                        <footer class="blockquote-footer">Client 1</footer>
-                    </blockquote>
-                </div>
-                <div class="carousel-item">
-                    <blockquote class="blockquote text-center">
-                        <p>"Des solutions sur mesure et une équipe réactive."</p>
-                        <footer class="blockquote-footer">Client 2</footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            <!-- Bouton pour le menu mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-<section id="portfolio" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Notre Portfolio</h2>
-        <div class="row">
-            <!-- Projet 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/img/developpement-mobile.jpg" class="card-img-top" alt="Projet 1">
-                    <div class="card-body">
-                        <p class="card-text">Développement d'une application mobile de gestion de produits destinée à aider les utilisateurs à organiser et suivre leurs stocks en temps réel. L'application est conçue pour offrir une expérience utilisateur fluide et performante sur les plateformes Android et iOS.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projet 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/img/developpement-web.jpg" class="card-img-top" alt="Projet 2">
-                    <div class="card-body">
-                        <p class="card-text">Création d'un site web moderne et interactif en utilisant Angular, conçu pour offrir une expérience utilisateur fluide et performante. Ce projet repose sur une architecture robuste et évolutive, adaptée aux besoins des utilisateurs finaux et aux attentes des entreprises.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projet 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/img/figma.jpg" class="card-img-top" alt="Projet 3">
-                    <div class="card-body">
-                       
-                        <p class="card-text">Dans le cadre de ce projet, j'ai conçu des maquettes interactives et modernes pour une application (ou un site web) en utilisant Figma. L'objectif principal était de créer une expérience utilisateur fluide et intuitive, tout en respectant les besoins spécifiques du client et les meilleures pratiques de design.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- blog.html -->
-<section class="py-5" id="blog">
-      <div class="container my-5">
-        <h1 class="text-center mb-5">Blog sur le Développement Logiciel</h1>
-        <div class="row">
-            <!-- Projet 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="./assets/img/SOLID.jpg" class="card-img-top" alt="Projet 1">
-                    <div class="card-body">
-                        <h2 class="blog-title">Les principes SOLID en programmation</h2>
-                        <p class="blog-text">
-                            Apprenez à appliquer les principes SOLID pour écrire un code propre, maintenable et évolutif dans vos projets logiciels.
-                        </p>
-                        <a href="#blog2" class="read-more">Lire la suite...</a>                    </div>
-                </div>
-            </div>
-
-            <!-- Projet 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/img/react.jpg" class="card-img-top" alt="Projet 2">
-                    <div class="card-body">
-                        <h2 class="blog-title">Introduction à ReactJS</h2>
-                        <p class="blog-text">
-                            Découvrez les bases de ReactJS, une bibliothèque JavaScript populaire pour créer des interfaces utilisateur modernes et dynamiques.
-                        </p>
-                        <a href="#blog1" class="read-more">Lire la suite...</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projet 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="assets/img/node.png" class="card-img-top" alt="Projet 3">
-                    <div class="card-body">
-                       
-                        <h2 class="blog-title">Node.js et la puissance du backend</h2>
-                        <p class="blog-text">
-                            Plongez dans l'univers de Node.js et découvrez comment construire des applications backend performantes et évolutives.
-                        </p>
-                        <a href="#blog3" class="read-more">Lire la suite...</a>                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- contact.html -->
-<section class="py-5" id="contact">
-    <div class="container">
-        <h2 class="text-center mb-4">Contactez-nous</h2>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="name" placeholder="Votre nom">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Votre email">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Envoyer</button>
-        </form>
-        <div class="mt-4">
-            <h5>Coordonnées</h5>
-            <p>Adresse : Monji slim Ariana</p>
-            <p>Téléphone : +216 25625656</p>
-            <div id="map" class="mt-3">
-                <!-- Intégrer Google Maps -->
-                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- about.html -->
-<section id="propos" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">À Propos de Nous</h2>
-        <p>Nous sommes une agence spécialisée dans Developper solutions informatique. Fondée en 2020, nous nous efforçons de fournir des solutions innovantes et personnalisées.</p>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <img src="/assets/img/equipe.jpg" class="img-fluid" alt="Notre équipe">
-            </div>
-            <div class="col-md-6">
-                <h3>Nos Valeurs</h3>
-                <ul>
-                    <li>Excellence</li>
-                    <li>Innovation</li>
-                    <li>Engagement client</li>
+            <!-- Menu principal -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#propos">À propos</a>
+                    </li>
+                    <!-- Menu avec sous-menus -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#developpement-mobile">Developpement-mobile</a></li>
+                            <li><a class="dropdown-item" href="#developpement-web">Developpement-web</a></li>
+                            <li><a class="dropdown-item" href="#desgin">Desgin</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#temoignages">Témoignages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Nos Services</h2>
+            <div class="row">
+                <div class="col-md-4 text-center" id="developpement-mobile">
+                    <i class="bi bi-gear-fill display-4 text-primary"></i>
+                    <h4 class="mt-3">developpement-mobile</h4>
+                    <p>Developper application mobile by React-native.</p>
+                </div>
+                <div class="col-md-4 text-center" id="developpement-web">
+                    <i class="bi bi-graph-up display-4 text-primary"></i>
+                    <h4 class="mt-3">developpement-web</h4>
+                    <p>Developper site web partie backend by Node Js.</p>
+                </div>
+                <div class="col-md-4 text-center" id="desgin">
+                    <i class="bi bi-person-circle display-4 text-primary"></i>
+                    <h4 class="mt-3">Desgin</h4>
+                    <p>Cretae maket site web by Figma</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="temoignages">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./assets/img/node.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Node js</h5>
+                        <p>Node.js est un environnement d'exécution JavaScript multiplateforme gratuit et open source
+                            qui permet aux développeurs de créer des serveurs, des applications Web, des outils de ligne
+                            de commande et des scripts.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/img/react.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>React Js </h5>
+                        <p>Libray JavaScript Pour developpement-web.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/img/figma.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Figma</h5>
+                        <p>Figma est le principal outil de conception collaborative pour créer des produits
+                            significatifs. Concevoir, prototyper, développer en toute transparence</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Notre Portfolio</h2>
+            <div class="row">
+                <!-- Projet 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/img/developpement-mobile.jpg" class="card-img-top" alt="Projet 1">
+                        <div class="card-body">
+                            <p class="card-text">Développement d'une application mobile de gestion de produits destinée
+                                à aider les utilisateurs à organiser et suivre leurs stocks en temps réel. L'application
+                                est conçue pour offrir une expérience utilisateur fluide et performante sur les
+                                plateformes Android et iOS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/img/developpement-web.jpg" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <p class="card-text">Création d'un site web moderne et interactif en utilisant Angular,
+                                conçu pour offrir une expérience utilisateur fluide et performante. Ce projet repose sur
+                                une architecture robuste et évolutive, adaptée aux besoins des utilisateurs finaux et
+                                aux attentes des entreprises.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/img/figma.jpg" class="card-img-top" alt="Projet 3">
+                        <div class="card-body">
+
+                            <p class="card-text">Dans le cadre de ce projet, j'ai conçu des maquettes interactives et
+                                modernes pour une application (ou un site web) en utilisant Figma. L'objectif principal
+                                était de créer une expérience utilisateur fluide et intuitive, tout en respectant les
+                                besoins spécifiques du client et les meilleures pratiques de design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog.html -->
+    <section class="py-5" id="blog">
+        <div class="container my-5">
+            <h1 class="text-center mb-5">Blog sur le Développement Logiciel</h1>
+            <div class="row">
+                <!-- Projet 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./assets/img/SOLID.jpg" class="card-img-top" alt="Projet 1">
+                        <div class="card-body">
+                            <h2 class="blog-title">Les principes SOLID en programmation</h2>
+                            <p class="blog-text">
+                                Apprenez à appliquer les principes SOLID pour écrire un code propre, maintenable et
+                                évolutif dans vos projets logiciels.
+                            </p>
+                            <a href="https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design-fr"
+                                class="read-more">Lire la suite...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/img/react.jpg" class="card-img-top" alt="Projet 2">
+                        <div class="card-body">
+                            <h2 class="blog-title">Introduction à ReactJS</h2>
+                            <p class="blog-text">
+                                Découvrez les bases de ReactJS, une bibliothèque JavaScript populaire pour créer des
+                                interfaces utilisateur modernes et dynamiques.
+                            </p>
+                            <a href="https://fr.legacy.reactjs.org/tutorial/tutorial.html" class="read-more">Lire la
+                                suite...</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/img/node.png" class="card-img-top" alt="Projet 3">
+                        <div class="card-body">
+
+                            <h2 class="blog-title">Node.js et la puissance du backend</h2>
+                            <p class="blog-text">
+                                Plongez dans l'univers de Node.js et découvrez comment construire des applications
+                                backend performantes et évolutives.
+                            </p>
+                            <a href="https://www.dualmedia.fr/pourquoi-choisir-node-js-pour-le-developpement-backend/"
+                                class="read-more">Lire la suite...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact.html -->
+    <section class="py-5" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-4">Contactez-nous</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" placeholder="Votre nom">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Votre email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+            <div class="mt-4">
+                <h5>Coordonnées</h5>
+                <p>Adresse : Monji slim Ariana</p>
+                <p>Téléphone : +216 25625656</p>
+                <div id="map" class="mt-3">
+                    <!-- Intégrer Google Maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about.html -->
+    <section id="propos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">À Propos de Nous</h2>
+            <p>Nous sommes une agence spécialisée dans Developper solutions informatique. Fondée en 2020, nous nous
+                efforçons de fournir des solutions innovantes et personnalisées.</p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <img src="/assets/img/equipe.jpg" class="img-fluid" alt="Notre équipe">
+                </div>
+                <div class="col-md-6">
+                    <h3>Nos Valeurs</h3>
+                    <ul>
+                        <li>Excellence</li>
+                        <li>Innovation</li>
+                        <li>Engagement client</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pied de page -->
+    <footer class="py-4 bg-dark text-center text-white">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <a href="#" class="text-white mx-2">Facebook</a>
+                <a href="#" class="text-white mx-2">Twitter</a>
+                <a href="#" class="text-white mx-2">LinkedIn</a>
+            </div>
+            <p>&copy; 2025 Coding. Tous droits réservés.</p>
+
+        </div>
+    </footer>
 </body>
 
-    <!-- Pied de page -->
-        <footer class="py-4 bg-dark text-center text-white">
-            <div class="container">
-                <div class="d-flex justify-content-center">
-                    <a href="#" class="text-white mx-2">Facebook</a>
-                    <a href="#" class="text-white mx-2">Twitter</a>
-                    <a href="#" class="text-white mx-2">LinkedIn</a>
-                </div>
-                <p>&copy; 2025 Naceur. Tous droits réservés.</p>
 
-            </div>
-        </footer>
-        
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+
+
 </html>
