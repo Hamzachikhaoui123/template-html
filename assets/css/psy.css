@@ -1,0 +1,135 @@
+.box-psy {
+    position: relative;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #eaccac;
+    will-change: transform;
+	padding: 15px;
+}
+
+.psy-box {
+    position: relative;
+    border-radius: 8px;
+    will-change: transform;
+}
+
+.img-psy-box {
+    width: 200px;
+}
+
+.img-psy{
+    width : 100%;
+}
+.box-psy-title{
+    color : #ffffff;
+	font-family: "Gotham Rounded Bold";
+    font-size: 20px;
+}
+.button-psy {
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #c3ab85;
+}
+.button-psy:hover {
+  background-color: #d6c6ac ;
+}
+
+.container-banner-psy {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.psy-title {
+    font-family: "Gotham Rounded Bold";
+    font-size: 2em;
+    color: #c3ab85;
+}
+.psy-title-banner {
+        font-family: "Gotham Rounded Bold";
+        font-size: 24px;
+        font-weight: 500;
+        color: #c3ab85;
+}
+.psy-title-banner2 {
+        text-align: center !important;
+        font-family: "Gotham Rounded Bold";
+        font-size: 24px;
+        font-weight: 500;
+        color: #c3ab85;
+}
+.background-section-psy{
+    background-color: #f8f8f8;
+}
+.check-list-psy {
+    --icon-space: 1.3em;
+    list-style: none;
+}
+.check-list-psy li:before {
+    content: '\e92c';
+    font-size: 22px;
+    font-weight: bold;
+    font-family: feather;
+    color: #f87679;
+}
+
+.iconbox-psy {
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    border: 1px solid #f0f0f0;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    background-clip: border-box;
+    -ms-flex-direction: column;
+    word-wrap: break-word;
+    margin: 5px;
+}
+.iconbox-psy:hover {
+  border-radius: 0.5rem;
+  background-color: #eaccac;
+}
+
+.psy-specality {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    will-change: transform;
+    height: 90px;
+    padding: 10px;
+	border: 1px solid #E5E5E5;
+}
+.pbanner-psy {
+  color: #000;
+  margin: 20px 0;
+}
+.banner02-psy {
+    font-family: "Gotham Rounded Bold";
+    font-size: 2.5em;
+    color: #008d93;
+}
+.card-icon-psy {
+    width: 4rem;
+    height: auto;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 560px; /* Facultatif : limite la largeur */
+    height: 315px;
+    border-radius: 15px; /* Ajuste la valeur selon tes besoins */
+    overflow: hidden;
+    position: relative;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

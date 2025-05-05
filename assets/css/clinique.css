@@ -1,0 +1,266 @@
+@media (min-width: 576px)
+{.mb-sm-4, .my-sm-4 {
+    margin-bottom: 1.5rem!important;
+  
+}
+.d-sm-inline-block {
+    display: inline-block!important;
+    font-family: "Gotham Rounded bold";
+}
+.search{
+    display: none;
+}
+
+}
+@media (max-width:575px){
+    .input-group{
+        margin-top: 25px;
+        position: relative;
+            display: flex;
+           
+            -ms-flex-align: stretch;
+            align-items: stretch;
+            width: 100%;
+            }
+            .search{
+                display: block;
+            }
+}
+
+  
+
+  
+  
+ 
+  span {
+    border-bottom: 3px solid transparent;
+  }
+  
+
+.card-color-purple .card-header {
+    background-color: #dce2f4
+
+    ;
+    color: #000;
+    font-family: "Gotham Rounded bold";
+
+}
+
+.card-custom .card-header {
+    border: none;
+    border-radius: 10px 10px 0 0;
+}
+.card{
+    height: 100%!important;
+}
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.page-list-society .card-custom .card-body a {
+    color: #4e4550;
+}
+.page-list-society .card-custom .card-body a, .page-list-society .card-custom .card-header a {
+    text-decoration: none;
+}
+
+.page-list-society #card-search #search-input input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    background: #fff;
+    background-image: none;
+    border: none!important;
+    height: 48px;
+    padding-left: 20px;
+}
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.page-list-society #card-search #search-input {
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+.input-group-append {
+    margin-left: -1px;
+}
+.input-group-append, .input-group-prepend {
+    display: flex;
+}
+.input-group {
+    position: relative;
+    display: flex;
+   
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.btn-color-primary {
+    color: #000;
+    background-color: #dce2f4
+
+    ;
+    font-family: "Gotham Rounded bold";
+}
+.page-list-society #card-search #search-input button {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+.list-wrapper {
+	padding: 15px;
+	overflow: hidden;
+}
+
+.list-item {
+	border: 1px solid #EEE;
+	background: #FFF;
+	margin-bottom: 10px;
+	padding: 10px;
+	box-shadow: 0px 0px 10px 0px #EEE;
+}
+
+.list-item h4 {
+	color: #FF7182;
+	font-size: 18px;
+	margin: 0 0 5px;	
+}
+
+.list-item p {
+	margin: 0;
+}
+
+.simple-pagination ul {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.simple-pagination li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.simple-pagination li a,
+.simple-pagination li span {
+	color: #666;
+	padding: 5px 10px;
+	text-decoration: none;
+	border: 1px solid #EEE;
+	background-color: #FFF;
+	box-shadow: 0px 0px 10px 0px #EEE;
+}
+
+.simple-pagination .current {
+	color: #FFF;
+	background-color: #FF7182;
+	border-color: #FF7182;
+}
+
+.simple-pagination .prev.current,
+.simple-pagination .next.current {
+	background: #e04e60;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    position: relative;
+    padding: 1rem 1rem 3rem;
+    min-height: calc(100vh - 4rem);
+  }
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .pagination-container {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 0;
+    justify-content: center;
+    background-color: white;
+    margin-top: 25px;
+  }
+  
+  strong {
+    font-family: "Gotham Rounded bold";
+
+  }
+  .timing{
+    margin-top: 10px;
+  }
+  .address{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #000;
+  }
+  .pagination-number,
+  .pagination-button{
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    margin: 0.25rem 0.25rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: .2rem;
+  }
+  
+  .pagination-number:hover,
+  .pagination-button:not(.disabled):hover {
+    background: #fff;
+  }
+  
+  .pagination-number.active {
+    color: #fff;
+    background: #0085b6;
+  }

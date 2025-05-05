@@ -1,0 +1,127 @@
+.contact-section {
+    padding: 50px 0 60px;
+    background: linear-gradient(360deg, rgba(0, 113, 220, 0.06) 40.94%, rgba(229, 241, 251, 0) 100%);
+}
+
+
+
+.contact-section h3 {
+    color: #272B41;
+    font-size: 36px;
+}
+.contact-section p {
+    color: #000000;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+.infor-img .image-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #0DE0FE;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.contact-box{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    gap: 16px;
+	color: #FFFFFF;
+	font-size: 18px;
+	margin: 10px;
+}
+.infor-details {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+.infor-img {
+    position: relative;
+    margin: 0 auto;
+}
+.bg-primary, .badge-primary {
+    background-color: #09e5ab !important;
+}
+.contact-form {
+    padding: 50px 0 60px;
+    background-color: #fff;
+}
+.contact-box .infor-details label {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.contact-box .infor-details p {
+    color: #48b9b2;
+    font-size: 16px;
+    font-weight: 600;
+}
+.contact-section p {
+    max-width: 710px;
+    margin: 0 auto;
+}
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+}
+label{
+    display: inline-block;
+
+}
+.text-center {
+    text-align: center!important;
+}
+.d-flex {
+    display: flex!important;
+}
+.contact-map iframe {
+    width: 100%;
+    border: none;
+    height: 400px;
+    margin-bottom: 15px;
+}
+
+.contact-form form {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px 5px #e5f1fb;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-form form label span {
+    color: #ff0000;
+}
+.contact-form form input, .contact-form form textarea {
+    background: #FFFFFF;
+    border: 1px solid #E5F1FB;
+    border-radius: 8px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    color: #000;
+    font-size: 15px;
+    min-height: 34px;
+    padding: 10px 15px;
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+.contact-form form textarea {
+    min-height: 200px;
+    resize: none;
+    padding: 6px 15px;
+}
+.contact-form form input, .contact-form form textarea {
+    background: #FFFFFF;
+    border: 1px solid #E5F1FB;
+    border-radius: 8px;
+}

@@ -1,0 +1,16 @@
+.radio {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 2px var(--primary) solid;
+    background-color: var(--secondary);
+}
+
+.radio.checked {
+    background-color: var(--primary);
+    outline-color: var(--primary);
+    outline-width: 1px;
+    outline-style: solid;
+    border: 1px solid white;
+    color: white;
+}

@@ -1,0 +1,132 @@
+
+.bg-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.bg-primary.deactivated {
+    background-color: var(--primary-light);
+    color: rgb(245, 245, 245);
+}
+
+.fw-bold {
+    font-family: 'Gotham Rounded Light';
+}
+
+.fw-medium {
+    font-family: 'Gotham Rounded Medium';
+}
+
+.fw-medium {
+    font-family: 'Gotham Rounded Medium Italic';
+}
+
+.fw-light {
+    font-family: 'Gotham Rounded Light';
+}
+
+.fw-light-itlaic {
+    font-family: 'Gotham Rounded Light Italic';
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-start {
+    text-align: start;
+}
+
+.align-end {
+    text-align: end;
+}
+
+.v-align-middle {
+    vertical-align: middle;
+}
+
+.v-align-bottom {
+    vertical-align: bottom;
+}
+
+.v-align-top {
+    vertical-align: top;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.fs-8 {
+    font-size: 8px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 16px;
+}
+
+.fs-16 {
+    font-size: 14px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-26 {
+    font-size: 26px;
+}
+
+.fs-28 {
+    font-size: 28px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-38 {
+    font-size: 38px;
+}
+
+.fs-42 {
+    font-size: 42px;
+}
+
+.fs-48 {
+    font-size: 48px;
+}
+
+.fs-52 {
+    font-size: 52px;
+}
+
+
+.fs-56 {
+    font-size: 56px;
+}
+

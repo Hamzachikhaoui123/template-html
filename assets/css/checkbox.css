@@ -1,0 +1,24 @@
+.checkbox {
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    border: 2px var(--primary) solid;
+    background-color: white;
+}
+
+.checkbox.checked {
+    background-color: var(--primary);
+    outline-color: var(--primary);
+    outline-width: 1px;
+    outline-style: solid;
+    border: 1px solid white;
+    color: white;
+}
+
+.checkbox.checked::after {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    margin-left: 20%;
+    content: '\2713';
+}

@@ -1,0 +1,206 @@
+
+.account-content{
+  padding: 10px;
+}
+
+.condi{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    gap: 16px;
+    padding: 10px;
+}
+
+.login-right {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.profiles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+.profiles-container button {
+  border: none;
+  width: 70%;
+  background-color: #48b9b2;
+  color: white;
+  height: 42px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: "Gotham Bold Rounded";
+  margin-top: 24px;
+  cursor: pointer;
+}
+.profiles-container button.inverted {
+  width: 70%;
+  background-color: white;
+  border: 1px solid #48b9b2;
+  color: #48b9b2;
+  height: 42px;
+}
+
+.login-right .forgot-link {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #005bea;
+  margin-bottom: 30px;
+}
+@media  (min-width:1000px) {
+  .contact-admin{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+}
+@media only screen and (max-width: 991.98px) {
+  .login-left {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .login-right {
+    margin: 0 15px;
+    padding: 15px;
+  }
+  textarea{
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Register Doctor */
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+@media only screen and (max-width: 767.98px) {
+  .login-right {
+    margin: 0 15px;
+    padding: 15px;
+  }
+  
+  
+  }
+  
+  .contact-admin{
+    font-size: 24px;
+    font-family: 'Gotham Rounded Bold';
+	margin-bottom: 10px;
+	color: white;
+  }
+  label{
+	display: inline;
+    font-size: 13px;
+  }
+
+
+
+.actions-container button {
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border:none;
+}
+
+.actions-container button:hover {
+  background-color: #005461;
+  
+}
+
+.btm {
+  width:100%;
+  padding: 10px 20px 10px 20px;
+  background-color: #eee;
+  color: #000;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border:none;
+}
+
+.btm:hover {
+  background-color: #ddd;
+  
+}
+
+.back-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-items: center;
+  cursor: pointer;
+  margin: 12px 8px;
+}
+.back-action i {
+  font-weight: bold;
+  color: #48b9b2;
+  font-size: 16px;
+}
+#va{
+  display: none;
+  color: red;
+}
+.mot-de-passe{
+  display: none;
+  color: red;
+}
+.confrim-mot-de-passe{
+  display: none;
+  color: red;
+}
+.back-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-items: center;
+  cursor: pointer;
+  margin: 12px 8px;
+}
+
+.back-action i {
+  font-weight: bold;
+  color: #48b9b2;
+  font-size: 16px;
+  padding: 6px;
+}
+
+
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+
+

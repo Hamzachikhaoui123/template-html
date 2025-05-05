@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Tajawal-Bold';
+	src: url('../fonts/tajawal/Tajawal-Bold.woff2') format('woff2'),
+        url('../fonts/tajawal/Tajawal-Bold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tajawal-Regular';
+	src: url('../fonts/tajawal/Tajawal-Regular.woff2') format('woff2'),
+        url('../fonts/tajawal/Tajawal-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+* {
+    font-family: 'Tajawal-Regular';
+}
+
+body {
+  font-family: 'Tajawal-Regular';
+}
+
+.box-title {
+  font-family: "Tajawal-Regular";
+}
+
+select {
+  font-family: "Tajawal-Bold";
+}
+.banner01 {
+  font-family: "Tajawal-Bold";
+}
+
+.banner02 {
+  font-family: "Tajawal-Bold";
+}
+
+@media (min-width:1300px) {
+  .main-nav > li > a {
+      font-family: "Tajawal-Regular";
+  }
+  .main-nav > li > a:hover {
+      font-family: "Tajawal-Bold";
+  }
+}
+@media (min-width:768px) and (max-width:1280px) {
+  .main-nav > li > a {
+      font-family: "Tajawal-Regular";
+  }
+
+  .main-nav > li > a.current {
+      font-family: "Tajawal-Bold";
+  }
+  .main-nav {
+      font-family: 'Tajawal-Regular';
+  }
+
+}
+
+input,
+select {
+  font-family: "Tajawal-Regular";
+}
+
+/* Etablissements CSS */
+
+@media only screen and (max-width:418px) {
+  .Etablissements {
+      font-family: "Tajawal-Bold";
+  }
+
+  .Etablissements-sante {
+      font-family: "Tajawal-Bold";
+  }
+}
+
+@media screen and (min-width:420px) {
+  .Etablissements {
+      font-family: "Tajawal-Bold";
+  }
+  .Etablissements-sante {
+      font-family: "Tajawal-Bold";
+  }
+}
+
+.check-list {
+  font-family: "Tajawal-Regular";
+}
+
+.footer-title {
+  font-family: 'Tajawal-Bold';
+}
+
+.titre{
+  font-family: "Tajawal-Bold";
+}
+.contact-medecin {
+    font-family: "Tajawal-Bold";
+  }
+  
+.footer .footer-menu ul li a:before {
+  content: "\e92f";
+  position: sticky;
+  top: 5px;
+  right: 0;
+  margin-left: 5px;
+}
+
+.banner-img1 {
+  background-image: url('../assets/img/top2.png');
+}
+
+.accordion-content-title {
+    font-family: "Tajawal-Bold";
+}
+    .contact-user {
+        border-left: 1px solid #E6E6E6;
+        border-right: none;
+    }
+	.specialtiy-name {
+        font-family: "Tajawal-Regular";
+        float: right;
+    }
+	.name-user {
+        font-family: "Tajawal-Bold";
+    }
+	.contact-patient {
+        font-family: "Tajawal-Bold";
+    }
+
+
+.doctors-city div {
+    float: right;
+}
+
+.box_l1 {
+    text-align: right;
+}
+#app a {
+    font-family: 'Tajawal-Bold';
+    font-size: 14px;
+}
+.flag-container {
+    left: 0;
+}
+.selected-flag {
+    padding: 0 8px 0 6px;
+}
+.arrow {
+    margin-right: 6px;
+	margin-left: none;
+}
+.loadmore {
+    font-family: "Tajawal-Bold";
+}
+/* -----------autre----------- */
+.stepper-item:after {
+    position: absolute;
+    content: "";
+    border-bottom: 4px solid #eaf0f4;
+    width: 100%;
+    top: 18px;
+    right: 50%;
+    z-index: 2;
+}
+.stepper-item:before {
+    border-bottom: 4px solid #eaf0f4;
+    top: 18px;
+    right: -50%;
+}
+.stepper-item.completed:after {
+    border-bottom: 4px solid #008d93;
+    top: 18px;
+    right: 50%;
+}
+
+.confirmed {
+    text-align: right;
+}
+.multi_step_form #msform fieldset h4 {
+    font-family: "Tajawal-Regular";
+}
+
+.multi_step_form #msform #progressbar li {
+    float: right;
+}

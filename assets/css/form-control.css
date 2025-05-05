@@ -1,0 +1,26 @@
+.form-control,
+.form-control input {
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    background-color: var(--secondary);
+}
+
+.form-control.small {
+    height: 32px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.form-control.medium {
+    height: 42px;
+    font-size: 21px;
+    border-radius: 8px;
+}
+
+.form-control.large {
+    height: 56px;
+    font-size: 28px;
+    border-radius: 10px;
+}
