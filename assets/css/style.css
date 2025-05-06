@@ -269,13 +269,13 @@ body {
 
 .search-bar input {
     flex: 1 1 150px;
-    padding: 10px;
+    padding: 8px;
     border-radius: 6px;
     border: 1px solid #ccc;
 }
 
 .search-bar button {
-    padding: 10px 20px;
+    padding: 8px 20px;
     background-color: teal;
     color: white;
     border: none;
@@ -760,6 +760,7 @@ body {
     width: 250px;
     margin-right: auto;
     margin-left: auto;
+    height: 40px;
   }
   
   .menu-header {
@@ -925,8 +926,8 @@ body {
     }
   
     .img-fluid {
-      height: auto;
-      padding: 10px;
+      height: 46px;
+      padding: 8px;
       max-width: 100%;
     }
   
@@ -1055,8 +1056,8 @@ body {
     }
   
     .img-fluid {
-      height: auto;
-      padding: 10px;
+      height: 46px;
+      padding: 8px;
       max-width: 100%;
     }
   
