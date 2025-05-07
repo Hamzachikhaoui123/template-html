@@ -48,20 +48,3 @@ function removeOpenedContent(index) {
     }
   })
 }
-const navbarVertical = document.getElementById('mobile_btn')
-navbarVertical.addEventListener('click', () => {
-  const navbar = document.getElementById('navbar-vertical');
-  if (navbar.style.display === "none") {
-
-    navbar.style.display = "block";
-    const body = document.querySelector('.container-fluid')
-    body.style.display = 'none'
-
-  } else {
-    navbar.style.display = "none";
-    const body = document.querySelector('.container-fluid')
-
-    body.style.display = 'block'
-
-  }
-})
