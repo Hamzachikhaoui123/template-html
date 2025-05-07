@@ -724,7 +724,6 @@ body {
     margin-right: auto;
     margin-left: auto;
     padding-top: 30px;
-    padding-bottom: 30px;
     max-width: 1200px;
   }
   
@@ -865,7 +864,9 @@ body {
   }
   
   @media (min-width:1300px) {
- 
+ body{
+  margin-inline: 50px;
+ }
   
     .mobile-bottom-nav {
       display: none !important;
