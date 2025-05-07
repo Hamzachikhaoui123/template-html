@@ -3,28 +3,1458 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link type="image/x-icon" href="./assets/favicon.ico" rel="icon">
+  <link rel="stylesheet" href="./assets/css/gotham-rounded.css">
+  <link rel="stylesheet" href="./assets/css/feather.css">
+  <link rel="stylesheet" href="./assets/css/radio.css">
+  <link rel="stylesheet" href="./assets/css/checkbox.css">
+  <link rel="stylesheet" href="./assets/css/form-control.css">
+  <link rel="stylesheet" href="./assets/css/switcher.css">
+  <!-- <link rel="stylesheet" href="./assets/css/colors.css"> -->
+  <link rel="stylesheet" href="./assets/css/drop-down.css">
+  <!-- <link rel="stylesheet" href="./assets/css/data-table.css"> -->
+  <!-- <link rel="stylesheet" href="./assets/css/tab-view.css"> -->
+  <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
+  <link rel="stylesheet" href="./assets/css/grid.css">
+  <link rel="stylesheet" href="./assets/css/accordion.css">
   <title>Santé mentale - Siladoc</title>
-  <link rel="stylesheet" href="assets/css/Sante-mental.css">
 </head>
+<style>
+  @media screen and (min-width: 767px) and (max-width: 768px) {
+    .trust-section {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f8f8f8;
+      border-radius: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 350px;
+      text-align: center;
+      padding: 10px;
+      background-color: white;
+      border-radius: 35px;
+      justify-content: space-between;
+
+      /* UI Properties */
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .trust-item img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .trust-item span {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .trust-item small {
+      font-weight: normal;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .parcours-sante {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: #ffff;
+      align-items: center;
+      margin-left: 30px;
+      width: 95%;
+      margin-top: 25px;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .center-icon {
+
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      background: #008d93;
+      width: 150px;
+      height: 150px;
+      padding: 26px;
+      border-radius: 50px;
+    }
+
+    .title-parcours {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+
+    .bloc-left,
+    .bloc-right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 300px;
+    }
+
+    .bloc-parcours {
+      background: #f8f8f8;
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
+      text-align: left;
+      width: 150px;
+      height: 100px;
+
+    }
+
+    .description-site {
+      flex-direction: row;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 18px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .form {
+      position: relative;
+    }
+
+    .description-site-left h1 {
+
+      /* UI Properties */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-000000);
+      text-align: left;
+      font: normal normal bold 40px/48px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .description-site-left p {
+
+      left: 195px;
+      /* height: 96px; */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 20px / 24px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .description-site-center {
+      flex: 1 1 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border-radius: 0.5rem;
+    }
+
+    .description-site-left {
+      flex: 1 1 300px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 0.5rem;
+    }
+
+    .search-bar {
+      flex-direction: column;
+    }
+
+    .search-bar input,
+    .search-bar button {
+      width: 100%;
+
+    }
+
+    .description-site-center img {
+      max-width: 70%;
+      border-radius: 20px;
+
+    }
+
+    .directory-card {
+
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+      width: 360px;
+      border: 1px solid #DDDDDD;
+      border-radius: 40px;
+      opacity: 0.7;
+    }
+
+    .search-bar input {
+      flex: 1 1 0px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .card.yellow {
+      background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
+      background-size: cover;
+      width: auto;
+      height: auto;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .parcours-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .map {
+      display: flex;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      align-items: center;
+      gap: 40px;
+      margin: 8px;
+      width: 95%;
+      height: auto;
+      flex-direction: column;
+    }
+
+    .cards-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px
+    }
+
+    .card.blue {
+      background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
+      background-size: cover;
+      width: auto;
+      height: auto;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .annuaire {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+
+
+  @media(min-width: 769px) {
+    .child-left {
+      position: relative;
+      left: 120px;
+
+    }
+
+    .form {
+      position: relative;
+      top: 25px;
+
+    }
+
+    .child-right {
+      position: relative;
+      right: 120px;
+
+    }
+
+    .trust-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f8f8f8;
+      border-radius: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 350px;
+      text-align: center;
+      padding: 10px;
+      background-color: white;
+      border-radius: 35px;
+      justify-content: space-between;
+
+      /* UI Properties */
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .trust-item img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .trust-item span {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .trust-item small {
+      font-weight: normal;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .magazine-santé {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      align-items: center;
+      border-radius: 20px;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+      margin-top: 25px;
+      background-position: center center;
+      border-radius: 40px;
+      opacity: 1;
+      background-color: white;
+    }
+
+    .bloc-left {
+      position: relative;
+      left: 80px;
+    }
+
+    .bloc-right {
+      position: relative;
+      right: 80px;
+    }
+
+    .description-site-left h1 {
+
+      width: 490px;
+      height: 144px;
+      /* UI Properties */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-000000);
+      text-align: left;
+      font: normal normal bold 40px/48px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .description-site-left p {
+
+      left: 195px;
+      /* height: 96px; */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 20px / 24px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .parcours-sante {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
+      align-items: center;
+      border-radius: 20px;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+      margin-top: 25px;
+      background-position: center center;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .title-parcours {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .parcours-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .bloc-left,
+    .bloc-right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 300px;
+    }
+
+    .directory-card {
+
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+      width: 360px;
+      height: 290px;
+      border: 1px solid #DDDDDD;
+      border-radius: 40px;
+      opacity: 0.7;
+    }
+
+    .section-global {
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 20px;
+      justify-content: center;
+      width: 95%;
+      align-items: center;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+      padding: 16px;
+    }
+
+    .bloc-parcours {
+      background: #f8f8f8;
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
+      text-align: center;
+
+    }
+
+    .cards-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 25px;
+      margin-left: 150px;
+      padding: 8px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+    }
+
+    .center-icon {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      background: #008d93;
+      width: 150px;
+      height: 150px;
+      padding: 26px;
+      border-radius: 50px;
+      right: 80px;
+    }
+
+    .heart-main {
+      width: 100px;
+      height: 100px;
+    }
+
+    .map {
+      display: flex;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      align-items: center;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+    }
+
+    .description-site-center {
+      flex: 1 1 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border-radius: 0.5rem
+    }
+
+    .description-site {
+      display: flex;
+      gap: 18px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .annuaire {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 50px;
+    }
+
+    .description-site-left {
+      flex: 1 1 300px;
+      background-color: white;
+      padding: 8px;
+      border-radius: 0.5rem;
+      width: 450px;
+    }
+
+    .card.yellow {
+      background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
+      background-size: cover;
+      width: 544px;
+      height: 200px;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .card.blue {
+      background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
+      background-size: cover;
+      width: 544px;
+      height: 200px;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .magazine-santé-flex {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .card-img-top {
+      border-top-right-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .card-magazine {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 766px) {
+    .parcours-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-direction: row;
+      width: 50px !important;
+    }
+    .magazine-santé {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      align-items: center;
+      border-radius: 20px;
+      gap: 40px;
+
+      margin-top: 25px;
+      background-position: center center;
+      border-radius: 40px;
+      opacity: 1;
+      background-color: white;
+    }
+    .magazine-santé-flex {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .card-img-top {
+      border-top-right-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .card-magazine {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+    }
+    .parcours-sante {
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: #ffff;
+      align-items: center;
+      gap: 40px;
+      margin-top: 25px;
+      border-radius: 40px;
+      opacity: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .trust-section {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f8f8f8;
+      border-radius: 20px;
+      flex-direction: column;
+    }
+
+    .description-site-center {
+      display: none;
+    }
+
+    .description-site-left h1 {
+
+
+      /* UI Properties */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-000000);
+      text-align: left;
+      font: normal normal bold 40px/48px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .description-site-left p {
+
+      left: 195px;
+
+      /* height: 96px; */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 20px / 24px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .trust-section {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f8f8f8;
+      border-radius: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 350px;
+      text-align: center;
+      padding: 10px;
+      background-color: white;
+      border-radius: 35px;
+      justify-content: space-between;
+
+      /* UI Properties */
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .trust-item img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .trust-item span {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .trust-item small {
+      font-weight: normal;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+
+
+    .center-icon {
+      display: none;
+    }
+
+    .title-parcours {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+
+    .bloc-left,
+    .bloc-right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 300px;
+    }
+
+    .bloc-parcours {
+      background: #f8f8f8;
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
+      text-align: center;
+      height: 120px;
+      width: 150px;
+
+    }
+
+    .description-site {
+      flex-direction: row;
+      flex-wrap: wrap;
+      display: flex;
+      gap: 18px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .form {
+      position: relative;
+    }
+
+    .description-site-left h1 {
+
+      /* UI Properties */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-000000);
+      text-align: left;
+      font: normal normal bold 40px/48px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .description-site-left p {
+
+      left: 195px;
+      /* height: 96px; */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 20px / 24px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .description-site-center {
+      flex: 1 1 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border-radius: 0.5rem;
+    }
+
+    .description-site-left {
+      flex: 1 1 300px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 0.5rem;
+    }
+
+    .search-bar {
+      flex-direction: column;
+    }
+
+    .search-bar input,
+    .search-bar button {
+      width: 100%;
+
+    }
+
+    .description-site-center img {
+      max-width: 70%;
+      border-radius: 20px;
+
+    }
+
+    .directory-card {
+
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+      width: 360px;
+      border: 1px solid #DDDDDD;
+      border-radius: 40px;
+      opacity: 0.7;
+    }
+
+    .search-bar input {
+      flex: 1 1 0px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .card.yellow {
+      background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
+      background-size: cover;
+      width: auto;
+      height: auto;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .map {
+      display: flex;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      align-items: center;
+      gap: 40px;
+      margin: 8px;
+      width: 95%;
+      height: auto;
+      flex-direction: column;
+    }
+
+    .cards-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px
+    }
+
+    .card.blue {
+      background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
+      background-size: cover;
+      width: auto;
+      height: auto;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .annuaire {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+
+  .map-section {
+    position: relative;
+    flex: 1;
+  }
+
+  .map-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .text-section {
+    flex: 1;
+    font-family: sans-serif;
+  }
+
+  .card {
+    width: 360px;
+    /* UI Properties */
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 0.5rem;
+    opacity: 1;
+  }
+
+  .text-section h2 {
+    font-size: 20px;
+    color: #111;
+    margin-bottom: 20px;
+  }
+
+  .text-section ul {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    line-height: 1.8;
+    font-size: 15px;
+  }
+
+
+
+
+  .btn-link {
+    /* Layout Properties */
+    top: 30px;
+    left: 16px;
+    width: 50px;
+    height: 50px;
+    /* UI Properties */
+    border: 1px solid var(--unnamed-color-dddddd);
+    background: #F8F8F8 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 15px;
+    opacity: 1;
+    position: relative;
+  }
+
+
+
+  .description-site-center img {
+    max-width: 100%;
+    border-radius: 20px;
+    width: 400px;
+    height: 450px;
+  }
+
+  .description-site-right {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+
+  .style-paragraphe-description {
+    width: 150px;
+  }
+
+
+
+
+
+  .directory-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-header {
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 70px;
+  }
+
+  .card-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    font-family: "Gotham Rounded Bold";
+  }
+
+  .card-footer {
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    height: 50px;
+    position: relative;
+    bottom: 50px;
+    right: 25px;
+  }
+
+  .card-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .card-button:hover {
+    background-color: #eee;
+  }
+
+  .border {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background: #008d93;
+    width: 150px;
+    height: 150px;
+    padding: 26px;
+    border-radius: 50px;
+    display: flex;
+    left: 50px;
+    top: 20px;
+  }
+
+  .icon {
+    fill: transparent;
+    stroke: var(--green);
+    stroke-width: 20;
+    cursor: pointer;
+    position: relative;
+  }
+
+  svg {
+    overflow: visible;
+    width: 100px;
+  }
+
+  path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+  }
+
+  .heart-main:hover path {
+    animation: stroke-animation 2s ease-in-out forwards;
+    animation-fill-mode: forwards;
+  }
+
+
+  .heart-main:hover~.text {
+    animation: fadeInText 2s ease-in-out forwards;
+    animation-delay: 2s;
+  }
+
+  @keyframes stroke-animation {
+    0% {
+      stroke-dashoffset: 0;
+    }
+
+    30% {
+      stroke-dashoffset: 1550;
+    }
+
+    60% {
+      stroke-dashoffset: 3100;
+      fill: transparent;
+      transform: scale(1);
+    }
+
+    80% {
+      fill: transparent;
+      transform: scale(1.1);
+    }
+
+    100% {
+      stroke-dashoffset: 3100;
+      fill: none;
+    }
+  }
+
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+
+
+  /* Accordion style  */
+  .accordion-label,
+  .accordion-content {
+    padding: 5px 10px;
+  }
+
+  label {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+
+
+  }
+
+  label:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .accordion-label:after {
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    position: relative;
+  }
+
+  .active:after {
+    content: "\2796";
+  }
+
+  .accordion-content {
+    background: white;
+    line-height: 1.6;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+  }
+
+  .accordion {
+    max-width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(secondary-dark);
+    margin-bottom: 5px;
+
+  }
+
+
+  .col-header-icon {
+    padding-top: 15px;
+    opacity: 0.65;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    left: 83%;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .col-header {
+    flex-direction: row;
+    opacity: 0.65;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+
+  .section-accordion {
+    padding: 15px;
+    height: 400px;
+
+  }
+
+
+
+  .accordion .accordion-content {
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 0.5rem;
+    border: 1px solid #DDDDDD;
+
+  }
+
+  .accordion-content.is-open {
+    padding-bottom: 10px;
+  }
+
+  .accordion-content header {
+    display: flex;
+    min-height: 30px;
+    padding: 0 15px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s linear;
+    background: #F8F8F8 0% 0% no-repeat padding-box;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    opacity: 1;
+  }
+
+  .accordion-content.is-open header {
+    min-height: 35px;
+
+  }
+
+  .accordion-content.is-open .accordion-content-description {
+    display: block;
+
+  }
+
+  .accordion-content-title {
+    font-size: 16px;
+    color: #000000;
+    font-family: "Gotham Rounded Bold"
+  }
+
+  .accordion-content-description {
+    height: 0;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 400;
+    padding: 0 15px;
+    display: none;
+  }
+
+  @media (min-width: 1025px) {
+
+    .accordion {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 15px;
+
+    }
+
+
+  }
+
+  @media (max-width: 1024px) {
+
+    .accordion {
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      padding-top: 15px;
+
+    }
+
+
+  }
+
+  @media only screen and (max-width: 412.98px) {
+    .accordion {
+      width: 100%;
+
+    }
+
+    .iframe {
+      width: 100%;
+      padding: 5px;
+      height: 100%;
+      border-radius: 0.5rem;
+    }
+  }
+
+  @media (max-width:991px) {
+    .accordion {
+      padding-top: 15px;
+    }
+  }
+  /* Reset & Base */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Tahoma, sans-serif; color: #333; background: #fff; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  /* Container */
+  .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+  /* Header */
+  header { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+  .logo img { height: 40px; }
+  nav ul { display: flex; list-style: none; gap: 30px; font-size: 0.95rem; }
+  .btn-login { background: #008C9E; color: #fff; padding: 10px 25px; border-radius: 4px; font-size: 0.95rem; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; margin-bottom: 60px; }
+  .hero-content {
+    background: #fffbe6;
+    padding: 40px;
+    border-radius: 16px 0 0 16px;
+  }
+  .hero-content h1 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .hero-content h2 {
+    margin: 20px 0;
+    font-size: 1.4rem;
+    color: #008080;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.6;
+  }
+  .badges {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .badge {
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .badge img {
+    max-width: 80px;
+    margin-bottom: 8px;
+  }
+  .badge p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #333;
+  }
+  .hero-image {
+    position: relative;
+    width: 100%;
+    border-radius: 0 16px 16px 0;
+
+  }
+  .header-img {
+    width: 100%;
+    border-radius: 16px;
+  }
+  .phone-frame {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+  .phone-img {
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 960px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+    .hero-image {
+      margin-top: 40px;
+    }
+    .menu-toggle { display: flex; }
+    .nav-links { display: none; }
+  }
+  .hero-text { background: #F9F4DC; padding: 50px 30px; border-radius: 8px; }
+  .hero-text h1 { font-size: 2.2rem; margin-bottom: 15px; }
+  .hero-text p.subtitle { font-size: 1rem; margin-bottom: 20px; color: #555; }
+  .hero-text p.body { font-size: 0.95rem; margin-bottom: 25px; color: #666; line-height: 1.5; }
+  .trust-icons { display: flex; gap: 20px; }
+
+  .hero-media { position: relative; }
+  .hero-media .logo-bg { position: absolute; top: 50%; left: -10%; transform: translateY(-50%); width: 110%; opacity: 0.1; }
+  .hero-media .phone { position: relative; z-index: 2; width: 70%; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 16px; }
+
+  /* Professionals */
+  .professionnels { margin-bottom: 50px; }
+  .professionnels h2 { font-size: 1.4rem; margin-bottom: 20px; }
+  .cards { display: flex; flex-wrap: wrap; gap: 20px; }
+  .card { flex: 1 1 calc(25% - 20px); background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 20px; text-align: center; }
+  .card img.avatar { width: 60px; height: 60px; margin-bottom: 15px; }
+  .card h3 { font-size: 1.05rem; margin-bottom: 5px; }
+  .card small { color: #777; display: block; margin-bottom: 12px; font-size: 0.85rem; }
+  .card p { font-size: 0.85rem; color: #555; margin-bottom: 15px; }
+  .card a.btn { display: inline-block; background: #008C9E; color: #fff; padding: 8px 20px; border-radius: 4px; font-size: 0.9rem; }
+
+  /* Domains */
+  .domains { margin-bottom: 50px; }
+  .domains h2 { font-size: 1.4rem; margin-bottom: 20px; }
+  .grid-domains { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 20px; }
+  .domain-item { position: relative; border-radius: 8px; overflow: hidden; }
+  .domain-item img { width: 100%; height: 120px; object-fit: cover; filter: brightness(60%); transition: filter .3s; }
+  .domain-item:hover img { filter: brightness(80%); }
+  .domain-item span { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; font-weight: 600; font-size: 1rem; }
+
+  /* Media & FAQ */
+  .media-faq { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; align-items: start; }
+  .media-faq iframe { width: 100%; height: 260px; border: none; border-radius: 8px; }
+  .faq-item { border-bottom: 1px solid #ddd; padding: 12px 0; }
+  .faq-item summary { font-size: 0.95rem; cursor: pointer; list-style: none; }
+  .faq-item p { font-size: 0.9rem; color: #555; padding: 8px 0; }
+
+  /* Magazine */
+  .magazine { margin-bottom: 50px; }
+  .magazine h2 { font-size: 1.4rem; margin-bottom: 20px; }
+  .articles { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap: 20px; }
+  .article { background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
+  .article img { width: 100%; height: 140px; object-fit: cover; }
+  .article-content { padding: 15px; }
+  .article-content h4 { font-size: 1rem; margin-bottom: 8px; }
+  .article-content p { font-size: 0.85rem; color: #666; }
+
+  /* Footer */
+  footer { text-align: center; padding: 20px 0; border-top: 1px solid #eee; font-size: 0.85rem; color: #555; }
+  .store-links { margin-top: 10px; }
+  .store-links img { width: 130px; margin: 0 8px; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; text-align: center; }
+    .hero-media { margin-top: 30px; }
+    .media-faq { grid-template-columns: 1fr; }
+  }
+</style>
 <body>
   <!-- Header / Navbar -->
-  <header class="navbar">
-    <div class="container">
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="logo">
-        <img  src="assets/img/logo web.png" alt="Logo web" class="logox-img">
-      </div>
-      <nav class="nav-links">
-        <a href="#">Accueil</a>
-        <a href="#">Inscrivez-vous</a>
-        <a href="#">Nous Contacter</a>
-      </nav>
-      <a href="#" class="btn btn-primary">Se connecter</a>
-    </div>
+  <header class="container">
+    <div class="logo"><img src="assets/img/logo web.png" alt="SILA DOC Logo"></div>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Professionnels</a></li>
+        <li><a href="#">Mon Compte</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="btn-login">Se connecter</a>
   </header>
 
   <!-- Hero Section -->
@@ -51,7 +1481,260 @@
       </div>
     </div>
   </section>
+  <section class="professionnels container">
+    <h2>Les professionnels de la santé mentale</h2>
+    <div class="cards">
+      <!-- Card prototypes, duplicate as needed -->
+      <div class="card">
+        <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+        <h3>Mr Mohamed MBAREK</h3>
+        <small>Psychiatre</small>
+        <p>Adresse: Centre Médical Ariana ...</p>
+        <a href="#" class="btn">Prendre rendez-vous</a>
+      </div>
+      <div class="card">
+        <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+        <h3>Mr Mohamed MBAREK</h3>
+        <small>Psychiatre</small>
+        <p>Adresse: Centre Médical Ariana ...</p>
+        <a href="#" class="btn">Prendre rendez-vous</a>
+      </div>
+      <div class="card">
+        <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+        <h3>Mr Mohamed MBAREK</h3>
+        <small>Psychiatre</small>
+        <p>Adresse: Centre Médical Ariana ...</p>
+        <a href="#" class="btn">Prendre rendez-vous</a>
+      </div>
+      <div class="card">
+        <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+        <h3>Mr Mohamed MBAREK</h3>
+        <small>Psychiatre</small>
+        <p>Adresse: Centre Médical Ariana ...</p>
+        <a href="#" class="btn">Prendre rendez-vous</a>
+      </div>
+      <!-- images/7.png, 8.png, 9.png -->
+    </div>
+  </section>
 
+  <section class="domains container">
+    <h2>Nos domaines d'intervention</h2>
+    <div class="grid-domains">
+      <div class="domain-item"><img src="assets/img/addiction.png" alt="Dépression"><span>Dépression</span></div>
+      <div class="domain-item"><img src="assets/img/anxiety.png" alt="Anxiété"><span>Anxiété</span></div>
+      <div class="domain-item"><img src="assets/img/crise.png" alt="Crise d'angoisse"><span>Crise d'angoisse</span></div>
+      <div class="domain-item"><img src="assets/img/conflict.png" alt="Conflits relationnels"><span>Conflits relationnels</span></div>
+      <div class="domain-item"><img src="assets/img/addictologie.png" alt="Addictologie"><span>Addictologie</span></div>
+      <div class="domain-item"><img src="assets/img/pathologies.png" alt="Pathologies mentales"><span>Pathologies mentales</span></div>
+      <div class="domain-item"><img src="assets/img/relaxation.png" alt="Relaxation"><span>Relaxation</span></div>
+      <div class="domain-item"><img src="assets/img/developpement.png" alt="Développement personnel"><span>Développement personnel</span></div>
+    </div>
+  </section>
+  <!-- Accordion -->
+  <section class="section-global background-section">
+    <div class="container">
+
+      <div class="section-header">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <iframe width="100%" height="315" style="    border-radius: 0.5rem;"
+                    src="https://www.youtube.com/embed/PmQFG4LEPZs?si=IcZ_9ra3t9knpkPp&amp;controls=0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="accordion blocbox">
+              <div class="accordion-content">
+                <header>
+                  <span class="accordion-content-title">
+                    Comment Siladoc peut-il m’aider ?
+                  </span>
+                  <i class="feather-plus"></i>
+                </header>
+                <p class="accordion-content-description">
+                  <strong>Siladoc, Solution de numérisation de parcours de
+                    soin.</strong>
+                  Chaque patient pourra consulter un annuaire des praticiens et
+                  demander un RDV.
+                </p>
+              </div>
+
+              <div class="accordion-content">
+                <header>
+                  <span class="accordion-content-title">
+                    Comment je peux avoir un compte sur Siladoc?
+                  </span>
+                  <i class="feather-plus"></i>
+                </header>
+                <p class="accordion-content-description">
+                  <strong>Enregistrement d'un compte directement sur Siladoc.</strong>
+                  il suffit de créer un compte sur Siladoc en utilisant un email
+                  ou un numéro de téléphone mobile et un mot de passe pour
+                  accéder au site et profiter de l'espace patient.
+                </p>
+              </div>
+              <div class="accordion-content">
+                <header>
+                  <span class="accordion-content-title">
+                    Qui sont les praticiens sur Siladoc?
+                  </span>
+                  <i class="feather-plus"></i>
+                </header>
+                <p class="accordion-content-description">
+                  Sur<strong> Siladoc </strong>, Vous pouvez consulter des
+                  médecins généralistes, des psychiatres, des dermatologues, des
+                  pédiatres, des endocrinologues, des gynécologues et des
+                  gastro-entérologues. Ces médecins sont tous Docteurs en
+                  médecine, inscrits au Conseil National de l'Ordre des Médecins
+                  en TUNISIE (CNOM), et exercent en TUNISIE. Ils sont
+                  spécialement formés à la télé-consultation pour vous écouter,
+                  vous aider et vous prendre en charge au mieux. Ils répondent
+                  bien sûr aux standards requis pour faire de la
+                  télé-consultation, pratique en attente d'approbation par les
+                  autorités tunisienne .
+                </p>
+              </div>
+              <div class="accordion-content">
+                <header>
+                  <span class="accordion-content-title">
+                    Comment puis-je demander une consultation ?
+                  </span>
+                  <i class="feather-plus"></i>
+                </header>
+                <p class="accordion-content-description">
+                  En utilisant le site web https://Siladoc.co ou l'application
+                  mobileSiladoc sur playstore Vous pouvez chercher un praticien
+                  par spécialisation ou par localisation géographique, et
+                  demander un RDV et partager des documents avec le praticien
+                </p>
+              </div>
+              <div class="accordion-content">
+                <header>
+                  <span class="accordion-content-title">
+                    C'est quoi la precription éléctronique ou E-PRECRIPTION?
+                  </span>
+                  <i class="feather-plus"></i>
+                </header>
+                <p class="accordion-content-description">
+                  <strong>
+                    La prescription Electronique ou E-PRESCRITION. </strong>E-Prescription ou ordonnance électronique,
+                  unique et
+                  sécurisé, pour une meilleure expérience du patient.
+                  E-PRESCRIPTION: Presription de médicament - Prescription
+                  d'analyse biologique - Prescription radiologie
+                </p>
+              </div>
+              <div class="accordion-content">
+                <header>
+                  <span class="accordion-content-title">
+                    L'application Siladoc ne fonctionne pas, que dois-je faire ?
+                  </span>
+                  <i class="feather-plus"></i>
+                </header>
+                <p class="accordion-content-description">
+                  <strong>
+                    En cas de problème de démarrage de l'application
+                    mobile.</strong>
+                  Si vous n'arrivez pas à vous connecter à votre application
+                  Siladoc, ou que l'application ne fonctionne pas correctement,
+                  vous pouvez : Vérifier d'avoir une bonne connexion Internet.
+                  Si vous n'utilisez pas de connexion Wi-Fi, assurez-vous que
+                  l'application Siladoc utilise vos données mobiles, Vérifier
+                  que votre téléphone est à jour puis mettre à jour
+                  l'application Siladoc via playstore ou Google Play, et
+                  redémarrer l'application.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Fin Accordion-->
+  <!-- Notre magazine de santé -->
+  <section class="magazine-santé">
+    <div class="magazine-santé-flex">
+      <span class="title-parcours">Notre magazine de santé</span>
+      <button class="icon-button" style="    background: transparent;
+border: none;
+position: relative;
+left: 25%;
+bottom: 8px;">
+        <i class="feather-chevron-right"></i>
+      </button>
+    </div>
+    <div class="card-magazine">
+      <div class="card" style="width: 300px;
+;padding: 0%;">
+        <img src="/assets/img/01.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 300px;
+      ;padding: 0%;">
+        <img src="/assets/img/02.jpeg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 300px;
+            ;padding: 0%;">
+        <img src="/assets/img/03.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card" style="width: 300px;
+                  ;padding: 0%;">
+        <img src="/assets/img/04.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Fin Notre magazine de santé -->
+  <footer class="container">
+    <p>Adresse: Ghazela Centre Civile Médical, Ariana – TUNISIE | Tel : +216 71 232 023</p>
+    <div class="store-links">
+      <img src="assets/img/google-play-badge.png" alt="Google Play">
+      <img src="assets/img/App_Store_Badge.png" alt="App Store">
+    </div>
+  </footer>
+  <script src="assets/js/accordion.js"></script>
+  <script>
+    var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+    navItems.forEach(function (e, i) {
+      e.addEventListener("click", function (e) {
+        navItems.forEach(function (e2, i2) {
+          e2.classList.remove("mobile-bottom-nav__item--active");
+        })
+        this.classList.add("mobile-bottom-nav__item--active");
+      });
+    });
+  </script>
+  <script src="assets/js/feather.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
 </body>
 </html>
 
