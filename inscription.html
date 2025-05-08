@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fiche d'inscription : Patient</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        @media screen and (min-width:798px) {
+            .form-wrapper {
+                background-color: white;
+                padding: 40px 30px;
+                border-radius: 15px;
+                width: 550px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                position: absolute;
+                top: 20%;
+                left: 35%;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .switch-button {
+                display: block;
+                margin: 15px auto 25px auto;
+                background-color: #d4f3f0;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 20px;
+                font-weight: 600;
+                color: #00695c;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            .form-row {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .form-row label {
+                width: 150px;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+
+            .form-row input[type="text"],
+            .form-row input[type="email"],
+            .form-row input[type="password"],
+            .form-row input[type="tel"],
+            .form-row input[type="date"] {
+                flex: 1;
+                padding: 10px;
+                border-radius: 10px;
+                background: #F8F8F8 0% 0% no-repeat padding-box;
+                border: 1px solid #DDDDDD;
+                border-radius: 10px;
+            }
+
+            .gender-group {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .checkbox-container {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+            .checkbox-container a {
+                color: #2196f3;
+                text-decoration: none;
+            }
+
+            .submit-button {
+                background-color: #008080;
+                padding: 10px;
+                border: none;
+                border-radius: 10px;
+                margin-top: 20px;
+                cursor: pointer;
+                top: 23px;
+                left: 320px;
+                width: 181px;
+                text-align: left;
+                font: normal normal bold 16px / 19px Gotham Rounded;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+                position: relative;
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .submit-button:hover {
+                background-color: #004d40;
+            }
+
+            input[type="radio"] {
+                width: 20px;
+                height: 20px;
+                background-color: #7b2424;
+                border: 1px solid #d70c0c;
+                border-radius: 0.5rem;
+
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            .navbar .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 64px;
+                background-color: transparent;
+            }
+
+            .menu-toggle {
+                display: none;
+                flex-direction: column;
+                gap: 4px;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .menu-toggle span {
+                display: block;
+                width: 24px;
+                height: 2px;
+                background: #333;
+            }
+
+            .logox-img {
+                width: 174px;
+                height: 40px;
+            }
+
+            .nav-links a {
+                margin: 0 12px;
+                color: #555;
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+
+            .btn-primary {
+                background: #008080;
+                color: #fff;
+                padding: 8px 8px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-size: 0.9rem;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="logo">
+                <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+            </div>
+            <nav class="nav-links">
+                <a href="./home.html">Accueil</a>
+                <a href="./inscription.html">Inscrivez-vous</a>
+                <a href="#">Nous Contacter</a>
+            </nav>
+            <a href="#" class="btn btn-primary">Se connecter</a>
+        </div>
+    </header>
+    <div class="form-wrapper">
+        <h2>Fiche d’inscription : Patient</h2>
+        <button class="switch-button">Vous êtes professionnel de santé ?</button>
+        <p>Merci de remplir ce formulaire</p>
+
+        <form>
+            <div class="form-row">
+                <label>Genre :</label>
+                <div class="gender-group">
+                    <input type="radio" id="homme" name="genre">
+                    <label for="homme">Homme</label>
+                    <input type="radio" id="femme" name="genre">
+                    <label for="femme">Femme</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-row">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+
+            <div class="form-row">
+                <label for="naissance">Date de naissance :</label>
+                <input type="date" id="naissance" name="naissance" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="mobile">Mobile :</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </div>
+
+            <div class="form-row">
+                <label for="mdp">Mot de passe :</label>
+                <input type="password" id="mdp" name="mdp" required>
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="cgu" required>
+                <label for="cgu">J’accepte les <a href="#">conditions d’utilisation</a></label>
+            </div>
+
+            <button type="submit" class="submit-button">Soumettre</button>
+        </form>
+    </div>
+</body>
+
+</html>

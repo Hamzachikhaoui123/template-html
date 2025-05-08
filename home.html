@@ -15,10 +15,10 @@
   <!-- <link rel="stylesheet" href="./assets/css/colors.css"> -->
   <link rel="stylesheet" href="./assets/css/drop-down.css">
   <!-- <link rel="stylesheet" href="./assets/css/data-table.css"> -->
-  <!-- <link rel="stylesheet" href="./assets/css/tab-view.css"> -->
+  <link rel="stylesheet" href="./assets/css/tab-view.css">
   <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
   <link rel="stylesheet" href="./assets/css/grid.css">
-  <link rel="stylesheet" href="./assets/css/accordion.css">
+
   <title>Document</title>
 </head>
 <style>
@@ -32,6 +32,58 @@
       border-radius: 20px;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      background-color: transparent;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #333;
+    }
+
+    .logox-img {
+      width: 174px;
+      height: 40px;
+    }
+
+    .nav-links a {
+      margin: 0 12px;
+      color: #555;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: #008080;
+      color: #fff;
+      padding: 8px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
     .trust-item {
       display: flex;
       flex-direction: row;
@@ -40,17 +92,14 @@
       text-align: center;
       padding: 10px;
       background-color: white;
-      border-radius: 35px;
+      border-radius: 0.5rem;
       justify-content: space-between;
-
-      /* UI Properties */
       background: #FFFFFF 0% 0% no-repeat padding-box;
-      border-radius: 40px;
       opacity: 1;
     }
 
     .trust-item img {
-      width: 80px;
+      width: 100px;
       height: auto;
       margin-bottom: 10px;
     }
@@ -58,6 +107,7 @@
     .trust-item span {
       font-weight: bold;
       color: #222;
+      text-align: left;
     }
 
     .trust-item small {
@@ -262,21 +312,109 @@
       opacity: 1;
     }
 
+    footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+
+    }
+
+    footer p {
+      width: 400px;
+      height: 57px;
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 16px/19px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .img-logo-footer {
+      width: 60px;
+      height: 60px;
+    }
+
+    .img-store {
+      width: 100px;
+      height: 50px;
+    }
+
     .annuaire {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
   }
-
-
-
   @media(min-width: 769px) {
     .child-left {
       position: relative;
       left: 120px;
 
     }
+
+    .google-play {
+
+
+      /* UI Properties */
+      background: url(/assets/img/google-play-badge.png) 0% 0% no-repeat padding-box;
+      opacity: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      background-color: transparent;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #333;
+    }
+
+    .logox-img {
+      width: 174px;
+      height: 40px;
+    }
+
+    .nav-links a {
+      margin: 0 12px;
+      color: #555;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: #008080;
+      color: #fff;
+      padding: 8px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+
+
+
 
     .form {
       position: relative;
@@ -307,18 +445,15 @@
       width: 350px;
       text-align: center;
       padding: 10px;
-      background-color: white;
-      border-radius: 35px;
+      border-radius: 0.8rem;
       justify-content: space-between;
-
       /* UI Properties */
       background: #FFFFFF 0% 0% no-repeat padding-box;
-      border-radius: 40px;
       opacity: 1;
     }
 
     .trust-item img {
-      width: 80px;
+      width: 100px;
       height: auto;
       margin-bottom: 10px;
     }
@@ -326,6 +461,7 @@
     .trust-item span {
       font-weight: bold;
       color: #222;
+      text-align: left;
     }
 
     .trust-item small {
@@ -582,8 +718,37 @@
       justify-content: center;
       gap: 15px;
     }
-  }
 
+    footer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+
+    }
+
+    footer p {
+      width: 400px;
+      height: 57px;
+      /* UI Properties */
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 16px/19px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .img-logo-footer {
+      width: 60px;
+      height: 60px;
+    }
+
+    .img-store {
+      width: 150px;
+      height: 50px;
+    }
+  }
   @media screen and (min-width: 320px) and (max-width: 766px) {
     .parcours-content {
       display: flex;
@@ -593,6 +758,95 @@
       flex-direction: row;
       width: 50px !important;
     }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+
+    footer p {
+      width: 400px;
+      height: 57px;
+      /* UI Properties */
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 16px/19px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .img-logo-footer {
+      width: 60px;
+      height: 60px;
+    }
+
+    .img-store {
+      width: 150px;
+      height: 50px;
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 25px;
+      height: 64px;
+      background-color: transparent;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #333;
+    }
+
+    .logo {}
+
+    .logox-img {
+      width: 174px;
+      height: 40px;
+    }
+
+    .nav-links a {
+      margin: 0 12px;
+      color: #555;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
     .magazine-santé {
       text-align: center;
       padding: 40px 20px;
@@ -600,13 +854,14 @@
       align-items: center;
       border-radius: 20px;
       gap: 40px;
-    
+
       margin-top: 25px;
       background-position: center center;
       border-radius: 40px;
       opacity: 1;
       background-color: white;
     }
+
     .magazine-santé-flex {
       display: flex;
       flex-direction: row;
@@ -628,6 +883,7 @@
       justify-content: center;
       gap: 15px;
     }
+
     .parcours-sante {
       padding: 40px 20px;
       font-family: sans-serif;
@@ -701,17 +957,16 @@
       text-align: center;
       padding: 10px;
       background-color: white;
-      border-radius: 35px;
+      border-radius: 0.5rem;
       justify-content: space-between;
 
       /* UI Properties */
       background: #FFFFFF 0% 0% no-repeat padding-box;
-      border-radius: 40px;
       opacity: 1;
     }
 
     .trust-item img {
-      width: 80px;
+      width: 100px;
       height: auto;
       margin-bottom: 10px;
     }
@@ -719,6 +974,7 @@
     .trust-item span {
       font-weight: bold;
       color: #222;
+      text-align: left;
     }
 
     .trust-item small {
@@ -735,9 +991,8 @@
 
     .title-parcours {
       display: block;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: bold;
-      margin-bottom: 40px;
     }
 
 
@@ -830,11 +1085,10 @@
     .description-site-center img {
       max-width: 70%;
       border-radius: 20px;
-
+      display: none;
     }
 
     .directory-card {
-
       background-size: cover;
       background-position: center;
       overflow: hidden;
@@ -844,10 +1098,13 @@
       flex-direction: column;
       justify-content: space-between;
       transition: transform 0.3s ease;
-      width: 360px;
+      width: 340px;
       border: 1px solid #DDDDDD;
-      border-radius: 40px;
+      border-radius: 0.5rem;
       opacity: 0.7;
+      height: 100px;
+      margin-left: 15px;
+
     }
 
     .search-bar input {
@@ -922,7 +1179,6 @@
 
   .card {
     width: 360px;
-    /* UI Properties */
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
     border-radius: 0.5rem;
@@ -942,18 +1198,9 @@
     line-height: 1.8;
     font-size: 15px;
   }
-
-
-
-
   .btn-link {
-    /* Layout Properties */
-    top: 30px;
-    left: 16px;
     width: 50px;
     height: 50px;
-    /* UI Properties */
-    border: 1px solid var(--unnamed-color-dddddd);
     background: #F8F8F8 0% 0% no-repeat padding-box;
     border: 1px solid #DDDDDD;
     border-radius: 15px;
@@ -1025,7 +1272,6 @@
     height: 32px;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: background 0.3s ease;
   }
 
   .card-button:hover {
@@ -1033,7 +1279,6 @@
   }
 
   .border {
-
     position: relative;
     display: flex;
     justify-content: center;
@@ -1299,50 +1544,23 @@
 
 <body>
   <!-- Header -->
-  <header class="header min-header">
-    <nav class="navbar navbar-expand-lg header-nav compact">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand logo">
-            <img src="assets/img/logo web.png" class="img-fluid" alt="Logo">
-          </a>
-        </div>
-        <div class="main-menu-wrapper">
-          <div class="menu-header">
-            <a class="menu-logo" href="index.html">
-              <img src="assets/img/logo web.png" class="img-fluid" alt="tabib">
-            </a>
-            <a id="menu_close" class="menu-close">
-              <i class="fas fa-times"></i>
-            </a>
-          </div>
-          <ul class="main-nav">
-            <li>
-              <a href="index.html">Accuiel</a>
-            </li>
-            <li class="has-submenu">
-              <a href="contact.html">
-                Nous Contacter</a>
-            </li>
-          </ul>
-        </div>
-        <ul class="nav header-navbar-rht">
-          <li class="nav-item">
-            <a class="btn button-rechercher small btn-navbar" href="account/compte.html">
-              Se connecter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="btn button-pra small btn-navbar" href="account/register/doctor.html">
-              Vous êtes praticien ?</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn small btm" href="ar/index.html">
-              العربية</a>
-          </li>
-        </ul>
+  <header class="navbar">
+    <div class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="logo">
+        <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
       </div>
-    </nav>
+      <nav class="nav-links">
+        <a href="./home.html">Accueil</a>
+        <a href="./inscription.html">Inscrivez-vous</a>
+        <a href="#">Nous Contacter</a>
+      </nav>
+      <a href="#" class="btn btn-primary">Se connecter</a>
+    </div>
   </header>
 
   <main class="description-site">
@@ -1640,7 +1858,7 @@
 
   <!-- Fin Accordion-->
   <!-- Notre magazine de santé -->
-  <section class="magazine-santé">
+  <!-- <section class="magazine-santé">
     <div class="magazine-santé-flex">
       <span class="title-parcours">Notre magazine de santé</span>
       <button class="icon-button" style="    background: transparent;
@@ -1651,13 +1869,14 @@ bottom: 8px;">
         <i class="feather-chevron-right"></i>
       </button>
     </div>
+    
     <div class="card-magazine">
       <div class="card" style="width: 300px;
 ;padding: 0%;">
         <img src="/assets/img/01.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
         <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-            content.</p>
+          <p class="card-text">La prise de rendez-vous en ligne via SILADOC.</p>
+          <p>Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
@@ -1689,8 +1908,23 @@ bottom: 8px;">
         </div>
       </div>
     </div>
-  </section>
-  <!-- Fin Notre magazine de santé -->
+    
+  </section> -->
+
+
+  <!-- Footer -->
+  <footer>
+    <img src="./assets/img/logo-footer.png" class="img-logo-footer" alt="">
+    <p>
+      Adresse : Ghazala Centre, Cité ghazala, ARIANA, TUNISIE Tel : +216 23124828 Email : contact@5pservices.net
+    </p>
+    <div>
+      <img src="./assets/img/google-play-badge.png" class="img-store">
+      <img src="./assets/img/App_Store_Badge.png" style="width: 150px;height: 50px;">
+    </div>
+
+  </footer>
+  <!--  -->
   <script src="assets/js/accordion.js"></script>
   <script>
     var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
