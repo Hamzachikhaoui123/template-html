@@ -65,19 +65,6 @@
       color: #666;
     }
 
-    .parcours-sante {
-      text-align: center;
-      padding: 40px 20px;
-      font-family: sans-serif;
-      background: #ffff;
-      align-items: center;
-      margin-left: 30px;
-      width: 95%;
-      margin-top: 25px;
-      border-radius: 40px;
-      opacity: 1;
-    }
-
     .center-icon {
 
       position: relative;
@@ -333,7 +320,7 @@
       color: #666;
     }
 
-    .magazine-santé {
+    .white-container {
       text-align: center;
       padding: 40px 20px;
       font-family: sans-serif;
@@ -347,6 +334,21 @@
       border-radius: 40px;
       opacity: 1;
       background-color: white;
+    }
+    .yellow-container {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      align-items: center;
+      border-radius: 20px;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+      margin-top: 25px;
+      background-position: center center;
+      border-radius: 40px;
+      opacity: 1;
+      background-color: #fffbe6;
     }
 
     .bloc-left {
@@ -388,21 +390,7 @@
       opacity: 1;
     }
 
-    .parcours-sante {
-      text-align: center;
-      padding: 40px 20px;
-      font-family: sans-serif;
-      background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
-      align-items: center;
-      border-radius: 20px;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-      margin-top: 25px;
-      background-position: center center;
-      border-radius: 40px;
-      opacity: 1;
-    }
+
 
     .title-parcours {
       display: block;
@@ -442,19 +430,6 @@
       border: 1px solid #DDDDDD;
       border-radius: 40px;
       opacity: 0.7;
-    }
-
-    .section-global {
-      display: flex;
-      background-color: #ffffff;
-      border-radius: 20px;
-      justify-content: center;
-      width: 95%;
-      align-items: center;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-      padding: 16px;
     }
 
     .bloc-parcours {
@@ -592,7 +567,7 @@
       flex-direction: row;
       width: 50px !important;
     }
-    .magazine-santé {
+    .white-container {
       text-align: center;
       padding: 40px 20px;
       font-family: sans-serif;
@@ -626,18 +601,6 @@
       flex-direction: row;
       justify-content: center;
       gap: 15px;
-    }
-    .parcours-sante {
-      padding: 40px 20px;
-      font-family: sans-serif;
-      background: #ffff;
-      align-items: center;
-      gap: 40px;
-      margin-top: 25px;
-      border-radius: 40px;
-      opacity: 1;
-      display: flex;
-      flex-direction: column;
     }
 
     .trust-section {
@@ -1296,7 +1259,7 @@
   }
   /* Reset & Base */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', Tahoma, sans-serif; color: #333; background: #fff; }
+  body { color: #333; background: #f4f7f6; }
   a { text-decoration: none; color: inherit; }
   img { max-width: 100%; display: block; }
 
@@ -1395,8 +1358,6 @@
   .hero-media .phone { position: relative; z-index: 2; width: 70%; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 16px; }
 
   /* Professionals */
-  .professionnels { margin-bottom: 50px; }
-  .professionnels h2 { font-size: 1.4rem; margin-bottom: 20px; }
   .cards { display: flex; flex-wrap: wrap; gap: 20px; }
   .card { flex: 1 1 calc(25% - 20px); background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 20px; text-align: center; }
   .card img.avatar { width: 60px; height: 60px; margin-bottom: 15px; }
@@ -1432,9 +1393,41 @@
   .article-content p { font-size: 0.85rem; color: #666; }
 
   /* Footer */
-  footer { text-align: center; padding: 20px 0; border-top: 1px solid #eee; font-size: 0.85rem; color: #555; }
-  .store-links { margin-top: 10px; }
-  .store-links img { width: 130px; margin: 0 8px; }
+  footer {
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* For smaller screens */
+
+  }
+  footer .footer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  footer .footer-logo-icon { /* For the small 'S' logo */
+    height: 30px; /* Adjust */
+  }
+  footer p {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #555;
+    flex-basis: 100%; /* Full width on small screens */
+    text-align: left;
+  }
+  footer .store-links {
+    margin: 10px 0;
+    flex-basis: 100%; /* Full width on small screens */
+    text-align: right;
+  }
+  footer .store-links img {
+    height: 40px; /* Adjust as needed */
+    margin-left: 10px;
+  }
 
   /* Responsive */
   @media (max-width: 900px) {
@@ -1458,7 +1451,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero yellow-container">
     <div class="hero-content">
       <h1>Prenez soin de votre<br> santé mentale,</h1>
       <h2>Grâce à la consultation vidéo<br>(Téléconsultation)</h2>
@@ -1481,7 +1474,7 @@
       </div>
     </div>
   </section>
-  <section class="professionnels container">
+  <section class="white-container">
     <h2>Les professionnels de la santé mentale</h2>
     <div class="cards">
       <!-- Card prototypes, duplicate as needed -->
@@ -1516,7 +1509,6 @@
       <!-- images/7.png, 8.png, 9.png -->
     </div>
   </section>
-
   <section class="domains container">
     <h2>Nos domaines d'intervention</h2>
     <div class="grid-domains">
@@ -1531,7 +1523,7 @@
     </div>
   </section>
   <!-- Accordion -->
-  <section class="section-global background-section">
+  <section class="white-container ">
     <div class="container">
 
       <div class="section-header">
@@ -1661,20 +1653,17 @@
 
   <!-- Fin Accordion-->
   <!-- Notre magazine de santé -->
-  <section class="magazine-santé">
+  <section class="white-container">
     <div class="magazine-santé-flex">
       <span class="title-parcours">Notre magazine de santé</span>
-      <button class="icon-button" style="    background: transparent;
-border: none;
-position: relative;
-left: 25%;
-bottom: 8px;">
+      <button class="icon-button" style="    background: transparent; border: none; position: relative; left: 25%;
+        bottom: 8px;">
         <i class="feather-chevron-right"></i>
       </button>
     </div>
     <div class="card-magazine">
       <div class="card" style="width: 300px;
-;padding: 0%;">
+  ;padding: 0%;">
         <img src="/assets/img/01.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
@@ -1713,10 +1702,12 @@ bottom: 8px;">
   </section>
   <!-- Fin Notre magazine de santé -->
   <footer class="container">
-    <p>Adresse: Ghazela Centre Civile Médical, Ariana – TUNISIE | Tel : +216 71 232 023</p>
+    <div class="footer-info">
+      <img src="assets/img/Siladoc%20illus%20logo2-3.png" alt="Siladoc S Icon" class="footer-logo-icon"> <p>Adresse: Ghazela Centre Civile Médical, Ariana – TUNISIE | Tel : +216 71 232 023</p>
+    </div>
     <div class="store-links">
-      <img src="assets/img/google-play-badge.png" alt="Google Play">
-      <img src="assets/img/App_Store_Badge.png" alt="App Store">
+      <a href="#"><img src="assets/img/google-play-badge.png" alt="Google Play"></a>
+      <a href="#"><img src="assets/img/App_Store_Badge.png" alt="App Store"></a>
     </div>
   </footer>
   <script src="assets/js/accordion.js"></script>
