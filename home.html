@@ -31,7 +31,13 @@
       background-color: #f8f8f8;
       border-radius: 20px;
     }
-
+  .description-site-right {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: rox;
+    gap: 20px;
+    justify-content: space-between;
+  }
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -346,13 +352,419 @@
       justify-content: space-between;
     }
   }
-  @media(min-width: 769px) {
+  @media screen and (min-width:1025px)  {
+    .child-left {
+      position: relative;
+      left: 120px;
+
+    }
+    .description-site-center img {
+    max-width: 100%;
+    border-radius: 20px;
+    max-height: 70%;
+    width: 320px;
+    height: 500px;
+  }
+    .description-site-right {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+    .google-play {
+
+
+      /* UI Properties */
+      background: url(/assets/img/google-play-badge.png) 0% 0% no-repeat padding-box;
+      opacity: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      background-color: transparent;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #333;
+    }
+
+    .logox-img {
+      width: 174px;
+      height: 40px;
+    }
+
+    .nav-links a {
+      margin: 0 12px;
+      color: #555;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn-primary {
+      background: #008080;
+      color: #fff;
+      padding: 8px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .form {
+      position: relative;
+    }
+    .child-right {
+      position: relative;
+      right: 120px;
+    }
+    .trust-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f8f8f8;
+      border-radius: 20px;
+    }
+    .trust-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 350px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 0.8rem;
+      justify-content: space-between;
+      /* UI Properties */
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      opacity: 1;
+    }
+    .trust-item img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .trust-item span {
+      font-weight: bold;
+      color: #222;
+      text-align: left;
+    }
+    .trust-item small {
+      font-weight: normal;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .magazine-santé {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      align-items: center;
+      border-radius: 20px;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+      margin-top: 25px;
+      background-position: center center;
+      border-radius: 40px;
+      opacity: 1;
+      background-color: white;
+    }
+
+    .bloc-left {
+      position: relative;
+      left: 80px;
+    }
+
+    .bloc-right {
+      position: relative;
+      right: 80px;
+    }
+
+    .description-site-left h1 {
+
+      width: 490px;
+      height: 144px;
+      /* UI Properties */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-000000);
+      text-align: left;
+      font: normal normal bold 40px/48px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
+
+    .description-site-left p {
+
+      left: 195px;
+      /* height: 96px; */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 20px / 24px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .parcours-sante {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
+      align-items: center;
+      border-radius: 20px;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+      margin-top: 25px;
+      background-position: center center;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .title-parcours {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .parcours-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .bloc-left,
+    .bloc-right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 300px;
+    }
+
+    .directory-card {
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+      width: 360px;
+      height: 290px;
+      border: 1px solid #DDDDDD;
+      border-radius: 40px;
+      opacity: 0.7;
+    }
+
+    .section-global {
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 20px;
+      justify-content: center;
+      width: 95%;
+      align-items: center;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+      padding: 16px;
+    }
+
+    .bloc-parcours {
+      background: #f8f8f8;
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
+      text-align: center;
+
+    }
+
+    .cards-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 25px;
+      margin-left: 150px;
+      padding: 8px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+    }
+
+    .center-icon {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      background: #008d93;
+      width: 150px;
+      height: 150px;
+      padding: 26px;
+      border-radius: 50px;
+      right: 80px;
+    }
+
+    .heart-main {
+      width: 100px;
+      height: 100px;
+    }
+
+    .map {
+      display: flex;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      align-items: center;
+      gap: 40px;
+      margin-left: 45px;
+      width: 95%;
+    }
+
+    .description-site-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border-radius: 0.5rem;
+      width:auto
+    }
+
+    .description-site {
+      display: flex;
+      gap: 18px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .annuaire {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+      margin-top: 50px;
+    }
+
+    .description-site-left {
+      flex: 1 1 300px;
+      background-color: white;
+      padding: 8px;
+      border-radius: 0.5rem;
+      width: 450px;
+    }
+
+    .card.yellow {
+      background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
+      background-size: cover;
+      width: auto;
+      height: auto;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .card.blue {
+      background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
+      background-size: cover;
+      width: auto;
+      height: auto;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .magazine-santé-flex {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .card-img-top {
+      border-top-right-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .card-magazine {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+
+    }
+
+    footer p {
+      width: 400px;
+      height: 57px;
+      /* UI Properties */
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-707070);
+      text-align: left;
+      font: normal normal 300 16px/19px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
+
+    .img-logo-footer {
+      width: 60px;
+      height: 60px;
+    }
+
+    .img-store {
+      width: 150px;
+      height: 50px;
+    }
+  }
+  @media screen and (min-width:769px) and (max-width:1024px) {
     .child-left {
       position: relative;
       left: 120px;
 
     }
 
+    .description-site-center img {
+    max-width: 100%;
+    border-radius: 20px;
+    max-height: 70%;
+    border-radius: 20px;
+  }
     .google-play {
 
 
@@ -441,7 +853,6 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      width: 350px;
       text-align: center;
       padding: 10px;
       border-radius: 0.8rem;
@@ -497,12 +908,7 @@
 
     .description-site-left h1 {
 
-      width: 490px;
-      height: 144px;
-      /* UI Properties */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-000000);
+     
       text-align: left;
       font: normal normal bold 40px/48px Gotham Rounded;
       letter-spacing: 0px;
@@ -512,11 +918,7 @@
 
     .description-site-left p {
 
-      left: 195px;
-      /* height: 96px; */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-707070);
+      
       text-align: left;
       font: normal normal 300 20px / 24px Gotham Rounded;
       letter-spacing: 0px;
@@ -660,6 +1062,7 @@
       gap: 18px;
       border-radius: 20px;
       padding: 20px;
+      flex-wrap: wrap;
     }
 
     .annuaire {
@@ -671,18 +1074,17 @@
     }
 
     .description-site-left {
-      flex: 1 1 300px;
       background-color: white;
       padding: 8px;
       border-radius: 0.5rem;
-      width: 450px;
+      width: 300px;
     }
 
     .card.yellow {
       background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
       background-size: cover;
-      width: 544px;
-      height: 200px;
+      width: auto;
+      height: auto;
       border-radius: 40px;
       opacity: 1;
     }
@@ -690,8 +1092,8 @@
     .card.blue {
       background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
       background-size: cover;
-      width: 544px;
-      height: 200px;
+      width: auto;
+      height: auto;
       border-radius: 40px;
       opacity: 1;
     }
@@ -742,7 +1144,12 @@
       width: 60px;
       height: 60px;
     }
-
+    .description-site-right {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
     .img-store {
       width: 150px;
       height: 50px;
@@ -820,7 +1227,6 @@
       background: #333;
     }
 
-    .logo {}
 
     .logox-img {
       width: 174px;
@@ -1151,7 +1557,12 @@
       border-radius: 40px;
       opacity: 1;
     }
-
+    .description-site-right {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
     .annuaire {
       display: flex;
       flex-direction: column;
@@ -1209,19 +1620,8 @@
 
 
 
-  .description-site-center img {
-    max-width: 100%;
-    border-radius: 20px;
-    width: 400px;
-    height: 450px;
-  }
 
-  .description-site-right {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+ 
 
 
 
@@ -1561,8 +1961,7 @@
       <a href="#" class="btn btn-primary">Se connecter</a>
     </div>
   </header>
-
-  <main class="description-site">
+ <main class="description-site">
     <section class="description-site-left">
       <h1>Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
       <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
@@ -1611,7 +2010,7 @@
         </button>
       </div>
     </section>
-  </main>
+  </main> 
   <div class="parcours-sante">
     <span class="title-parcours">Le parcours de santé Siladoc :</span>
 
@@ -1865,7 +2264,7 @@
 
   <!-- Fin Accordion-->
   <!-- Notre magazine de santé -->
-  <!-- <section class="magazine-santé">
+ <!-- <section class="magazine-santé">
     <div class="magazine-santé-flex">
       <span class="title-parcours">Notre magazine de santé</span>
       <button class="icon-button" style="    background: transparent;
@@ -1916,7 +2315,7 @@ bottom: 8px;">
       </div>
     </div>
     
-  </section> -->
+  </section>  -->
 
 
   <!-- Footer -->
