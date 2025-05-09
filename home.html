@@ -31,6 +31,10 @@
       background-color: #f8f8f8;
       border-radius: 20px;
     }
+    .description-site-priemre {
+      display: flex;background-color: white;
+      
+    }
   .description-site-right {
     flex: 1 1 300px;
     display: flex;
@@ -217,12 +221,7 @@
     }
 
     .description-site-center {
-      flex: 1 1 250px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      border-radius: 0.5rem;
+  
     }
 
     .description-site-left {
@@ -358,6 +357,10 @@
       left: 120px;
 
     }
+    .description-site-priemre {
+      display: flex;background-color: white;
+      
+    }
     .description-site-center img {
     max-width: 100%;
     border-radius: 20px;
@@ -370,10 +373,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
+    left: 50px;
+
   }
     .google-play {
-
-
       /* UI Properties */
       background: url(/assets/img/google-play-badge.png) 0% 0% no-repeat padding-box;
       opacity: 1;
@@ -651,12 +655,7 @@
     }
 
     .description-site-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      border-radius: 0.5rem;
-      width:auto
+   
     }
 
     .description-site {
@@ -741,7 +740,10 @@
       color: #707070;
       opacity: 1;
     }
-
+    .description-site-priemre {
+      display: flex;background-color: white; height: 500px;
+      
+    }
     .img-logo-footer {
       width: 60px;
       height: 60px;
@@ -758,12 +760,16 @@
       left: 120px;
 
     }
-
-    .description-site-center img {
+    .description-site-priemre {
+      display: flex;background-color: white;
+      
+    }
+    .description-site-center {
     max-width: 100%;
     border-radius: 20px;
-    max-height: 70%;
-    border-radius: 20px;
+    width: 75%;
+    position: relative;
+    right: 50px;
   }
     .google-play {
 
@@ -1048,21 +1054,13 @@
       width: 95%;
     }
 
-    .description-site-center {
-      flex: 1 1 250px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      border-radius: 0.5rem
-    }
+
 
     .description-site {
       display: flex;
       gap: 18px;
       border-radius: 20px;
       padding: 20px;
-      flex-wrap: wrap;
     }
 
     .annuaire {
@@ -1149,6 +1147,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    left:50px;
+    position: relative;
   }
     .img-store {
       width: 150px;
@@ -1164,7 +1164,10 @@
       flex-direction: row;
       width: 50px !important;
     }
-
+    .description-site-priemre {
+      display: flex;background-color: white;
+      
+    }
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -1462,12 +1465,7 @@
     }
 
     .description-site-center {
-      flex: 1 1 250px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: white;
-      border-radius: 0.5rem;
+    
     }
 
     .description-site-left {
@@ -1962,6 +1960,7 @@
     </div>
   </header>
  <main class="description-site">
+   <div  class="description-site-priemre">
     <section class="description-site-left">
       <h1>Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
       <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
@@ -1988,9 +1987,8 @@
       </div>
     </section>
 
-    <section class="description-site-center">
-      <img src="assets/img/siladoc01.png" alt="Médecin">
-    </section>
+      <img class="description-site-center" src="assets/img/siladoc01.png" alt="Médecin">
+   </div>
 
     <section class="description-site-right">
       <div class="card yellow">
