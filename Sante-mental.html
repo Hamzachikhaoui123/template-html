@@ -336,15 +336,14 @@
       padding-left: 20px;
       font-family: sans-serif;
       align-items: center;
-      border-radius: 20px;
+      border-radius: 40px;
       gap: 40px;
       margin-left: 45px;
       width: 95%;
       margin-top: 25px;
       background-position: center center;
-      border-radius: 40px;
       opacity: 1;
-      background-color: #fffbe6;
+      background-color: #F8F4D0;
     }
 
     .bloc-left {
@@ -1286,13 +1285,15 @@
   .badge {
     background: #fff;
     padding: 16px;
-    max-width: 200px;
-    border-radius: 12px;
+    width: 200px;
+    height: 200px;
+    border-radius: 40px;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   }
   .badge img {
-    max-width: 80px;
+    height: 70px;
+    width: auto;
     margin-bottom: 8px;
   }
   .badge p {
@@ -1302,23 +1303,29 @@
   }
   .hero-image {
     position: relative;
-    width: 100%;
-    border-radius: 0 16px 16px 0;
-
+    width: 835px;
+    height: 776px;
+    padding-bottom: 100%;
+    overflow: hidden;
+    border-radius: 40px;
   }
   .header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
   }
   .phone-frame {
     position: absolute;
     top: 50%;
-    left: 6%;
-    transform: translate(-50%, -50%);
-    width: 300px;
+    transform: translate(-65%, -50%);
+    width: 359px;
+    height: 684px;
   }
   .phone-img {
-    width: 75%;
+    width: 100%;
     display: block;
   }
 
@@ -1444,18 +1451,19 @@
       <div class="badges">
         <div class="badge">
           <h3 class="">Confidentialité</h3>
+          <p class=""><small>Conformité avec les normes</small></p>
           <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo">
-          <p class=""><small>Conformité avec les normes de protection des données.</small></p>
         </div>
         <div class="badge">
           <h3>Données sécurisées</h3>
           <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo">
-          <p class=""><small>Sécurité des informations garantie.</small></p>
         </div>
       </div>
     </div>
+    <div style="position: relative">
     <div class="hero-image">
       <img src="assets/img/Sante Mentale/psy header.jpg" alt="Famille allongée" class="header-img">
+    </div>
       <div class="phone-frame">
         <img src="assets/img/Sante Mentale/psy ad.png" alt="Consultation vidéo" class="phone-img">
       </div>
