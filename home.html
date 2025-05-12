@@ -17,6 +17,7 @@
   <!-- <link rel="stylesheet" href="./assets/css/data-table.css"> -->
   <link rel="stylesheet" href="./assets/css/tab-view.css">
   <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
+   <link rel="stylesheet" href="./assets/css/grid.css">
 
   <title>Document</title>
 </head>
@@ -183,7 +184,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
       font-size: 0.95rem;
       text-align: left;
-      width: 180px;
+      width: 150px;
       height: 100px;
 
     }
@@ -788,14 +789,16 @@
     }
     .description-site-priemre {
       display: flex;background-color: white;
+      height: 600px;
+      width: 70%;
       
     }
     .description-site-center {
     max-width: 100%;
     border-radius: 20px;
-    width: 75%;
+    width: 50%;
     position: relative;
-    right: 50px;
+    left: 50px;
   }
     .google-play {
 
@@ -956,6 +959,7 @@
       letter-spacing: 0px;
       color: #707070;
       opacity: 1;
+      margin-top: 100px;
     }
 
     .parcours-sante {
@@ -1216,13 +1220,6 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
-  }
-  .title-card{
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 20px;
-    width: 200px;
   }
   
   .grid-siladoc {
@@ -1610,6 +1607,7 @@
       flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
+      gap: 25px
     }
 
     .card.blue {
@@ -2021,7 +2019,7 @@
         <a href="./inscription.html">Inscrivez-vous</a>
         <a href="#">Nous Contacter</a>
       </nav>
-      <a href="#" class="btn btn-primary">Se connecter</a>
+      <a href="./login.html" class="btn btn-primary">Se connecter</a>
     </div>
   </header>
  <main class="description-site">
@@ -2065,7 +2063,7 @@
         </button>
       </div>
       <div class="card blue">
-        <h2 class="title-card">Digitaliser votre cabinet médical</h2>
+        <h2 class="title-card" >Digitaliser votre cabinet médical</h2>
         <p class="style-paragraphe-description">Planification de rendez-vous, partage de documents, interface intuitive.
         </p>
         <button class="icon-button">

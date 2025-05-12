@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,216 @@
     <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
     <link rel="stylesheet" href="./assets/css/grid.css">
 </head>
+<style>
+    @media (min-width: 300px) and (max-width: 767px) {
+
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row input[type="password"],
+        .form-row input[type="tel"],
+        .form-row input[type="date"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            border: 1px solid #DDDDDD;
+            border-radius: 10px;
+            width: 150px;
+        }
+
+        .container-fluid {
+            background-color: white;
+            padding: 15px;
+            height: 350px;
+            align-content: center;
+        }
+
+        .form-controle-login {
+            position: relative;
+        }
+
+        .title-style {
+            position: relative;
+            top: 50%;
+            font-size: 2rem
+        }
+
+        .submit-inscription {
+            background: #c3c3c3;
+            color: #fff;
+            padding: 8px 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .style-button {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-left: 25%;
+            flex-direction: column;
+        }
+
+        .btn-primary-login {
+            display: flex;
+            background: #008080;
+            color: #fff;
+            padding: 8px 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            width: 150px;
+            align-content: center;
+            justify-content: center;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 769px) {
+
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row input[type="password"],
+        .form-row input[type="tel"],
+        .form-row input[type="date"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            border: 1px solid #DDDDDD;
+            border-radius: 10px;
+            width: 50px;
+        }
+
+        .submit-inscription {
+            background: #c3c3c3;
+            color: #fff;
+            padding: 8px 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .style-button {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-left: 25%;
+        }
+
+        .btn-primary-login {
+            display: flex;
+            background: #008080;
+            color: #fff;
+            padding: 8px 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            width: 150px;
+            align-content: center;
+            justify-content: center;
+        }
+
+        .container-fluid {
+            background-color: white;
+            width: 50%;
+            padding: 15px;
+            height: 350px;
+            align-content: center;
+        }
+
+        .form-controle-login {
+            position: relative;
+        }
+
+        .title-style {
+            position: relative;
+            top: 50%;
+            left: 28%;
+            ;
+            font-size: 2rem
+        }
+    }
+
+    @media (min-width: 770px) {
+
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row input[type="password"],
+        .form-row input[type="tel"],
+        .form-row input[type="date"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            border: 1px solid #DDDDDD;
+            border-radius: 10px;
+        }
+
+        .form-controle-login {
+            position: relative;
+        }
+
+        .title-style {
+            position: relative;
+            top: 50%;
+            left: 35%;
+            ;
+            font-size: 2rem
+        }
+
+        .container-fluid {
+            background-color: white;
+            width: 35%;
+            padding: 15px;
+            height: 350px;
+            align-content: center;
+        }
+.Oublie-mot-passe{
+    margin-left: 45%;
+    
+}
+        .submit-inscription {
+            background: #c3c3c3;
+            color: #fff;
+            padding: 8px 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .style-button {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-left: 25%;
+            margin-bottom: 50px;
+        }
+
+        .btn-primary-login {
+            display: flex;
+            background: #008080;
+            color: #fff;
+            padding: 8px 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            width: 150px;
+            align-content: center;
+            justify-content: center;
+        }
+    }
+</style>
+
 <body>
     <header class="navbar">
         <div class="container">
@@ -35,12 +246,37 @@
                 <a href="./inscription.html">Inscrivez-vous</a>
                 <a href="#">Nous Contacter</a>
             </nav>
-            <a href="#" class="btn btn-primary">Se connecter</a>
+            <a href="./login.html" class="btn btn-primary">Se connecter</a>
         </div>
     </header>
     <div class="container-fluid">
+        <div class="contbox">
+            <h1 class="title-style">Se Connecté</h1>
+        </div>
+
+        <form class="form-controle-login">
+
+
+
+            <div class="form-row">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Mot de Passe :</label>
+                <input type="password" id="email" name="email" required>
+            </div>
+            <div class="style-button">
+                <a type="submit" class="btn-primary-login">Se Connecter</a>
+                <a type="submit" class="submit-inscription">Inscription</a>
+
+            </div>
+            <a href="http://" class="Oublie-mot-passe">Oublie Mot de Passe ?</a>
+
+        </form>
     </div>
-    <footer>
+    <!-- <footer>
         <img src="./assets/img/logo-footer.png" class="img-logo-footer" alt="">
         <p>
           Adresse : Ghazala Centre, Cité ghazala, ARIANA, TUNISIE Tel : +216 23124828 Email : contact@5pservices.net
@@ -50,6 +286,7 @@
           <img src="./assets/img/App_Store_Badge.png" style="width: 150px;height: 50px;">
         </div>
     
-      </footer>
+      </footer> -->
 </body>
+
 </html>
