@@ -17,7 +17,7 @@
   <!-- <link rel="stylesheet" href="./assets/css/data-table.css"> -->
   <link rel="stylesheet" href="./assets/css/tab-view.css">
   <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
-   <link rel="stylesheet" href="./assets/css/grid.css">
+  <link rel="stylesheet" href="./assets/css/grid.css">
 
   <title>Document</title>
 </head>
@@ -31,26 +31,73 @@
       background-color: #f8f8f8;
       border-radius: 20px;
     }
-    .card-header h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.3;
-    font-family: "Gotham Rounded Bold";
-  }
-    .container-siladoc{
+
+    .carousel {
+      width: 100%;
+      max-width: 400px;
+      overflow: hidden;
+      margin: auto;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .card-magazine {
       display: none;
     }
-    .description-site-priemre {
-      display: flex;background-color: white;
-      
+
+    .card-doctor {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      height: 500px;
     }
-  .description-site-right {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: rox;
-    gap: 20px;
-    justify-content: space-between;
-  }
+
+    .card-doctor.visible {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 1;
+    }
+
+    .card-doctor.hidden-left {
+      opacity: 0;
+      transform: translateX(-100%);
+      z-index: 0;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      font-family: "Gotham Rounded Bold";
+    }
+
+    .container-siladoc {
+      display: none;
+    }
+
+    .description-site-priemre {
+      display: flex;
+      background-color: white;
+      border-radius: 40px;
+
+    }
+
+    .description-site-right {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: rox;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -229,9 +276,7 @@
       opacity: 1;
     }
 
-    .description-site-center {
-  
-    }
+
 
     .description-site-left {
       flex: 1 1 300px;
@@ -360,41 +405,53 @@
       justify-content: space-between;
     }
   }
-  @media screen and (min-width:1025px)  {
+
+  @media screen and (min-width:1025px) {
     .child-left {
       position: relative;
       left: 120px;
 
     }
-    .card-header h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.3;
-    font-family: "Gotham Rounded Bold";
-  }
-    .container-siladoc{
+
+    .carousel {
       display: none;
     }
-    .description-site-priemre {
-      display: flex;background-color: white;
-      
-    }
-    .description-site-center img {
-    max-width: 100%;
-    border-radius: 20px;
-    max-height: 70%;
-    width: 320px;
-    height: 500px;
-  }
-    .description-site-right {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    left: 50px;
 
-  }
+    .card-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      font-family: "Gotham Rounded Bold";
+    }
+
+    .container-siladoc {
+      display: none;
+    }
+
+    .description-site-priemre {
+      display: flex;
+      background-color: white;
+      border-radius: 40px;
+
+    }
+
+    .description-site-center img {
+      max-width: 100%;
+      border-radius: 20px;
+      max-height: 70%;
+      width: 320px;
+      height: 500px;
+    }
+
+    .description-site-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      left: 50px;
+      width: 40%;
+    }
+
     .google-play {
       /* UI Properties */
       background: url(/assets/img/google-play-badge.png) 0% 0% no-repeat padding-box;
@@ -443,6 +500,11 @@
       font-size: 0.9rem;
     }
 
+    .nav-links {
+      position: relative;
+      left: 23%;
+    }
+
     .btn-primary {
       background: #008080;
       color: #fff;
@@ -451,13 +513,16 @@
       text-decoration: none;
       font-size: 0.9rem;
     }
+
     .form {
       position: relative;
     }
+
     .child-right {
       position: relative;
       right: 120px;
     }
+
     .trust-section {
       display: flex;
       justify-content: space-around;
@@ -467,6 +532,7 @@
       background-color: #f8f8f8;
       border-radius: 20px;
     }
+
     .trust-item {
       display: flex;
       flex-direction: row;
@@ -480,16 +546,19 @@
       background: #FFFFFF 0% 0% no-repeat padding-box;
       opacity: 1;
     }
+
     .trust-item img {
       width: 100px;
       height: auto;
       margin-bottom: 10px;
     }
+
     .trust-item span {
       font-weight: bold;
       color: #222;
       text-align: left;
     }
+
     .trust-item small {
       font-weight: normal;
       font-size: 0.9em;
@@ -672,9 +741,7 @@
       width: 95%;
     }
 
-    .description-site-center {
-   
-    }
+    .description-site-center {}
 
     .description-site {
       display: flex;
@@ -758,10 +825,15 @@
       color: #707070;
       opacity: 1;
     }
+
     .description-site-priemre {
-      display: flex;background-color: white; height: 500px;
-      
+      display: flex;
+      background-color: white;
+      height: 500px;
+      border-radius: 40px;
+
     }
+
     .img-logo-footer {
       width: 60px;
       height: 60px;
@@ -771,35 +843,62 @@
       width: 150px;
       height: 50px;
     }
+
+    .p-card {
+      width: 190px;
+      height: 95px;
+
+      text-align: left;
+      font: normal normal 300 16px/20px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #707070;
+      opacity: 1;
+    }
   }
+
   @media screen and (min-width:769px) and (max-width:1024px) {
     .child-left {
       position: relative;
       left: 120px;
 
     }
-    .card-header h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.3;
-    font-family: "Gotham Rounded Bold";
-  }
-    .container-siladoc{
+
+    .nav-links {
+      position: relative;
+      left: 20%;
+    }
+
+    .carousel {
       display: none;
     }
-    .description-site-priemre {
-      display: flex;background-color: white;
-      height: 600px;
-      width: 70%;
-      
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      font-family: "Gotham Rounded Bold";
     }
+
+    .container-siladoc {
+      display: none;
+    }
+
+    .description-site-priemre {
+      display: flex;
+      background-color: white;
+      width: 70%;
+      border-radius: 40px;
+
+    }
+
     .description-site-center {
-    max-width: 100%;
-    border-radius: 20px;
-    width: 50%;
-    position: relative;
-    left: 50px;
-  }
+      max-width: 100%;
+      border-radius: 20px;
+      width: 50%;
+      position: relative;
+      left: 50px;
+    }
+
     .google-play {
 
 
@@ -858,22 +957,13 @@
       text-decoration: none;
       font-size: 0.9rem;
     }
-
-
-
-
-
     .form {
       position: relative;
-
     }
-
     .child-right {
       position: relative;
       right: 120px;
-
     }
-
     .trust-section {
       display: flex;
       justify-content: space-around;
@@ -883,7 +973,6 @@
       background-color: #f8f8f8;
       border-radius: 20px;
     }
-
     .trust-item {
       display: flex;
       flex-direction: row;
@@ -943,7 +1032,7 @@
 
     .description-site-left h1 {
 
-     
+
       text-align: left;
       font: normal normal bold 40px/48px Gotham Rounded;
       letter-spacing: 0px;
@@ -953,7 +1042,7 @@
 
     .description-site-left p {
 
-      
+
       text-align: left;
       font: normal normal 300 20px / 24px Gotham Rounded;
       letter-spacing: 0px;
@@ -1046,7 +1135,7 @@
       flex-direction: row;
       align-items: center;
       gap: 25px;
-      margin-left: 150px;
+      margin-left: 100px;
       padding: 8px;
       margin-top: 20px;
       margin-bottom: 20px;
@@ -1172,19 +1261,22 @@
       width: 60px;
       height: 60px;
     }
+
     .description-site-right {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    left:50px;
-    position: relative;
-  }
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      left: 50px;
+      position: relative;
+    }
+
     .img-store {
       width: 150px;
       height: 50px;
     }
   }
+
   @media screen and (min-width: 320px) and (max-width: 766px) {
     .parcours-content {
       display: flex;
@@ -1194,49 +1286,54 @@
       flex-direction: row;
       width: 50px !important;
     }
+
     .description-site-priemre {
-      display: flex;background-color: white;
-      
+      display: flex;
+      background-color: white;
+      border-radius: 40px;
     }
-    .icon-button{
+
+    .icon-button {
       display: none;
     }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
     }
+
     .container-siladoc {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .grid-siladoc {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-  
-  .card-siladoc {
-    background-color: #f3f3f3;
-    border-radius: 12px;
-    padding: 12px;
-    font-size: 14px;
-    text-align: center;
-    box-shadow: inset 0 0 3px rgba(0,0,0,0.05);
-  }
-  
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .grid-siladoc {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .card-siladoc {
+      background-color: #f3f3f3;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 14px;
+      text-align: center;
+      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
+    }
+
     footer {
       display: flex;
       justify-content: center;
@@ -1266,6 +1363,41 @@
     .img-store {
       width: 150px;
       height: 50px;
+    }
+
+    .carousel {
+      width: 100%;
+      max-width: 400px;
+      overflow: hidden;
+      margin: auto;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .card-doctor {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card-doctor.visible {
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 1;
+    }
+
+    .card-doctor.hidden-left {
+      opacity: 0;
+      transform: translateX(-100%);
+      z-index: 0;
     }
 
     .navbar .container {
@@ -1349,7 +1481,7 @@
     }
 
     .card-magazine {
-      display: flex;
+      display: none;
       flex-direction: row;
       justify-content: center;
       gap: 15px;
@@ -1527,9 +1659,6 @@
       opacity: 1;
     }
 
-    .description-site-center {
-    
-    }
 
     .description-site-left {
       flex: 1 1 300px;
@@ -1557,20 +1686,13 @@
     .directory-card {
       background-size: cover;
       background-position: center;
-      overflow: hidden;
       position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
-      width: 160px;
+      width: 40%;
       border: 1px solid #DDDDDD;
       border-radius: 0.5rem;
       opacity: 0.7;
       height: 100px;
       margin-left: 15px;
-
     }
 
     .search-bar input {
@@ -1606,8 +1728,8 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      gap: 25px;
       flex-wrap: wrap;
-      gap: 25px
     }
 
     .card.blue {
@@ -1618,22 +1740,30 @@
       border-radius: 40px;
       opacity: 1;
     }
+
     .description-site-right {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .annuaire {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
+
+    .title-card {
+      text-align: left;
+      width: 45%;
+    }
+
     .card-header h3 {
-    margin: 0;
-    font-size: 1rem;
-    font-family: "Gotham Rounded Bold";
-  }
+      margin: 0;
+      font-size: 1rem;
+      font-family: "Gotham Rounded Bold";
+    }
   }
 
 
@@ -1674,6 +1804,7 @@
     line-height: 1.8;
     font-size: 15px;
   }
+
   .btn-link {
     width: 50px;
     height: 50px;
@@ -1684,20 +1815,9 @@
     position: relative;
   }
 
-
-
-
- 
-
-
-
   .style-paragraphe-description {
     width: 150px;
   }
-
-
-
-
 
   .directory-card:hover {
     transform: translateY(-5px);
@@ -1760,29 +1880,23 @@
     cursor: pointer;
     position: relative;
   }
-
   svg {
     overflow: visible;
     width: 100px;
   }
-
   path {
     stroke-dashoffset: 0;
     stroke-dasharray: 1550;
     transform-origin: center;
   }
-
   .heart-main:hover path {
     animation: stroke-animation 2s ease-in-out forwards;
     animation-fill-mode: forwards;
   }
-
-
   .heart-main:hover~.text {
     animation: fadeInText 2s ease-in-out forwards;
     animation-delay: 2s;
   }
-
   @keyframes stroke-animation {
     0% {
       stroke-dashoffset: 0;
@@ -1808,7 +1922,6 @@
       fill: none;
     }
   }
-
   @keyframes fadeInText {
     0% {
       opacity: 0;
@@ -1820,16 +1933,12 @@
       transform: translateY(0);
     }
   }
-
   /* Responsive */
-
-
   /* Accordion style  */
   .accordion-label,
   .accordion-content {
     padding: 5px 10px;
   }
-
   label {
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -1839,7 +1948,6 @@
 
 
   }
-
   label:hover {
     background-color: rgba(0, 0, 0, 0.1);
     display: block;
@@ -1848,7 +1956,6 @@
     cursor: pointer;
     position: relative;
   }
-
   .accordion-label:after {
     font-size: 13px;
     color: #777;
@@ -1856,18 +1963,15 @@
     margin-left: 5px;
     position: relative;
   }
-
   .active:after {
     content: "\2796";
   }
-
   .accordion-content {
     background: white;
     line-height: 1.6;
     font-size: 0.85em;
     margin-bottom: 5px;
   }
-
   .accordion {
     max-width: 100%;
     border-radius: 15px;
@@ -1876,8 +1980,6 @@
     margin-bottom: 5px;
 
   }
-
-
   .col-header-icon {
     padding-top: 15px;
     opacity: 0.65;
@@ -1887,22 +1989,17 @@
     font-weight: bold;
     position: relative;
   }
-
   .col-header {
     flex-direction: row;
     opacity: 0.65;
     color: rgb(0, 0, 0);
     font-weight: bold;
   }
-
-
   .section-accordion {
     padding: 15px;
     height: 400px;
 
   }
-
-
 
   .accordion .accordion-content {
     background-color: white;
@@ -1965,6 +2062,20 @@
 
     }
 
+    .title-card {
+      text-align: left;
+      width: 298px;
+      height: 68px;
+      /* UI Properties */
+      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-28)/var(--unnamed-line-spacing-34) var(--unnamed-font-family-gotham-rounded);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      color: var(--unnamed-color-000000);
+      text-align: left;
+      font: normal normal bold 28px/34px Gotham Rounded;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+    }
 
   }
 
@@ -1977,7 +2088,6 @@
       padding-top: 15px;
 
     }
-
 
   }
 
@@ -2022,36 +2132,39 @@
       <a href="./login.html" class="btn btn-primary">Se connecter</a>
     </div>
   </header>
- <main class="description-site">
-   <div  class="description-site-priemre">
-    <section class="description-site-left">
-      <h1>Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
-      <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
-        côté de chez vous.</p>
+  <main class="description-site">
+    <div class="description-site-priemre">
+      <section class="description-site-left">
+        <h1>Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
+        <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
+          côté de chez vous.</p>
         <div style="display: flex;justify-content: flex-start;margin-left: 25px;">
           <img src="./assets/img/doctor-13.jpg" alt="" style="width: 50px;height: 40px;border-radius: 0.5rem;">
           <img src="./assets/img/doctor-13.jpg" alt="" style="width: 50px;height: 40px;border-radius: 0.5rem;">
-          <img src="./assets/img/doctor-13.jpg" alt="" style="width: 50px;height: 40px;border-radius: 0.5rem;text-align: center;display: flex;">
+          <img src="./assets/img/doctor-13.jpg" alt=""
+            style="width: 50px;height: 40px;border-radius: 0.5rem;text-align: center;display: flex;">
 
           <img src="./assets/img/doctor-13.jpg" alt="" style="width: 50px;height: 40px;border-radius: 0.5rem;">
-          <div style="width: 50px;height: 40px;border-radius: 0.5rem;background-color: wheat;text-align: center;display: flex;justify-content: center;"><span>...</span></div>
+          <div
+            style="width: 50px;height: 40px;border-radius: 0.5rem;background-color: wheat;text-align: center;display: flex;justify-content: center;">
+            <span>...</span></div>
         </div>
-          <div class="form">
-        <input type="text" style="padding: 8px;
+        <div class="form">
+          <input type="text" style="padding: 8px;
       border-radius: 6px;
       border: 1px solid #ccc;width: 100%;margin-bottom: 15px;margin-top: 25px;" placeholder="Choisir une spécialité">
 
-        <div class="search-bar">
-          <input type="text" placeholder="Tunis">
-          <input type="text" placeholder="Tunis">
+          <div class="search-bar">
+            <input type="text" placeholder="Tunis">
+            <input type="text" placeholder="Tunis">
 
-          <button>Rechercher</button>
+            <button>Rechercher</button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <img class="description-site-center" src="assets/img/siladoc01.png" alt="Médecin">
-   </div>
+    </div>
 
     <section class="description-site-right">
       <div class="card yellow">
@@ -2063,7 +2176,7 @@
         </button>
       </div>
       <div class="card blue">
-        <h2 class="title-card" >Digitaliser votre cabinet médical</h2>
+        <h2 class="title-card">Digitaliser votre cabinet médical</h2>
         <p class="style-paragraphe-description">Planification de rendez-vous, partage de documents, interface intuitive.
         </p>
         <button class="icon-button">
@@ -2071,7 +2184,7 @@
         </button>
       </div>
     </section>
-  </main> 
+  </main>
   <div class="parcours-sante">
     <span class="title-parcours">Le parcours de santé Siladoc :</span>
 
@@ -2336,7 +2449,7 @@
 
   <!-- Fin Accordion-->
   <!-- Notre magazine de santé -->
- <!-- <section class="magazine-santé">
+  <section class="magazine-santé">
     <div class="magazine-santé-flex">
       <span class="title-parcours">Notre magazine de santé</span>
       <button class="icon-button" style="    background: transparent;
@@ -2347,15 +2460,17 @@ bottom: 8px;">
         <i class="feather-chevron-right"></i>
       </button>
     </div>
-    
+
     <div class="card-magazine">
       <div class="card" style="width: 300px;
 ;padding: 0%;">
         <img src="/assets/img/01.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
         <div class="card-body">
           <p class="card-text">La prise de rendez-vous en ligne via SILADOC.</p>
-          <p>Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="p-card">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+          <button class="icon-button">
+            <i class="feather-chevron-right"></i>
+          </button>
         </div>
       </div>
       <div class="card" style="width: 300px;
@@ -2364,7 +2479,11 @@ bottom: 8px;">
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
             content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="p-card">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+
+          <button class="icon-button">
+            <i class="feather-chevron-right"></i>
+          </button>
         </div>
       </div>
       <div class="card" style="width: 300px;
@@ -2373,7 +2492,12 @@ bottom: 8px;">
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
             content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+            
+          <p class="p-card">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+
+          <button class="icon-button">
+            <i class="feather-chevron-right"></i>
+          </button>
         </div>
       </div>
       <div class="card" style="width: 300px;
@@ -2382,12 +2506,55 @@ bottom: 8px;">
         <div class="card-body">
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
             content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div style="display: flex;flex-direction: row;justify-content: flex-start;">
+            <p class="p-card">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+
+            <button class="icon-button" style="position: relative;left: 0px;top: 20px;">
+              <i class="feather-chevron-right"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-    
-  </section>  -->
+    <div class="carousel">
+      <div class="carousel-track">
+
+        <div class="card-doctor">
+          <img src="/assets/img/01.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
+          <div class="card-body">
+            <p class="card-text">La prise de rendez-vous en ligne via SILADOC.</p>
+            <p>Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card-doctor">
+          <img src="/assets/img/02.jpeg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card-doctor">
+          <img src="/assets/img/03.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card-doctor">
+          <img src="/assets/img/04.jpg" class="card-img-top card-header" style="padding: 0%;height: 50%;" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
 
   <!-- Footer -->
@@ -2403,6 +2570,20 @@ bottom: 8px;">
 
   </footer>
   <!--  -->
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.card-doctor');
+    let index = 0;
+
+    function slideToNext() {
+      index = (index + 1) % cards.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      setTimeout(slideToNext, 3000);
+    }
+
+    setTimeout(slideToNext, 3000);
+  </script>
+
   <script src="assets/js/accordion.js"></script>
   <script>
     var navItems = document.querySelectorAll(".mobile-bottom-nav__item");

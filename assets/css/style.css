@@ -1402,39 +1402,8 @@ body {
     background: #e5e5e5;
   }
   @media screen and (min-width: 767px) and (max-width: 768px) {
-    .trust-section {
-      display: flex;
-      justify-content: space-around;
-      gap: 20px;
-      padding: 40px 20px;
-      background-color: #f8f8f8;
-      border-radius: 20px;
-    }
 
-    .card-header h3 {
-      margin: 0;
-      font-size: 1.1rem;
-      line-height: 1.3;
-      font-family: "Gotham Rounded Bold";
-    }
-
-    .container-siladoc {
-      display: none;
-    }
-
-    .description-site-priemre {
-      display: flex;
-      background-color: white;
-
-    }
-
-    .description-site-right {
-      flex: 1 1 300px;
-      display: flex;
-      flex-direction: rox;
-      gap: 20px;
-      justify-content: space-between;
-    }
+ 
 
     .container {
       max-width: 1200px;
@@ -1488,226 +1457,8 @@ body {
       font-size: 0.9rem;
     }
 
-    .trust-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 350px;
-      text-align: center;
-      padding: 10px;
-      background-color: white;
-      border-radius: 0.5rem;
-      justify-content: space-between;
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      opacity: 1;
-    }
+ 
 
-    .trust-item img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .trust-item span {
-      font-weight: bold;
-      color: #222;
-      text-align: left;
-    }
-
-    .trust-item small {
-      font-weight: normal;
-      font-size: 0.9em;
-      color: #666;
-    }
-
-    .parcours-sante {
-      text-align: center;
-      padding: 40px 20px;
-      font-family: sans-serif;
-      background: #ffff;
-      align-items: center;
-      margin-left: 30px;
-      width: 95%;
-      margin-top: 25px;
-      border-radius: 40px;
-      opacity: 1;
-    }
-
-    .center-icon {
-
-      position: relative;
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      background: #008d93;
-      width: 150px;
-      height: 150px;
-      padding: 26px;
-      border-radius: 50px;
-    }
-
-    .title-parcours {
-      display: block;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 40px;
-    }
-
-
-    .bloc-left,
-    .bloc-right {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      max-width: 300px;
-    }
-
-    .bloc-parcours {
-      background: #f8f8f8;
-      padding: 15px 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      font-size: 0.95rem;
-      text-align: left;
-      width: 180px;
-      height: 100px;
-
-    }
-
-    .description-site {
-      flex-direction: row;
-      flex-wrap: wrap;
-      display: flex;
-      gap: 18px;
-      border-radius: 20px;
-      padding: 20px;
-    }
-
-    .form {
-      position: relative;
-    }
-
-    .description-site-left h1 {
-
-      /* UI Properties */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-000000);
-      text-align: left;
-      font: normal normal bold 40px/48px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #000000;
-      opacity: 1;
-    }
-
-    .description-site-left p {
-
-      left: 195px;
-      /* height: 96px; */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-707070);
-      text-align: left;
-      font: normal normal 300 20px / 24px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #707070;
-      opacity: 1;
-    }
-
-    .description-site-center {}
-
-    .description-site-left {
-      flex: 1 1 300px;
-      background-color: white;
-      padding: 10px;
-      border-radius: 0.5rem;
-    }
-
-    .search-bar {
-      flex-direction: column;
-    }
-
-    .search-bar input,
-    .search-bar button {
-      width: 100%;
-
-    }
-
-    .description-site-center img {
-      max-width: 70%;
-      border-radius: 20px;
-
-    }
-
-    .directory-card {
-
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
-      width: 360px;
-      border: 1px solid #DDDDDD;
-      border-radius: 40px;
-      opacity: 0.7;
-    }
-
-    .search-bar input {
-      flex: 1 1 0px;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    .card.yellow {
-      background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
-      background-size: cover;
-      width: auto;
-      height: auto;
-      border-radius: 40px;
-      opacity: 1;
-    }
-
-    .parcours-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .map {
-      display: flex;
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      align-items: center;
-      gap: 40px;
-      margin: 8px;
-      width: 95%;
-      height: auto;
-      flex-direction: column;
-    }
-
-    .cards-row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 25px
-    }
-
-    .card.blue {
-      background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
-      background-size: cover;
-      width: auto;
-      height: auto;
-      border-radius: 40px;
-      opacity: 1;
-    }
 
     footer {
       display: flex;
@@ -1737,54 +1488,14 @@ body {
       height: 50px;
     }
 
-    .annuaire {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+   
   }
 
   @media screen and (min-width:1025px) {
-    .child-left {
-      position: relative;
-      left: 120px;
+ 
 
-    }
 
-    .card-header h3 {
-      margin: 0;
-      font-size: 1.1rem;
-      line-height: 1.3;
-      font-family: "Gotham Rounded Bold";
-    }
 
-    .container-siladoc {
-      display: none;
-    }
-
-    .description-site-priemre {
-      display: flex;
-      background-color: white;
-
-    }
-
-    .description-site-center img {
-      max-width: 100%;
-      border-radius: 20px;
-      max-height: 70%;
-      width: 320px;
-      height: 500px;
-    }
-
-    .description-site-right {
-      flex: 1 1 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      position: relative;
-      left: 50px;
-
-    }
 
     .google-play {
       /* UI Properties */
@@ -1833,7 +1544,10 @@ body {
       text-decoration: none;
       font-size: 0.9rem;
     }
-
+.nav-links{
+  position: relative;
+  left: 23%;
+}
     .btn-primary {
       background: #008080;
       color: #fff;
@@ -1843,305 +1557,7 @@ body {
       font-size: 0.9rem;
     }
 
-    .form {
-      position: relative;
-    }
-
-    .child-right {
-      position: relative;
-      right: 120px;
-    }
-
-    .trust-section {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 40px 20px;
-      background-color: #f8f8f8;
-      border-radius: 20px;
-    }
-
-    .trust-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 350px;
-      text-align: center;
-      padding: 10px;
-      border-radius: 0.8rem;
-      justify-content: space-between;
-      /* UI Properties */
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      opacity: 1;
-    }
-
-    .trust-item img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .trust-item span {
-      font-weight: bold;
-      color: #222;
-      text-align: left;
-    }
-
-    .trust-item small {
-      font-weight: normal;
-      font-size: 0.9em;
-      color: #666;
-    }
-
-    .magazine-santé {
-      text-align: center;
-      padding: 40px 20px;
-      font-family: sans-serif;
-      align-items: center;
-      border-radius: 20px;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-      margin-top: 25px;
-      background-position: center center;
-      border-radius: 40px;
-      opacity: 1;
-      background-color: white;
-    }
-
-    .bloc-left {
-      position: relative;
-      left: 80px;
-    }
-
-    .bloc-right {
-      position: relative;
-      right: 80px;
-    }
-
-    .description-site-left h1 {
-
-      width: 490px;
-      height: 144px;
-      /* UI Properties */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-000000);
-      text-align: left;
-      font: normal normal bold 40px/48px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #000000;
-      opacity: 1;
-    }
-
-    .description-site-left p {
-
-      left: 195px;
-      /* height: 96px; */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-707070);
-      text-align: left;
-      font: normal normal 300 20px / 24px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #707070;
-      opacity: 1;
-    }
-
-    .parcours-sante {
-      text-align: center;
-      padding: 40px 20px;
-      font-family: sans-serif;
-      background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
-      align-items: center;
-      border-radius: 20px;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-      margin-top: 25px;
-      background-position: center center;
-      border-radius: 40px;
-      opacity: 1;
-    }
-
-    .title-parcours {
-      display: block;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 40px;
-    }
-
-    .parcours-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .bloc-left,
-    .bloc-right {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      max-width: 300px;
-    }
-
-    .directory-card {
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
-      width: 360px;
-      height: 290px;
-      border: 1px solid #DDDDDD;
-      border-radius: 40px;
-      opacity: 0.7;
-    }
-
-    .section-global {
-      display: flex;
-      background-color: #ffffff;
-      border-radius: 20px;
-      justify-content: center;
-      width: 95%;
-      align-items: center;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-      padding: 16px;
-    }
-
-    .bloc-parcours {
-      background: #f8f8f8;
-      padding: 15px 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      font-size: 0.95rem;
-      text-align: center;
-
-    }
-
-    .cards-row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 25px;
-      margin-left: 150px;
-      padding: 8px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-
-    }
-
-    .center-icon {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      background: #008d93;
-      width: 150px;
-      height: 150px;
-      padding: 26px;
-      border-radius: 50px;
-      right: 80px;
-    }
-
-    .heart-main {
-      width: 100px;
-      height: 100px;
-    }
-
-    .map {
-      display: flex;
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      align-items: center;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-    }
-
-    .description-site-center {}
-
-    .description-site {
-      display: flex;
-      gap: 18px;
-      border-radius: 20px;
-      padding: 20px;
-    }
-
-    .annuaire {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 50px;
-      margin-top: 50px;
-    }
-
-    .description-site-left {
-      flex: 1 1 300px;
-      background-color: white;
-      padding: 8px;
-      border-radius: 0.5rem;
-      width: 450px;
-    }
-
-    .card.yellow {
-      background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
-      background-size: cover;
-      width: auto;
-      height: auto;
-      border-radius: 40px;
-      opacity: 1;
-    }
-
-    .title-card {
-      font-size: 18px;
-      font-weight: bold;
-      text-align: left;
-      margin-bottom: 20px;
-      width: 200px;
-    }
-
-    .card.blue {
-      background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
-      background-size: cover;
-      width: auto;
-      height: auto;
-      border-radius: 40px;
-      opacity: 1;
-    }
-
-    .magazine-santé-flex {
-      display: flex;
-      flex-direction: row;
-      gap: 25px;
-      justify-content: center;
-    }
-
-    .card-img-top {
-      border-top-right-radius: 0.5rem;
-      border-top-left-radius: 0.5rem;
-
-      width: 100%;
-      height: 100%;
-    }
-
-    .card-magazine {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 15px;
-    }
+    
 
     footer {
       display: flex;
@@ -2163,13 +1579,7 @@ body {
       opacity: 1;
     }
 
-    .description-site-priemre {
-      display: flex;
-      background-color: white;
-      height: 500px;
-      width: 60%;
-
-    }
+ 
 
     .img-logo-footer {
       width: 60px;
@@ -2183,45 +1593,12 @@ body {
   }
 
   @media screen and (min-width:769px) and (max-width:1024px) {
-    .child-left {
-      position: relative;
-      left: 120px;
-
-    }
-
-    .card-header h3 {
-      margin: 0;
-      font-size: 1.1rem;
-      line-height: 1.3;
-      font-family: "Gotham Rounded Bold";
-    }
-
-    .container-siladoc {
-      display: none;
-    }
-
-    .description-site-priemre {
-      display: flex;
-      background-color: white;
-      height: 500px;
-      width: 60%;
-    }
-
-    .description-site-center {
-      max-width: 100%;
-      border-radius: 20px;
-      width: 75%;
-      position: relative;
-      right: 50px;
-    }
-
-    .google-play {
+ 
 
 
-      /* UI Properties */
-      background: url(/assets/img/google-play-badge.png) 0% 0% no-repeat padding-box;
-      opacity: 1;
-    }
+    
+
+
 
     .container {
       max-width: 1200px;
@@ -2283,278 +1660,13 @@ body {
 
     }
 
-    .trust-section {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 40px 20px;
-      background-color: #f8f8f8;
-      border-radius: 20px;
-    }
-
-    .trust-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      text-align: center;
-      padding: 10px;
-      border-radius: 0.8rem;
-      justify-content: space-between;
-      /* UI Properties */
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      opacity: 1;
-    }
-
-    .trust-item img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .trust-item span {
-      font-weight: bold;
-      color: #222;
-      text-align: left;
-    }
-
-    .trust-item small {
-      font-weight: normal;
-      font-size: 0.9em;
-      color: #666;
-    }
-
-    .magazine-santé {
-      text-align: center;
-      padding: 40px 20px;
-      font-family: sans-serif;
-      align-items: center;
-      border-radius: 20px;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-      margin-top: 25px;
-      background-position: center center;
-      border-radius: 40px;
-      opacity: 1;
-      background-color: white;
-    }
-
-    .bloc-left {
-      position: relative;
-      left: 80px;
-    }
-
-    .bloc-right {
-      position: relative;
-      right: 80px;
-    }
-
-    .description-site-left h1 {
-      text-align: left;
-      font: normal normal bold 40px/48px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #000000;
-      opacity: 1;
-      width: 400px;
-      height: 100px;
-    }
-
-    .description-site-left p {
-
-
-      text-align: left;
-      font: normal normal 300 20px / 24px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #707070;
-      opacity: 1;
-    }
-
-    .parcours-sante {
-      text-align: center;
-      padding: 40px 20px;
-      font-family: sans-serif;
-      background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
-      align-items: center;
-      border-radius: 20px;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-      margin-top: 25px;
-      background-position: center center;
-      border-radius: 40px;
-      opacity: 1;
-    }
-
-    .title-parcours {
-      display: block;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 40px;
-    }
-
-    .parcours-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .bloc-left,
-    .bloc-right {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      max-width: 300px;
-    }
-
-    .directory-card {
-
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
-      width: 360px;
-      height: 290px;
-      border: 1px solid #DDDDDD;
-      border-radius: 40px;
-      opacity: 0.7;
-    }
-
-    .section-global {
-      display: flex;
-      background-color: #ffffff;
-      border-radius: 20px;
-      justify-content: center;
-      width: 95%;
-      align-items: center;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-      padding: 16px;
-    }
-
-    .bloc-parcours {
-      background: #f8f8f8;
-      padding: 15px 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      font-size: 0.95rem;
-      text-align: center;
-
-    }
-
-    .cards-row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 25px;
-      margin-left: 150px;
-      padding: 8px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-
-    }
-
-    .center-icon {
-      display: flex;
-      justify-content: center;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      margin: 0 auto;
-      background: #008d93;
-      width: 150px;
-      height: 150px;
-      padding: 26px;
-      border-radius: 50px;
-      right: 80px;
-    }
-
-    .heart-main {
-      width: 100px;
-      height: 100px;
-    }
-
-    .map {
-      display: flex;
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      align-items: center;
-      gap: 40px;
-      margin-left: 45px;
-      width: 95%;
-    }
 
 
 
-    .description-site {
-      display: flex;
-      gap: 18px;
-      border-radius: 20px;
-      padding: 20px;
-    }
 
-    .annuaire {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 50px;
-      margin-top: 50px;
-    }
 
-    .description-site-left {
-      background-color: white;
-      padding: 8px;
-      border-radius: 0.5rem;
-      width: 400px;
-    }
 
-    .card.yellow {
-      background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
-      background-size: cover;
-      width: auto;
-      height: auto;
-      border-radius: 40px;
-      opacity: 1;
-    }
 
-    .card.blue {
-      background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
-      background-size: cover;
-      width: auto;
-      height: auto;
-      border-radius: 40px;
-      opacity: 1;
-    }
-
-    .magazine-santé-flex {
-      display: flex;
-      flex-direction: row;
-      gap: 25px;
-      justify-content: center;
-    }
-
-    .card-img-top {
-      border-top-right-radius: 0.5rem;
-      border-top-left-radius: 0.5rem;
-
-      width: 100%;
-      height: 100%;
-    }
-
-    .card-magazine {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 15px;
-    }
 
     footer {
       display: flex;
@@ -2581,44 +1693,17 @@ body {
       height: 60px;
     }
 
-    .description-site-right {
-      flex: 1 1 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      left: 50px;
-      position: relative;
-    }
+    
 
     .img-store {
       width: 150px;
       height: 50px;
     }
 
-    .title-card {
-      font-size: 18px;
-      font-weight: bold;
-      text-align: left;
-      margin-bottom: 20px;
-      width: 200px;
-    }
   }
 
   @media screen and (min-width: 320px) and (max-width: 766px) {
-    .parcours-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      flex-direction: row;
-      width: 50px !important;
-    }
 
-    .description-site-priemre {
-      display: flex;
-      background-color: white;
-
-    }
 
     .icon-button {
       display: none;
@@ -2630,14 +1715,6 @@ body {
       padding: 0 20px;
     }
 
-    .container-siladoc {
-      background-color: #fff;
-      border-radius: 15px;
-      padding: 20px;
-      max-width: 400px;
-      width: 100%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
 
     h2 {
       font-size: 18px;
@@ -2646,28 +1723,11 @@ body {
       margin-bottom: 20px;
     }
 
-    .title-card {
-      font-size: 18px;
-      font-weight: bold;
-      text-align: left;
-      margin-bottom: 20px;
-      width: 200px;
-    }
+ 
 
-    .grid-siladoc {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
+ 
 
-    .card-siladoc {
-      background-color: #f3f3f3;
-      border-radius: 12px;
-      padding: 12px;
-      font-size: 14px;
-      text-align: center;
-      box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
-    }
+ 
 
     footer {
       display: flex;
@@ -2750,223 +1810,40 @@ body {
       display: none;
     }
 
-    .magazine-santé {
-      text-align: center;
-      padding: 40px 20px;
-      font-family: sans-serif;
-      align-items: center;
-      border-radius: 20px;
-      gap: 40px;
-
-      margin-top: 25px;
-      background-position: center center;
-      border-radius: 40px;
-      opacity: 1;
-      background-color: white;
-    }
-
-    .magazine-santé-flex {
-      display: flex;
-      flex-direction: row;
-      gap: 25px;
-      justify-content: center;
-    }
-
-    .card-img-top {
-      border-top-right-radius: 0.5rem;
-      border-top-left-radius: 0.5rem;
-
-      width: 100%;
-      height: 100%;
-    }
-
-    .card-magazine {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .parcours-sante {
-      padding: 40px 20px;
-      font-family: sans-serif;
-      background: #ffff;
-      align-items: center;
-      gap: 40px;
-      margin-top: 25px;
-      border-radius: 40px;
-      opacity: 1;
-      display: none;
-      flex-direction: column;
-    }
-
-    .trust-section {
-      display: flex;
-      justify-content: space-around;
-      gap: 20px;
-      padding: 40px 20px;
-      background-color: #f8f8f8;
-      border-radius: 20px;
-      flex-direction: column;
-    }
-
-    .description-site-center {
-      display: none;
-    }
-
-    .description-site-left h1 {
 
 
-      /* UI Properties */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-000000);
-      text-align: left;
-      font: normal normal bold 40px/48px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #000000;
-      opacity: 1;
-    }
 
-    .description-site-left p {
 
-      left: 195px;
 
-      /* height: 96px; */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-707070);
-      text-align: left;
-      font: normal normal 300 20px / 24px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #707070;
-      opacity: 1;
-    }
 
-    .trust-section {
-      display: flex;
-      justify-content: space-around;
-      gap: 20px;
-      padding: 40px 20px;
-      background-color: #f8f8f8;
-      border-radius: 20px;
-    }
 
-    .trust-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      width: 350px;
-      text-align: center;
-      padding: 10px;
-      background-color: white;
-      border-radius: 0.5rem;
-      justify-content: space-between;
 
-      /* UI Properties */
-      background: #FFFFFF 0% 0% no-repeat padding-box;
-      opacity: 1;
-    }
 
-    .trust-item img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 10px;
-    }
 
-    .trust-item span {
-      font-weight: bold;
-      color: #222;
-      text-align: left;
-    }
 
-    .trust-item small {
-      font-weight: normal;
-      font-size: 0.9em;
-      color: #666;
-    }
 
+ 
+  
+  
 
 
     .center-icon {
       display: none;
     }
 
-    .title-parcours {
-      display: block;
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
 
 
-    .bloc-left,
-    .bloc-right {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      max-width: 300px;
-    }
 
-    .bloc-parcours {
-      background: #f8f8f8;
-      padding: 15px 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      font-size: 0.95rem;
-      text-align: center;
-      height: 120px;
-      width: 150px;
 
-    }
 
-    .description-site {
-      flex-direction: row;
-      flex-wrap: wrap;
-      display: flex;
-      gap: 18px;
-      border-radius: 20px;
-      padding: 20px;
-    }
 
     .form {
       position: relative;
     }
 
-    .description-site-left h1 {
 
-      /* UI Properties */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-000000);
-      text-align: left;
-      font: normal normal bold 40px/48px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #000000;
-      opacity: 1;
-    }
+  
 
-    .description-site-left p {
-
-      left: 195px;
-      /* height: 96px; */
-      font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
-      letter-spacing: var(--unnamed-character-spacing-0);
-      color: var(--unnamed-color-707070);
-      text-align: left;
-      font: normal normal 300 20px / 24px Gotham Rounded;
-      letter-spacing: 0px;
-      color: #707070;
-      opacity: 1;
-    }
-
-    .description-site-center {}
-
-    .description-site-left {
-      flex: 1 1 300px;
-      background-color: white;
-      padding: 10px;
-      border-radius: 0.5rem;
-    }
 
     .search-bar {
       flex-direction: column;
@@ -2978,30 +1855,7 @@ body {
 
     }
 
-    .description-site-center img {
-      max-width: 70%;
-      border-radius: 20px;
-      display: none;
-    }
 
-    .directory-card {
-      background-size: cover;
-      background-position: center;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
-      width: 160px;
-      border: 1px solid #DDDDDD;
-      border-radius: 0.5rem;
-      opacity: 0.7;
-      height: 100px;
-      margin-left: 15px;
-
-    }
 
     .search-bar input {
       flex: 1 1 0px;
@@ -3010,62 +1864,10 @@ body {
       border: 1px solid #ccc;
     }
 
-    .card.yellow {
-      background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
-      background-size: cover;
-      width: auto;
-      height: 200px;
-      border-radius: 40px;
-      opacity: 1;
-    }
 
-    .map {
-      display: flex;
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 20px;
-      align-items: center;
-      gap: 40px;
-      margin: 8px;
-      width: 95%;
-      height: auto;
-      flex-direction: column;
-    }
 
-    .cards-row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: wrap;
-    }
 
-    .card.blue {
-      background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
-      background-size: cover;
-      width: auto;
-      height: 200px;
-      border-radius: 40px;
-      opacity: 1;
-    }
 
-    .description-site-right {
-      flex: 1 1 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .annuaire {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card-header h3 {
-      margin: 0;
-      font-size: 1rem;
-      font-family: "Gotham Rounded Bold";
-    }
   }
 
   .main-nav li a {
