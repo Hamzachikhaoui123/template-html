@@ -160,6 +160,7 @@
     overflow: visible;
     text-overflow: clip;
     margin-top: 11px;
+    text-align: center;
   }
   .section-header a i {
     margin: 0;
@@ -187,10 +188,12 @@
     justify-content: space-between;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     width: 360px;
+    height: 430px;
     border: 1px solid #DDDDDD;
     border-radius: 40px;
     opacity: 1;
-    padding: 16px;
+    padding: 34px 29px 44px 30px !important;
+    text-align: left;
   }
   .card:hover {
     transform: translateY(-5px);
@@ -200,7 +203,19 @@
     width: 90px;
     height: 90px;
     border-radius: 20px;
-    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+  .card_header{
+    margin-top: 1px;
+    margin-bottom: 0px !important;
+  }
+  .card-name{
+    padding: 0px !important;
+    margin-left: 20px;
+  }
+  .card-description{
+    padding: 6px 0 0 0 !important;
+    margin-left: 20px;
   }
   .card h3 {
     margin: 0;
@@ -213,34 +228,38 @@
     overflow-wrap: break-word;
     overflow: visible;
     text-overflow: clip;
-    margin-top: 11px;
   }
   card small {
     margin: 0;
     font-size: 16px;
     line-height: 19px;
-    font-family: "Gotham Rounded Bold";
+    font-family: "Gotham Rounded light";
     color: #707070;
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
     overflow: visible;
     text-overflow: clip;
-    margin-top: 11px;
   }
   .card hr {
     border-top: 1px solid #000000; /* Lighter horizontal rule */
   }
   .address-text, .tel-text {
-    font-size: 0.8rem;
-    color: #666;
-    line-height: 1.4;
-    min-height: 50px; /* Ensure consistent height for text blocks */
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "Gotham Rounded light";
+    color: #707070;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .btn-custom-disabled {
     background-color: #f0f0f0; /* Light grey background */
-    border-color: #e0e0e0;
+    border-color: #DDDDDD;
     color: #aaa; /* Light grey text */
     font-size: 0.9rem;
     border-radius: 8px;
@@ -265,6 +284,9 @@
     background-color: #138496;
     border-color: #117a8b;
   }
+  .container-voir-plus{
+    margin-top: 40px;
+  }
 
   .btn-voir-plus {
     background-color: #e9ecef; /* Light grey like the disabled button */
@@ -274,6 +296,8 @@
     font-size: 1rem;
     font-weight: 500;
     border-radius: 8px;
+    width: 1530px;
+    height: 48px;
   }
 
   .btn-voir-plus:hover {
@@ -334,21 +358,20 @@
       <div class="card p-2">
         <div class = "d-flex column-md ml-auto">
           <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
-          <div class="d-flex flex-column mb-3">
-            <div class="p-2">
+          <div class="d-flex flex-column mb-3 card_header">
+            <div class="p-2 card-name">
               <h3>Mr Mohamed MBAREK</h3>
             </div>
-            <div class="p-2">
-              <small>Psychiatre</small>
+            <div class="p-2 card-description">
+              <small>Psychologue</small>
             </div>
           </div>
-          <hr class="my-2">
         </div>
-
+        <hr class="my-2">
         <p class="card-text small address-text">
-          Adresse: Av. ... de la République 8050, centre farah manar Ville 2090, Ariana Tunisie
+          <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
         </p>
-        <p class="card-text small tel-text">Tél: +1234567 Mob: +0987654</p>
+        <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
         <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
         <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
       </div>
@@ -397,6 +420,9 @@
         <p>Adresse: Centre Médical Ariana ...</p>
         <a href="#" class="btn">Prendre rendez-vous</a>
       </div>
+    </div>
+    <div class="text-center container-voir-plus">
+      <a href="#" class="btn btn-light btn-voir-plus">Voir plus</a>
     </div>
   </section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
