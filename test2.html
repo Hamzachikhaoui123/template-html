@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professionnels de la Santé Mentale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        background-color: #f8f9fa; /* Light gray background, similar to image */
+        font-family: sans-serif; /* Basic sans-serif font */
+    }
+
+    .container {
+        background-color: #ffffff; /* White background for the main content area */
+        border-radius: 15px; /* Rounded corners for the main container */
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    }
+
+    .section-title {
+        font-size: 1.75rem; /* Adjust size as needed */
+        font-weight: 600;
+        color: #333; /* Darker text color */
+    }
+
+    .professional-card {
+        border-radius: 15px; /* Rounded corners for cards */
+        border: 1px solid #e0e0e0; /* Light border for cards */
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .professional-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .professional-icon {
+        width: 60px; /* Adjust size of icon background */
+        height: 60px;
+        background-color: #f0f0f0; /* Light gray circle for icon */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ddd; /* Slight border for the icon circle */
+    }
+
+    .professional-card .card-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 0.5rem;
+        color: #333;
+    }
+
+    .professional-card .specialty {
+        font-size: 0.9rem;
+        color: #555; /* Slightly darker than text-muted */
+        margin-bottom: 0.75rem;
+    }
+
+    .professional-card hr {
+        border-top: 1px solid #000000; /* Lighter horizontal rule */
+    }
+
+    .professional-card .contact-info {
+        font-size: 0.8rem; /* Smaller text for address and phone */
+        color: #666;
+        min-height: 60px; /* Ensure consistent height for this section */
+        text-align: left; /* Align text to the left within the card */
+        padding: 0 10px; /* Some padding for the text block */
+    }
+    .professional-card .contact-info small {
+        display: block; /* Make each line of contact info take full width */
+        margin-bottom: 2px;
+    }
+
+
+    .professional-card .btn-outline-primary {
+        border-color: #007bff; /* Primary color for outline button */
+        color: #007bff;
+        font-weight: 500;
+    }
+
+    .professional-card .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .professional-card .btn-primary {
+        background-color: #007bff; /* Primary color for solid button */
+        border-color: #007bff;
+        font-weight: 500;
+    }
+
+    /* Custom styling for the "Voir le profile" button if needed to match image more closely */
+    .professional-card .btn-outline-primary {
+        background-color: #f8f9fa; /* Very light grey, almost white */
+        border: 1px solid #ced4da; /* Standard Bootstrap input border color */
+        color: #495057; /* Dark grey text */
+    }
+
+    .professional-card .btn-outline-primary:hover {
+        background-color: #e9ecef;
+        border-color: #adb5bd;
+        color: #343a40;
+    }
+
+    /* Custom styling for the "Prendre rendez-vous" button to match the image's teal color */
+    .professional-card .btn-primary {
+        background-color: #17a2b8; /* Teal color - adjust if needed */
+        border-color: #17a2b8;
+    }
+
+    .professional-card .btn-primary:hover {
+        background-color: #138496;
+        border-color: #117a8b;
+    }
+
+
+    .btn-voir-plus {
+        background-color: #e9ecef; /* Light grey background for Voir plus */
+        color: #495057; /* Dark grey text */
+        border: 1px solid #ced4da;
+        padding: 0.5rem 2rem;
+        font-weight: 500;
+        border-radius: 20px; /* Pill-shaped button */
+    }
+
+    .btn-voir-plus:hover {
+        background-color: #d3d9df;
+        border-color: #adb5bd;
+    }
+</style>
+<body>
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="section-title">Les professionnels de la santé mentale</h2>
+        <a href="#" class="text-decoration-none text-secondary">
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <div class="col">
+            <div class="card h-100 professional-card">
+                <div class="card-body text-center">
+                    <div class="professional-icon mx-auto mb-3">
+                        <i class="fas fa-user-circle fa-3x text-secondary"></i>
+                    </div>
+                    <h5 class="card-title">Mr Mohamed MBAREK</h5>
+                    <p class="card-text text-muted specialty">Psychologue</p>
+                    <hr class="my-2">
+                    <p class="card-text contact-info">
+                        <small><strong>Adresse:</strong> Av. de la Tannerie, Résidence SBN2, centre Farah, manar ville 2092, Ariana (Tunis)</small><br>
+                        <small><strong>Tel:</strong> +216XX XXX XXX</small> <small><strong>Mob:</strong> +216XX XXX XXX</small>
+                    </p>
+                    <a href="#" class="btn btn-outline-primary w-100 mb-2">Voir le profile</a>
+                    <a href="#" class="btn btn-primary w-100">Prendre rendez-vous</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 professional-card">
+                <div class="card-body text-center">
+                    <div class="professional-icon mx-auto mb-3">
+                        <i class="fas fa-user-circle fa-3x text-secondary"></i>
+                    </div>
+                    <h5 class="card-title">Mr Mohamed MBAREK</h5>
+                    <p class="card-text text-muted specialty">Psychologue</p>
+                    <hr class="my-2">
+                    <p class="card-text contact-info">
+                        <small><strong>Adresse:</strong> Av. de la Tannerie, Résidence SBN2, centre Farah, manar ville 2092, Ariana (Tunis)</small><br>
+                        <small><strong>Tel:</strong> +216XX XXX XXX</small> <small><strong>Mob:</strong> +216XX XXX XXX</small>
+                    </p>
+                    <a href="#" class="btn btn-outline-primary w-100 mb-2">Voir le profile</a>
+                    <a href="#" class="btn btn-primary w-100">Prendre rendez-vous</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 professional-card">
+                <div class="card-body text-center">
+                    <div class="professional-icon mx-auto mb-3">
+                        <i class="fas fa-user-circle fa-3x text-secondary"></i>
+                    </div>
+                    <h5 class="card-title">Mr Mohamed MBAREK</h5>
+                    <p class="card-text text-muted specialty">Psychologue</p>
+                    <hr class="my-2">
+                    <p class="card-text contact-info">
+                        <small><strong>Adresse:</strong> Av. de la Tannerie, Résidence SBN2, centre Farah, manar ville 2092, Ariana (Tunis)</small><br>
+                        <small><strong>Tel:</strong> +216XX XXX XXX</small> <small><strong>Mob:</strong> +216XX XXX XXX</small>
+                    </p>
+                    <a href="#" class="btn btn-outline-primary w-100 mb-2">Voir le profile</a>
+                    <a href="#" class="btn btn-primary w-100">Prendre rendez-vous</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 professional-card">
+                <div class="card-body text-center">
+                    <div class="professional-icon mx-auto mb-3">
+                        <i class="fas fa-user-circle fa-3x text-secondary"></i>
+                    </div>
+                    <h5 class="card-title">Mr Mohamed MBAREK</h5>
+                    <p class="card-text text-muted specialty">Psychologue</p>
+                    <hr class="my-2">
+                    <p class="card-text contact-info">
+                        <small><strong>Adresse:</strong> Av. de la Tannerie, Résidence SBN2, centre Farah, manar ville 2092, Ariana (Tunis)</small><br>
+                        <small><strong>Tel:</strong> +216XX XXX XXX</small> <small><strong>Mob:</strong> +216XX XXX XXX</small>
+                    </p>
+                    <a href="#" class="btn btn-outline-primary w-100 mb-2">Voir le profile</a>
+                    <a href="#" class="btn btn-primary w-100">Prendre rendez-vous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4 mb-5">
+        <a href="#" class="btn btn-light btn-voir-plus">Voir plus</a>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
