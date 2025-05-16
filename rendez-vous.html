@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Étapes de processus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .stepper {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      margin: 40px auto;
+      max-width: 800px;
+    }
+
+    .step {
+      text-align: center;
+      position: relative;
+      flex: 1;
+    }
+
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: -50%;
+      width: 100%;
+      height: 4px;
+      background-color: #dee2e6;
+      z-index: 0;
+    }
+
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 25%;
+      background-color: #dee2e6;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      transition: background-color 0.3s ease;
+    }
+
+    .step.active .circle {
+      background-color: #0d6efd;
+    }
+
+    .step.completed .circle {
+      background-color: #198754;
+    }
+
+    .step p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+    <header class="navbar ">
+        <div class="container">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="d-block align-items-center">
+                <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+            </div>
+            <nav class="nav-links">
+                <a href="./home.html">Accueil</a>
+                <a href="./inscription.html">Inscrivez-vous</a>
+                <a href="#">Nous Contacter</a>
+            </nav>
+            <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
+        </div>
+    </header>
+  <div class="container">
+    <div class="stepper" id="stepper">
+      <div class="step active">
+        <div class="circle"></div>
+        <p>Rendez-vous</p>
+      </div>
+      <div class="step">
+        <div class="circle"></div>
+        <p>Vérification</p>
+      </div>
+      <div class="step">
+        <div class="circle"></div>
+        <p>Confirmation</p>
+      </div>
+      <div class="step">
+        <div class="circle"></div>
+        <p>Validation</p>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-primary me-2" onclick="prevStep()">Précédent</button>
+      <button class="btn btn-success" onclick="nextStep()">Suivant</button>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 0;
+    const steps = document.querySelectorAll(".step");
+
+    function updateSteps() {
+      steps.forEach((step, index) => {
+        step.classList.remove("active", "completed");
+        if (index < currentStep) {
+          step.classList.add("completed");
+        } else if (index === currentStep) {
+          step.classList.add("active");
+        }
+      });
+    }
+
+    function nextStep() {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        updateSteps();
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 0) {
+        currentStep--;
+        updateSteps();
+      }
+    }
+  </script>
+
+</body>
+</html>
