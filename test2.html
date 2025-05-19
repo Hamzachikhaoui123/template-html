@@ -1,926 +1,474 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link type="image/x-icon" href="./assets/favicon.ico" rel="icon">
+    <title>Santé mentale - Siladoc</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/gotham-rounded.css">
     <link rel="stylesheet" href="./assets/css/feather.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link type="image/x-icon" href="./assets/favicon.ico" rel="icon">
+    <style>
+        /* Custom Fonts - Ensure these are correctly linked or hosted */
+        /* @font-face { src: url('path-to-gotham-rounded-bold.woff2') format('woff2'); font-family: 'Gotham Rounded Bold'; font-weight: bold; } */
+        /* @font-face { src: url('path-to-gotham-rounded-light.woff2') format('woff2'); font-family: 'Gotham Rounded Light'; font-weight: 300; } */
+        /* @font-face { src: url('path-to-gotham-rounded-normal.woff2') format('woff2'); font-family: 'Gotham Rounded'; font-weight: normal; } */
 
-    <title>Document</title>
-</head>
-<style>
-    .img-doctor {
-        width: 50px;
-        height: 40px;
-        border-radius: 0.5rem;
-    }
-
-    .trois-point {
-        width: 50px;
-        height: 40px;
-        border-radius: 0.5rem;
-        background-color: wheat;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    body {
-        background-color: #F8F8F8;
-        margin: 30px;
-    }
-
-    .btn-seconnecter {
-        background-color: #008D93;
-        padding: 8px;
-        color: white;
-        font-weight: bold;
-        border: #008D93;
-    }
-
-    .btn-seconnecter:hover {
-        background-color: #008D93;
-
-    }
-
-    .card.yellow {
-        background: #fff5d1 url(/assets/img/anxiety.png) no-repeat center;
-        background-size: cover;
-        width: auto;
-        height: auto;
-        border-radius: 40px;
-        opacity: 1;
-    }
-
-    .card.blue {
-        background: #d6f5ff url(/assets/img/digit.png) no-repeat center;
-        background-size: cover;
-        width: auto;
-        height: auto;
-        border-radius: 40px;
-        opacity: 1;
-    }
-
-
-
-    @media screen and (min-width:1024px) {
-        .style-title {
-            width: 490px;
-            height: 144px;
-            font-size: 40px;
-            line-height: 48px;
-            font-family: 'Gotham Rounded';
-            letter-spacing: 0;
-            opacity: 1;
+        body {
+            color: #333;
+            background: #F8F8F8;
+            font-family: 'Gotham Rounded', sans-serif; /* Apply default custom font if needed */
+            padding-top: 70px; /* Adjust if navbar is fixed-top */
         }
 
-        .p-4-custom {
-            padding: 40px;
+        /* Navbar Customization */
+        .navbar {
+            background-color: #fff; /* Or your preferred navbar background */
+            border-bottom: 1px solid #eee;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
-
-        .center-icon {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            background: #008d93;
-            width: 150px;
-            height: 150px;
-            padding: 26px;
-            border-radius: 50px;
-            right: 20px;
+        .navbar .logox-img {
+            max-height: 40px; /* Adjust as needed */
         }
-
-        .parcours-sante {
-            text-align: center;
-            padding: 40px 20px;
-            font-family: sans-serif;
-            background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
-            align-items: center;
-            border-radius: 20px;
-            gap: 40px;
-            margin-top: 25px;
-            background-position: center center;
-            border-radius: 40px;
-            opacity: 1;
-        }
-
-        .bloc-parcours {
-            background: #f8f8f8;
-            padding: 15px 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            font-size: 0.95rem;
-            text-align: center;
-
-        }
-
-        .title-parcours {
-            display: block;
-            font-size: 1.5rem;
+        .btn-seconnecter-custom {
+            background-color: #008D93;
+            color: white;
             font-weight: bold;
-            margin-bottom: 40px;
+            border-color: #008D93;
+        }
+        .btn-seconnecter-custom:hover {
+            background-color: #007a7f;
+            border-color: #007a7f;
+            color: white;
         }
 
-        .parcours-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
+        /* Hero Section Specifics */
+        .yellow-container {
+            font-family: 'Gotham Rounded', sans-serif;
+            border-radius: 40px;
+            background-color: #F8F4D0;
+            margin-top: 30px; /* Reduced from 60px as body has padding */
+            padding: 40px 25px; /* Adjusted padding */
         }
 
-        .bloc-left,
-        .bloc-right {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            max-width: 300px;
+        .hero-content h1 {
+            font-family: 'Gotham Rounded Bold', sans-serif;
+            font-size: 2.5rem; /* ~40px */
+            color: #000000;
+            text-align: left;
+        }
+        .hero-content h2 {
+            font-family: 'Gotham Rounded Bold', sans-serif;
+            font-size: 2rem; /* ~32px */
+            color: #008080;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .hero-content p {
+            font-family: 'Gotham Rounded Light', sans-serif;
+            font-size: 1.25rem; /* ~20px */
+            line-height: 1.5; /* 24px */
+            color: #707070;
+            text-align: left;
+            margin-top: 40px;
+            max-width: 490px; /* Retained from original */
         }
 
-        .container-siladoc {
-            display: none;
-        }
-
-        .directory-card {
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
+        .hero-image-container {
             position: relative;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            min-height: 500px; /* Ensure container has height */
+        }
+
+        .hero-image-main {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 40px;
+            min-height: 500px; /* Match container */
+        }
+
+        .phone-img-overlay {
+            position: absolute;
+            bottom: -50px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px; /* Adjust as needed */
+            max-width: 80%;
+            z-index: 10;
+        }
+        @media (min-width: 768px) {
+            .phone-img-overlay {
+                width: 359px; /* Original width for larger screens */
+                left: auto; /* Reset left for larger screens if needed */
+                right: -10%; /* Example positioning from image, adjust */
+                bottom: -10%; /* Example positioning from image, adjust */
+                transform: none;
+            }
+            .hero-image-container {
+                /* Adjust based on image aspect ratio and desired overlap */
+                max-width: 835px; /* Original width */
+                height: 776px; /* Original height */
+                margin-left: auto;
+            }
+            .hero-image-main {
+                border-radius: 40px;
+            }
+        }
+
+
+        /* Badges in Hero */
+        .badge-custom {
+            background: #fff;
+            padding: 20px;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.3s ease;
+            height: 220px; /* Slightly increased to accommodate content */
+            margin-bottom: 15px; /* Spacing for mobile */
+        }
+        .badge-custom img {
+            max-height: 70px;
+            width: auto;
+            margin: 15px auto; /* Centered */
+        }
+        .badge-custom h3 {
+            font-size: 1.25rem; /* ~20px */
+            font-family: "Gotham Rounded Bold", sans-serif;
+            color: #707070;
+            margin-bottom: 5px;
+        }
+        .badge-custom p small {
+            font-size: 0.85rem;
+            color: #333;
+            font-family: "Gotham Rounded Light", sans-serif;
+        }
+
+        /* White Container for sections */
+        .white-container {
+            text-align: center;
+            padding: 50px 30px; /* Adjusted padding */
+            font-family: 'Gotham Rounded', sans-serif;
+            border-radius: 40px;
+            background-color: white;
+            margin-top: 60px;
+        }
+
+        /* Section Header */
+        .section-header h2 {
+            font-size: 1.75rem; /* ~28px */
+            font-family: "Gotham Rounded Bold", sans-serif;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        .section-header a i {
+            font-size: 1.5rem; /* ~24px */
+            color: #707070;
+        }
+
+        /* Cards Customization */
+        .card-custom {
             border: 1px solid #DDDDDD;
             border-radius: 40px;
-            opacity: 0.7;
-            height: 220px;
-            /* Keep fixed height */
-            width: 80%;
-        }
-
-        .card-header h3 {
-            margin: 0;
-            font-size: 1.1rem;
-            line-height: 1.3;
-            font-family: "Gotham Rounded Bold";
-            background-color: transparent;
-        }
-
-        .card-footer {
-            padding: 0.5rem 1rem;
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-    }
-
-    @media screen and (min-width:601px) and (max-width:768px) {
-        .description-site-center {
-            width: 50%;
-            left: 25%;
-            position: relative;
-            bottom: 50px;
-        }
-
-        .center-icon {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            background: #008d93;
-            width: 150px;
-            height: 150px;
-            padding: 26px;
-            border-radius: 50px;
-        }
-
-        .container-siladoc {
-            display: none;
-        }
-
-        .style-title {
-            width: 490px;
-            height: 144px;
-            font-size: 40px;
-            line-height: 48px;
-            font-family: 'Gotham Rounded';
-            letter-spacing: 0;
             opacity: 1;
+            text-align: left;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            /* height: 430px; /* Let content define height or use Bootstrap's h-100 if needed */
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .card-custom .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px;
+        }
+        .card-custom-header { /* Replaces .card_header */
+            margin-left: 15px;
+        }
+        .card-custom h3 { /* Replaces .card h3 */
+            font-size: 1.25rem; /* ~20px */
+            font-family: "Gotham Rounded Bold", sans-serif;
+            color: #000000;
+            margin-bottom: 0.25rem;
+        }
+        .card-custom small {
+            font-size: 1rem; /* ~16px */
+            font-family: "Gotham Rounded Light", sans-serif;
+            color: #707070;
+        }
+        .card-custom hr {
+            border-top: 1px solid #000000;
+        }
+        .address-text, .tel-text {
+            font-size: 1rem; /* ~16px */
+            line-height: 1.25; /* ~20px */
+            font-family: "Gotham Rounded Light", sans-serif;
+            color: #707070;
         }
 
-        .parcours-sante {
+        .btn-custom-disabled {
+            background-color: #f0f0f0;
+            border-color: #DDDDDD;
+            color: #aaa;
+            font-size: 0.9rem;
+            border-radius: 10px; /* Matched primary */
+        }
+        .btn-custom-disabled:hover {
+            background-color: #e9e9e9;
+            color: #aaa;
+        }
+        .btn-custom-primary {
+            background-color: #008D93;
+            border-color: #008D93; /* Added border color */
+            color: white;
+            font-size: 0.9rem;
+            border-radius: 10px;
+        }
+        .btn-custom-primary:hover {
+            background-color: #007a7f; /* Darken for hover */
+            border-color: #007a7f;
+            color: white;
+        }
+
+        /* "Voir plus" Button */
+        .btn-voir-plus-custom {
+            background-color: #e9ecef;
+            border-color: #ced4da;
+            color: #495057;
+            padding: 10px 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            /* width: 100%; /* Use Bootstrap's d-block or grid for width */
+            /* max-width: 1530px; /* This is very wide, consider container constraints */
+            /* height: 48px; /* Let padding define height or set explicitly if needed */
+        }
+        .btn-voir-plus-custom:hover {
+            background-color: #d3d9df;
+            border-color: #b8c0c7;
+        }
+
+        /* Domains Section */
+        .domains-section h2 { /* Renamed class for clarity */
+            font-size: 1.75rem; /* ~28px */
+            font-family: "Gotham Rounded Bold", sans-serif;
+            color: #000000;
             text-align: center;
-            padding: 40px 20px;
-            font-family: sans-serif;
-            background: #ffff;
-            align-items: center;
-            margin-left: 30px;
-            width: 95%;
-            margin-top: 25px;
-            border-radius: 40px;
-            opacity: 1;
+            margin-bottom: 44px; /* From .grid-domains margin-top */
         }
-
-        .bloc-left,
-        .bloc-right {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            max-width: 300px;
-        }
-
-        .bloc-parcours {
-            background: #f8f8f8;
-            padding: 15px 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-            font-size: 0.95rem;
-            text-align: center;
-            width: 222px;
-        }
-
-        .parcours-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .directory-card {
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
+        .domain-item {
             position: relative;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s ease;
-            border: 1px solid #DDDDDD;
-            border-radius: 25px;
-            opacity: 0.7;
-            height: auto;
-            /* Keep fixed height */
-        }
-
-        .card-header h3 {
-            margin: 0;
-            font-size: 1.1rem;
-            line-height: 1.3;
-            font-family: "Gotham Rounded Bold";
-            background-color: transparent;
-        }
-
-        .card-footer {
-            padding: 0.5rem 1rem;
-            position: absolute;
-            bottom: 20px;
-            /* Adjusted for positioning within the card */
-            right: 20px;
-            /* Adjusted for positioning */
-
-        }
-    }
-
-    @media screen and (max-width:600px) {
-        .description-site-center {
-            display: none
-        }
-
-        .parcours-sante {
-            display: none;
-        }
-
-        .btn-seconnecter {
-            display: none;
-        }
-
-        .icon-button {
-            display: none;
-        }
-
-        .directory-card {
-            background-size: cover;
-            background-position: center;
+            border-radius: 8px;
             overflow: hidden;
-            position: relative;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s ease;
-            border: 1px solid #DDDDDD;
-            border-radius: 25px;
-            opacity: 0.7;
-            height: 135px;
+            height: 120px; /* Fixed height */
         }
-
-        .card-header h3 {
-            margin: 0;
-            font-size: 0.8rem;
-            font-family: "Gotham Rounded Bold";
-            text-align: justify;
+        .domain-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(60%);
+            transition: filter .3s;
         }
-
-        .card-footer {
+        .domain-item:hover img {
+            filter: brightness(80%);
+        }
+        .domain-item span {
             position: absolute;
-            bottom: 10px;
-            right: 10px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 0.5rem 1rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center; /* Ensure text is centered if it wraps */
+            width: 90%; /* Prevent text from touching edges */
         }
-    }
-</style>
 
+    </style>
+</head>
 <body>
-<!-- Header -->
-<header class="navbar ">
+
+<nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="d-block align-items-center">
+        <a class="navbar-brand" href="#">
             <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
-        </div>
-        <nav class="nav-links">
-            <a href="./home.html">Accueil</a>
-            <a href="./inscription.html">Inscrivez-vous</a>
-            <a href="#">Nous Contacter</a>
-        </nav>
-        <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
-    </div>
-</header>
-<div class="row m-1 m-sm-2 m-lg-5">
-    <section class="col-lg-6  col-xl-7 col-sm-12 col-md-12">
-        <div class="row  bg-white rounded">
-            <section class="col-lg-7  p-2 rounded">
-                <h1 class="fw-bold text-start text-black style-title">
-                    Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
-                <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
-                    côté de chez vous.</p>
-                <div class="d-flex justify-content my-3">
-                    <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-                    <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-                    <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-
-                    <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-                    <div class="trois-point">
-                        <span>...</span>
-                    </div>
-                </div>
-                <div class="d-flex flex-column mb-5">
-                    <input type="text" class="form-control mb-3" placeholder="Choisir une spécialité">
-
-                    <div class="search-bar">
-                        <input type="text" class="form-control" placeholder="Tunis">
-                        <input type="text" class="form-control" placeholder="Tunis">
-
-                        <button>Rechercher</button>
-                    </div>
-                </div>
-            </section>
-
-            <img class="description-site-center col-lg-5" src="assets/img/siladoc01.png" alt="Médecin">
-        </div>
-    </section>
-
-    <section class="col-lg-6 col-xl-4 col-sm-12 col-md-12 mt-1 mt-sm-3">
-        <div class="card yellow mb-5">
-            <h3 class="text-start w-50">Prenez soin de votre santé mentale</h3>
-            <p class="w-50">Grâce à la consultation vidéo (Téléconsultation)</p>
-
-            <div>
-                <button class="icon-button">
-                    <i class="feather-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-        <div class="card blue ">
-            <h2 class="text-start w-50">Digitaliser votre cabinet médical</h2>
-            <p class="w-50">Planification de rendez-vous, partage de documents, interface intuitive.
-            </p>
-            <div>
-                <button class="icon-button">
-                    <i class="feather-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-
-    </section>
-</div>
-<div class="parcours-sante container my-5">
-    <span class="title-parcours">Le parcours de santé Siladoc :</span>
-
-    <div class="parcours-content d-flex justify-content-center gap-4 flex-lg-wrap">
-        <div class="bloc-left d-flex flex-column gap-4">
-            <div class="bloc-parcours"> Prendre <br> <strong> un rendez-vous</strong> en ligne</div>
-            <div class="bloc-parcours ms-lg-5">Consultation <strong>en ligne</strong> ou en
-                cabinet</div>
-            <div class="bloc-parcours"><strong>Prescription</strong> : Médocs, Analyses, Radiologies ...</div>
-        </div>
-
-
-        <div class="center-icon">
-            <a href="https://www.siladoc.com">
-                <div class="icon">
-                    <svg class="heart-main" viewBox="0 0 512 512" width="100" title="heart">
-                        <path class="st0"
-                              d="M177.8,96.2c-59-17.5-120.9,16.2-138.4,75.1s16.2,120.9,75.1,138.4s120.9-16.2,138.4-75.1
-                c3.3-11.3,5.1-20.4,4.9-31.6c0-61.5,49.9-111.4,111.4-111.4S480.5,141.5,480.5,203c0,35.9-17,67.9-43.5,88.3L261.4,422.1l-52.6-41.5"
-                              stroke="#ffffff" stroke-width="55" fill="none" />
-                    </svg>
-                </div>
-            </a>
-        </div>
-
-        <div class="bloc-right d-flex flex-column gap-4">
-            <div class="bloc-parcours">Votre <strong>rapport médical</strong><br>envoyer au médecin</div>
-            <div class="bloc-parcours me-lg-5  "><strong>Partager</strong> votre
-                dossier<br>avec un autre médecin</div>
-            <div class="bloc-parcours">Dossier envoyé <br> à votre <strong>Assurance</strong></div>
-        </div>
-    </div>
-</div>
-<div class=" container-siladoc bg-white rounded-3 p-3 w-100" style="max-width: 400px;">
-    <h2>Le parcours de santé Siladoc :</h2>
-    <div class="row g-3">
-        <div class="col-6">
-            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
-                Prendre un rendez-vous en ligne
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
-                Votre rapport médical envoyer au médecin
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
-                Consultation en ligne ou en cabinet
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
-                Partager votre dossier avec un autre médecin
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
-                Prescription : Médocs, Analyses, Radiologies ...
-            </div>
-        </div>
-        <div class="col-6">
-            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
-                Dossier envoyé à votre Assurance
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<section class="py-4">
-    <div class="container d-flex flex-wrap flex-md-nowrap justify-content-center gap-3">
-
-        <div
-                class="d-flex align-items-center flex-md-column flex-lg-row flex-xlg-row justify-content-between p-3 bg-white rounded-4 shadow-sm"
-                style="width: 400px;">
-            <div class="text-start">
-                <span class="fw-bold text-dark d-block">Confidentialité</span>
-                <small class="text-muted">Conformité aux normes</small>
-            </div>
-            <img src="./assets/img/protection-données-1024x421.jpg" alt="Confidentialité" class="img-fluid"
-                 style="width: 100px;">
-        </div>
-
-        <div
-                class="d-flex align-items-center flex-lg-row flex-md-column flex-xlg-row justify-content-between p-3 bg-white rounded-4 shadow-sm"
-                style="width: 400px;">
-            <div class="text-start">
-                <span class="fw-bold text-dark d-block">Protection des</span>
-                <small class="text-muted">données de santé.</small>
-            </div>
-            <img src="assets/img/Logo-ANCS-10.png" alt="INPDP" class="img-fluid" style="width: 100px;">
-        </div>
-
-        <div
-                class="d-flex align-items-center flex-row flex-lg-row flex-xlg-row flex-md-column justify-content-between p-3 bg-white rounded-4 shadow-sm"
-                style="width: 400px;">
-            <div class="text-start">
-                <span class="fw-bold text-dark d-block">Paiement</span>
-                <small class="text-muted">sécurisé</small>
-            </div>
-            <img src="assets/img/konnect.png" alt="ANCS" class="img-fluid">
-        </div>
-
-    </div>
-</section>
-<section class="container my-5">
-    <div class="row bg-white rounded-4 shadow-sm p-4 align-items-center">
-        <!-- Carte du monde -->
-        <div class="col-lg-8 col-md-6 mb-4 mb-lg-0">
-            <img src="./assets/img/maps.svg" alt="Carte du monde" class="img-fluid">
-        </div>
-        <!-- Titre + contenu -->
-        <div class="col-12 col-lg-4 col-md-6  text-left ">
-            <!-- col-12 for small screens, col-md-4 for medium screens and larger -->
-            <h2 class="h4 fw-bold mb-3 text-dark text-start">
-                Pourquoi choisir la Tunisie<br>pour vos soins
-            </h2>
-            <ul class="list-unstyled text-dark small">
-                <li>– Établissements de santé avec des technologies de pointe</li>
-                <li>– Médecins et professionnels de santé hautement qualifiés</li>
-                <li>– Qualité exceptionnelle des services de santé</li>
-                <li>– Temps d’attente très réduit</li>
-                <li>– Infrastructure touristique très confortable</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<div class="container-fluid">
-    <div class="row g-3 ">
-        <!-- First Column -->
-        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-            <div class="card directory-card" style="background-image: url('assets/img/polyc.png');">
-                <div class="card-header bg-transparent border-0">
-                    <h3>Annuaire<br>des polycliniques</h3>
-                </div>
-                <div class="card-footer bg-transparent border-0 d-flex justify-content-end align-items-center">
-                    <button class="icon-button">
-                        <i class="feather-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Second Column -->
-        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-            <div class="card directory-card" style="background-image: url('assets/img/pharmacie.png');">
-                <div class="card-header bg-transparent border-0">
-                    <h3>Annuaire<br>des pharmacies</h3>
-                </div>
-                <div class="card-footer bg-transparent border-0 d-flex justify-content-end align-items-center">
-                    <button class="icon-button">
-                        <i class="feather-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Third Column -->
-        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-            <div class="card directory-card" style="background-image: url('assets/img/centres.jpg');">
-                <div class="card-header bg-transparent border-0">
-                    <h3>Annuaire<br>des centres médical</h3>
-                </div>
-                <div class="card-footer bg-transparent border-0 d-flex justify-content-end align-items-center">
-                    <button class="icon-button">
-                        <i class="feather-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Fourth Column -->
-        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
-            <div class="card directory-card" style="background-image: url('assets/img/labo.jpg');">
-                <div class="card-header bg-transparent border-0">
-                    <h3>Annuaire<br>des Laboratoires d’Analyses</h3>
-                </div>
-                <div class="card-footer bg-transparent border-0 d-flex justify-content-end align-items-center">
-                    <button class="icon-button">
-                        <i class="feather-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Accordion -->
-<section class="bg-white rounded-3 h-100 p-3">
-    <div class="container">
-
-        <div class="section-header ">
-
-            <div class="row ">
-                <div class="col-lg-6">
-                    <iframe width="100%" height="315" style="    border-radius: 0.5rem;"
-                            src="https://www.youtube.com/embed/PmQFG4LEPZs?si=IcZ_9ra3t9knpkPp&amp;controls=0"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="accordion " id="accordionExample">
-                        <div class="accordion-item mb-3 rounded">
-                            <h2 class="accordion-header custom-radius">
-                                <button class="accordion-button rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    Comment Siladoc peut-il m’aider ?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>Siladoc, Solution de numérisation de parcours de
-                                        soin.</strong>
-                                    Chaque patient pourra consulter un annuaire des praticiens et
-                                    demander un RDV.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3 rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button  rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Comment je peux avoir un compte sur Siladoc?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>Enregistrement d'un compte directement sur Siladoc.</strong>
-                                    il suffit de créer un compte sur Siladoc en utilisant un email
-                                    ou un numéro de téléphone mobile et un mot de passe pour
-                                    accéder au site et profiter de l'espace patient.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3 rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Qui sont les praticiens sur Siladoc?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    Sur<strong> Siladoc </strong>, Vous pouvez consulter des
-                                    médecins généralistes, des psychiatres, des dermatologues, des
-                                    pédiatres, des endocrinologues, des gynécologues et des
-                                    gastro-entérologues. Ces médecins sont tous Docteurs en
-                                    médecine, inscrits au Conseil National de l'Ordre des Médecins
-                                    en TUNISIE (CNOM), et exercent en TUNISIE. Ils sont
-                                    spécialement formés à la télé-consultation pour vous écouter,
-                                    vous aider et vous prendre en charge au mieux. Ils répondent
-                                    bien sûr aux standards requis pour faire de la
-                                    télé-consultation, pratique en attente d'approbation par les
-                                    autorités tunisienne . </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3 rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                    C'est quoi la precription éléctronique ou E-PRECRIPTION?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>
-                                        La prescription Electronique ou E-PRESCRITION. </strong>E-Prescription ou ordonnance
-                                    électronique,
-                                    unique et
-                                    sécurisé, pour une meilleure expérience du patient.
-                                    E-PRESCRIPTION: Presription de médicament - Prescription
-                                    d'analyse biologique - Prescription radiologie
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-3 rounded">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
-                                    L'application Siladoc ne fonctionne pas, que dois-je faire ?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>
-                                        En cas de problème de démarrage de l'application
-                                        mobile.</strong>
-                                    Si vous n'arrivez pas à vous connecter à votre application
-                                    Siladoc, ou que l'application ne fonctionne pas correctement,
-                                    vous pouvez : Vérifier d'avoir une bonne connexion Internet.
-                                    Si vous n'utilisez pas de connexion Wi-Fi, assurez-vous que
-                                    l'application Siladoc utilise vos données mobiles, Vérifier
-                                    que votre téléphone est à jour puis mettre à jour
-                                    l'application Siladoc via playstore ou Google Play, et
-                                    redémarrer l'application.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-        </div>
-    </div>
-</section>
-<!-- Fin Accordion-->
-<!-- Notre magazine de santé -->
-<section class="bg-white p-2 mt-3 rounded">
-    <div class="row m-3">
-        <span class="col-lg-9 fw-bold mb-3 col-sm-9 col-9 text-dark text-start">Notre magazine de santé</span>
-        <button class=" col-lg-3 col-sm-3 col-3 bg-transparent border-0">
-            <i class="feather-chevron-right"></i>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-    </div>
-
-    <div class="card-magazine row ml-5 justify-content-center d-none d-sm-flex">
-        <div class="card col-lg-3 m-2 rounded" style="width: 300px;
-;padding: 0%;">
-            <img src="/assets/img/01.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
-            <div class="card-body">
-                <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make up
-                    the bulk of the card’s
-                <div class="d-flex justify-content-between align-items-center p-1">
-                    <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-                    <button class="icon-button ">
-                        <i class="feather-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="card col-lg-3 m-2 rounded " style="width: 300px;
-      ;padding: 0%;">
-            <img src="/assets/img/02.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
-            <div class="card-body">
-                <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make up
-                    the bulk of the card’s
-                    content.</p>
-                <div class="d-flex justify-content-between align-items-center p-1">
-                    <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-                    <button class="icon-button ">
-                        <i class="feather-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="card col-lg-3 m-2 rounded" style="width: 300px;
-            ;padding: 0%;">
-            <img src="/assets/img/03.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
-            <div class="card-body">
-                <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make up
-                    the bulk of the card’s
-                    content.</p>
-
-                <div class="d-flex justify-content-between align-items-center p-1">
-                    <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-                    <button class="icon-button ">
-                        <i class="feather-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="card col-lg-3 m-2 rounded" style="width: 300px;
-                  ;padding: 0%;">
-            <img src="/assets/img/04.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
-            <div class="card-body">
-                <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make up
-                    the bulk of the card’s
-                    content.</p>
-                <div class="d-flex justify-content-between align-items-center p-1">
-                    <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-                    <button class="icon-button ">
-                        <i class="feather-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./home.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./inscription.html">Inscrivez-vous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nous Contacter</a>
+                </li>
+            </ul>
+            <a href="./login.html" class="btn btn-seconnecter-custom d-none d-lg-block ms-lg-3">Se connecter</a>
         </div>
     </div>
-    <!-- Carousel pour mobile -->
-    <div id="cardCarousel" class="carousel slide d-block d-sm-none" data-bs-ride="carousel">
-        <div class="carousel-inner">
+</nav>
 
-            <!-- Card 1 -->
-            <div class="carousel-item active">
-                <div class="card mx-auto" style="width: 90%;">
-                    <img src="/assets/img/01.jpg" class="card-img-top" alt="Image 1" style="height: 150px; object-fit: cover;">
-                    <div class="card-body">
-                        <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make
-                            up
-                            the bulk of the card’s
-                        <div class="d-flex justify-content-between align-items-center p-1">
-                            <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-                            <button class="icon-button" style="display: inline-block;">
-                                <i class="feather-chevron-right"></i>
-                            </button>
-                        </div>
+<main class="container yellow-container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 hero-content">
+            <h1>Prenez soin de votre<br> santé mentale,</h1>
+            <h2>Grâce à la consultation vidéo<br>(Téléconsultation)</h2>
+            <p>Il peut parfois être difficile de trouver le moment optimun pour prendre soin de sa santé mentale, la téléconsultation peut vous y aider. Plusieurs spécialités dont l’exercice est protégé et réglementé peuvent vous accompagner sur ce sujet.</p>
+            <div class="row mt-5">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="badge-custom">
+                        <h3>Confidentialité</h3>
+                        <p><small>Conformité avec les normes</small></p>
+                        <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="badge-custom">
+                        <h3>Données sécurisées</h3>
+                        <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo" class="img-fluid">
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0 hero-image-container">
+            <img src="assets/img/Sante Mentale/psy header.jpg" alt="Famille allongée" class="hero-image-main">
+            <img src="assets/img/Sante Mentale/psy ad.png" alt="Consultation vidéo" class="phone-img-overlay d-none d-md-block">
+        </div>
+    </div>
+</main>
 
-            <!-- Card 2 -->
-            <div class="carousel-item">
-                <div class="card mx-auto" style="width: 90%;">
-                    <img src="/assets/img/02.jpeg" class="card-img-top" alt="Image 2" style="height: 150px; object-fit: cover;">
-                    <div class="card-body">
-                        <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make
-                            up
-                            the bulk of the card’s
-                            content.</p>
-                        <div class="d-flex justify-content-between align-items-center p-1">
-                            <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-                            <button class="icon-button" style="display: inline-block;">
-                                <i class="feather-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
+<section class="white-container container">
+    <div class="section-header d-flex justify-content-between align-items-center mb-5">
+        <h2>Les professionnels de la santé mentale</h2>
+        <a href="#" class="text-secondary">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <div class="row g-4"> <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+        <div class="card card-custom p-3 p-md-4 flex-fill">
+            <div class="d-flex align-items-center mb-3">
+                <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                <div class="card-custom-header">
+                    <h3>Mr Mohamed MBAREK</h3>
+                    <small>Psychologue</small>
                 </div>
             </div>
-
-            <!-- Card 3 -->
-            <div class="carousel-item">
-                <div class="card mx-auto" style="width: 90%;">
-                    <img src="/assets/img/03.jpg" class="card-img-top" alt="Image 3" style="height: 150px; object-fit: cover;">
-                    <div class="card-body">
-                        <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make
-                            up
-                            the bulk of the card’s
-                            content.</p>
-
-                        <div class="d-flex justify-content-between align-items-center p-1">
-                            <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-                            <button class="icon-button" style="display: inline-block;">
-                                <i class="feather-chevron-right"></i>
-                            </button>
-                        </div>
+            <hr class="my-2">
+            <p class="card-text small address-text mb-1">
+                <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+            </p>
+            <p class="card-text small tel-text mb-3"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+            <div class="mt-auto"> <button class="btn btn-sm btn-custom-disabled w-100 mb-2" disabled>Voir profile</button>
+                <button class="btn btn-sm btn-custom-primary w-100">Prendre rendez-vous</button>
+            </div>
+        </div>
+    </div>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card card-custom p-3 p-md-4 flex-fill">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                    <div class="card-custom-header">
+                        <h3>Mr Mohamed MBAREK</h3>
+                        <small>Psychologue</small>
                     </div>
                 </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="carousel-item">
-                <div class="card mx-auto" style="width: 90%;">
-                    <img src="/assets/img/04.jpg" class="card-img-top" alt="Image 4" style="height: 150px; object-fit: cover;">
-                    <div class="card-body">
-                        <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make
-                            up
-                            the bulk of the card’s
-                            content.</p>
-                        <div class="d-flex justify-content-between align-items-center p-1">
-                            <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
-                            <button class="icon-button" style="display: inline-block;">
-                                <i class="feather-chevron-right"></i>
-                            </button>
-                        </div>
-                    </div>
+                <hr class="my-2">
+                <p class="card-text small address-text mb-1">
+                    <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+                </p>
+                <p class="card-text small tel-text mb-3"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+                <div class="mt-auto">
+                    <button class="btn btn-sm btn-custom-disabled w-100 mb-2" disabled>Voir profile</button>
+                    <button class="btn btn-sm btn-custom-primary w-100">Prendre rendez-vous</button>
                 </div>
             </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card card-custom p-3 p-md-4 flex-fill">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                    <div class="card-custom-header">
+                        <h3>Mr Mohamed MBAREK</h3>
+                        <small>Psychologue</small>
+                    </div>
+                </div>
+                <hr class="my-2">
+                <p class="card-text small address-text mb-1">
+                    <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+                </p>
+                <p class="card-text small tel-text mb-3"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+                <div class="mt-auto">
+                    <button class="btn btn-sm btn-custom-disabled w-100 mb-2" disabled>Voir profile</button>
+                    <button class="btn btn-sm btn-custom-primary w-100">Prendre rendez-vous</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
+            <div class="card card-custom p-3 p-md-4 flex-fill">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                    <div class="card-custom-header">
+                        <h3>Mr Mohamed MBAREK</h3>
+                        <small>Psychologue</small>
+                    </div>
+                </div>
+                <hr class="my-2">
+                <p class="card-text small address-text mb-1">
+                    <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+                </p>
+                <p class="card-text small tel-text mb-3"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+                <div class="mt-auto">
+                    <button class="btn btn-sm btn-custom-disabled w-100 mb-2" disabled>Voir profile</button>
+                    <button class="btn btn-sm btn-custom-primary w-100">Prendre rendez-vous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5"> <a href="#" class="btn btn-voir-plus-custom">Voir plus</a>
+    </div>
+</section>
 
+<section class="container my-5 domains-section">
+    <h2 class="mb-5">Nos domaines d'intervention</h2>
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-4"> <div class="col">
+        <div class="domain-item"><img src="assets/img/addiction.png" alt="Dépression"><span>Dépression</span></div>
+    </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/anxiety.png" alt="Anxiété"><span>Anxiété</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/crise.png" alt="Crise d'angoisse"><span>Crise d'angoisse</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/conflict.png" alt="Conflits relationnels"><span>Conflits relationnels</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/addictologie.png" alt="Addictologie"><span>Addictologie</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/pathologies.png" alt="Pathologies mentales"><span>Pathologies mentales</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/relaxation.png" alt="Relaxation"><span>Relaxation</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/developpement.png" alt="Développement personnel"><span>Développement personnel</span></div>
         </div>
     </div>
 </section>
-<!-- Footer -->
-<!--  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
-<script>
-    const myCarousel = document.querySelector('#cardCarousel');
-    const carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 2000,
-        ride: 'carousel'
-    });
-</script>
 
-
-
-<script src="assets/js/accordion.js"></script>
-<script>
-    var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
-    navItems.forEach(function (e, i) {
-        e.addEventListener("click", function (e) {
-            navItems.forEach(function (e2, i2) {
-                e2.classList.remove("mobile-bottom-nav__item--active");
-            })
-            this.classList.add("mobile-bottom-nav__item--active");
-        });
-    });
-</script>
-<script src="assets/js/feather.min.js"></script>
-<script>
-    feather.replace();
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-
 </html>
