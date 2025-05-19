@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +7,353 @@
     <link type="image/x-icon" href="./assets/favicon.ico" rel="icon">
     <link rel="stylesheet" href="./assets/css/gotham-rounded.css">
     <link rel="stylesheet" href="./assets/css/feather.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Santé mentale - Siladoc</title>
 </head>
 <style>
     body {
-        background-color: #F8F8F8;
+        color: #333;
+        background: #F8F8F8;
+        margin: 30px;
     }
-
     .btn-seconnecter {
         background-color: #008D93;
         padding: 8px;
         color: white;
         font-weight: bold;
+        border: #008D93;
     }
-    .card-conf {
-        width: 150px;
+    .btn-seconnecter:hover {
+        background-color: #008D93;
+
     }
-    .mockup-img{
-        width: 100%;
+
+    .yellow-container {
+        text-align: center;
+        padding-left: 40px;
+        font-family: sans-serif;
+        align-items: center;
+        border-radius: 40px;
+        opacity: 1;
+        background-color: #F8F4D0;
+        justify-content: center;
+        margin-top: 60px;
+        padding-right: 0 !important;
+
+    }
+    .white-container {
+        text-align: center;
+        padding: 50px 55px 50px 55px;
+        font-family: sans-serif;
+        align-items: center;
+        border-radius: 40px;
+        gap: 40px;
+        background-position: center center;
+        border-radius: 40px;
+        opacity: 1;
+        background-color: white;
+        margin-top: 60px;
+        justify-items: center;
+    }
+    .hero-content{
+        justify-content: unset;
+    }
+    .hero-content h1 {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-000000);
+        text-align: left;
+        font: normal normal bold 40px Gotham Rounded;
+        letter-spacing: 0px;
+        color: #000000;
+    }
+    .hero-content h2 {
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-000000);
+        text-align: left;
+        font: normal normal bold 32px Gotham Rounded;
+        letter-spacing: 0px;
+        color: #008080;
+        margin-top: 20px;
+    }
+    .hero-content p {
+        left: 195px;
+        width: 490px;
+        font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        color: var(--unnamed-color-707070);
+        text-align: left;
+        font: normal normal 300 20px / 24px Gotham Rounded;
+        letter-spacing: 0px;
+        color: #707070;
+        opacity: 1;
+        margin-top: 40px;
+    }
+    .badges {
+        display: flex;
+        gap: 30px;
+        margin-top: 84px;
+    }
+    .badge {
+        background: #fff;
+        padding: 16px;
+        width: 200px;
+        height: 200px;
+        border-radius: 40px;
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+    }
+    .badge img {
+        height: 70px;
+        width: auto;
+        margin-top: auto;
+        margin-bottom: 14px;
+    }
+    .badge h3 {
+        margin: 0;
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "Gotham Rounded Bold";
+        color: #707070;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        text-overflow: clip;
+        margin-top: 11px;
+    }
+    .badge p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: #333;
+    }
+    .hero-image {
+        position: relative;
+        width: 835px;
+        height: 776px;
+        margin-left: auto;
+        overflow: hidden;
+        border-radius: 40px;
+    }
+    .header-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 835px;
+        height: 100%;
+        object-fit: cover;
+
+    }
+    .phone-img {
+        position: absolute;
+        width: 359px;
+        height: auto;
+
+    }
+    .section-header{
+        padding: 0!important;
+    }
+    .section-header h2 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 34px;
+        font-family: "Gotham Rounded Bold";
+        color: #000000;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        text-overflow: clip;
+        margin-top: auto;
+        text-align: center
+    }
+    .section-header a i {
+        font-size: 24px;
+        line-height: 29px;
+        color: #707070;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        text-overflow: clip;
+    }
+    .cards {
+        margin-top: 63px;
+        gap: 30px;
+    }
+    .card{
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+
+        flex-direction: column;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        width: 360px;
+        height: 430px;
+        border: 1px solid #DDDDDD;
+        border-radius: 40px;
+        opacity: 1;
+        padding: 34px 29px 44px 30px !important;
+        text-align: left;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card img.avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+        margin-top: 0px;
+    }
+    .card_header{
+        margin-top: 1px;
+        margin-bottom: 0px !important;
+    }
+    .card-name{
+        padding: 0px !important;
+        margin-left: 20px;
+    }
+    .card-description{
+        padding: 6px 0 0 0 !important;
+        margin-left: 20px;
+    }
+    .card h3 {
+        margin: 0;
+        font-size: 20px;
+        line-height: 24px;
+        font-family: "Gotham Rounded Bold";
+        color: #000000;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        text-overflow: clip;
+    }
+    card small {
+        margin: 0;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: "Gotham Rounded light";
+        color: #707070;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        text-overflow: clip;
+    }
+    .card hr {
+        border-top: 1px solid #000000; /* Lighter horizontal rule */
+    }
+    .address-text, .tel-text {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: "Gotham Rounded light";
+        color: #707070;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        text-overflow: clip;
+    }
+
+    .btn-custom-disabled {
+        background-color: #f0f0f0; /* Light grey background */
+        border-color: #DDDDDD;
+        color: #aaa; /* Light grey text */
+        font-size: 0.9rem;
+        border-radius: 8px;
+        padding: 8px 12px;
+    }
+
+    .btn-custom-disabled:hover {
+        background-color: #e9e9e9;
+        color: #aaa;
+    }
+
+    .btn-custom-primary {
+        background-color: #008D93; /* Teal color from image (adjust as needed) */
+        border: 1px solid #DDDDDD;
+        color: white;
+        font-size: 0.9rem;
+        border-radius: 10px;
+        padding: 8px 12px;
+    }
+
+    .btn-custom-primary:hover {
+        background-color: #138496;
+        border-color: #117a8b;
+    }
+    .container-voir-plus{
+        margin-top: 40px;
+    }
+
+    .btn-voir-plus {
+        background-color: #e9ecef; /* Light grey like the disabled button */
+        border-color: #ced4da;
+        color: #495057; /* Darker grey text */
+        padding: 10px 30px;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 8px;
+        width: 1530px;
+        height: 48px;
+    }
+
+    .btn-voir-plus:hover {
+        background-color: #d3d9df;
+        border-color: #b8c0c7;
+    }
+    .domains {
+        margin-top: 60px;
+    }
+    .domains h2 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 34px;
+        font-family: "Gotham Rounded Bold";
+        color: #000000;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        overflow: visible;
+        text-overflow: clip;
+        margin-top: auto;
+        text-align: center;
+    }
+    .grid-domains {
+        margin-top: 44px;
+    }
+    .domain-item { position: relative; border-radius: 8px; overflow: hidden; }
+    .domain-item img { width: 100%; height: 120px; object-fit: cover; filter: brightness(60%); transition: filter .3s; }
+    .domain-item:hover img { filter: brightness(80%); }
+    .domain-item span { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; font-weight: 600; font-size: 1rem; }
+
+    @media screen and (min-width:601px) and (max-width:768px) {
+        .yellow-container {
+            width: 716px;
+        }
+        .hero-image {
+            width: 100%;
+            height: 619px;
+        }
+        .header-img {
+            width: 232px;
+            height: 100%;
+        }
     }
 </style>
-
-<body class="m-lg-5 m-sm-0 m-md-5 text-center">
-<header class="navbar bg-white fixed-top ">
-
+<body>
+<!-- Header / Navbar -->
+<header class="navbar ">
     <div class="container">
         <button class="menu-toggle" aria-label="Toggle menu">
             <span></span>
@@ -52,139 +371,138 @@
         <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
     </div>
 </header>
-<div class="container mt-5">
-    <div class=" justify-content-center  rounded-5 p-5 mt-5" style=" background-color: #D0F6F8;
-">
-        <div class="col-11 teleconsult-section d-flex flex-lg-row flex-column align-items-center gap-4">
-            <!-- Left side: Text + phone -->
-            <div class="col-lg-6">
-                <h1>Prenez soin de votre santé mentale,</h1>
-                <h4 class="subheading">Grâce à la consultation vidéo<br>(Téléconsultation)</h4>
-                <p class="mt-3">
-                    Il peut parfois être difficile de trouver le moment opportun pour prendre soin de sa santé mentale,
-                    la téléconsultation peut vous y aider. Plusieurs spécialités dont l'exercice est protégé et
-                    réglementé peuvent vous accompagner sur ce sujet.
-                </p>
-                <div class="d-flex gap-3 mt-4">
-                    <div class="bg-white p-3 rounded-4 text-center">
-                        <strong class="">Confidentialité</strong><br>
-                        Conforme aux normes<br>
-                        <img src="./assets/img/protection-données-1024x421.jpg" alt="INPDP" style="max-height: 40px;width: 100%;">
-                    </div>
-                    <div class="bg-white p-3 rounded-4 text-center">
-                        <strong>Données<br>sécurisé</strong><br>
-                        <img src="./assets/img/Logo-ANCS-10.png" alt="ANCS" style="max-height: 40px;width: 120px;">
-                    </div>
-                </div>
+
+<!-- Hero Section -->
+<Main class="d-flex flex-row mb-3  yellow-container">
+    <div class="hero-content">
+        <h1>Prenez soin de votre<br> santé mentale,</h1>
+        <h2>Grâce à la consultation vidéo<br>(Téléconsultation)</h2>
+        <p>Il peut parfois être difficile de trouver le moment optimun pour prendre soin de sa santé mentale, la téléconsultation peut vous y aider. Plusieurs spécialités dont l’exercice est protégé et réglementé peuvent vous accompagner sur ce sujet.</p>
+        <div class="d-flex gap-3 mt-4">
+            <div class="badge bg-white p-3 rounded-6 text-center">
+                <h3 class="">Confidentialité</h3>
+                <p ><small>Conformité avec les normes</small></p>
+                <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo">
             </div>
-
-            <!-- Right side: Image -->
-            <div class="col-lg-6 image-col">
-                <img src="./assets/img/pro.png" class="mockup-img" alt="Famille heureuse">
-
+            <div class="badge bg-white p-3 text-center">
+                <h3>Données sécurisées</h3>
+                <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo">
             </div>
         </div>
-
     </div>
-
-
-    <div class="container py-5 bg-white rounded-4 mt-5">
-        <h2 class="text-center mb-5 w-50 ml-5">Siladoc votre partenaire dans la digitalisation du parcours de santé</h2>
-        <div class="row g-4">
-            <!-- Card 1 -->
-            <!-- Carte avec image et texte en ligne -->
-            <div class="col-md-12 col-sm-12 col-lg-4 mb-4">
-                <div class="card h-100 bg-light" >
-                    <div class="d-flex" style="height: 250px;">
-                        <img src="assets/img/parcour01.jpeg" alt="Téléconsultation"
-                             style="width: 175px; height: 100%; object-fit: cover;">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title">Téléconsultation :</h5>
-                            <p class="card-text">
-                                Un module de téléconsultation permet aux médecins de consulter leurs patients à distance, offrant une expérience fluide et sécurisée.
-                            </p>
-                        </div>
+    <div class="hero-image">
+        <img src="assets/img/Sante Mentale/psy header.jpg" alt="Famille allongée" class="header-img">
+    </div>
+    <img src="assets/img/Sante Mentale/psy ad.png" alt="Consultation vidéo" class="phone-img">
+</Main>
+<section class="white-container ">
+    <div class="section-header d-flex justify-content-between align-items-center mb-4">
+        <h2>Les professionnels de la santé mentale</h2>
+        <a href="#" class="text-secondary">
+            <i class="fas fa-chevron-right"></i> </a>
+    </div>
+    <div class="cards d-flex flex-wrap">
+        <!-- Card prototypes, duplicate as needed -->
+        <div class="card p-2 justify-content-between">
+            <div class = "d-flex column-md ml-auto">
+                <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                <div class="d-flex flex-column mb-3 card_header">
+                    <div class="p-2 card-name">
+                        <h3>Mr Mohamed MBAREK</h3>
+                    </div>
+                    <div class="p-2 card-description">
+                        <small>Psychologue</small>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-sm-12 col-lg-4 mb-4">
-                <div class="card h-100 bg-light" >
-                    <div class="d-flex" style="height: 250px;">
-                        <img src="assets/img/parcour02.jpg" alt="Téléconsultation"
-                             style="width: 175px; height: 100%; object-fit: cover;">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title">Téléconsultation :</h5>
-                            <p class="card-text">
-                                Un module de téléconsultation permet aux médecins de consulter leurs patients à distance, offrant une expérience fluide et sécurisée.
-                            </p>
-                        </div>
+            <hr class="my-2">
+            <p class="card-text small address-text">
+                <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+            </p>
+            <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+            <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
+            <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
+        </div>
+        <div class="card p-2 justify-content-between">
+            <div class = "d-flex column-md ml-auto">
+                <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                <div class="d-flex flex-column mb-3 card_header">
+                    <div class="p-2 card-name">
+                        <h3>Mr Mohamed MBAREK</h3>
+                    </div>
+                    <div class="p-2 card-description">
+                        <small>Psychologue</small>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-sm-12 col-lg-4 mb-4">
-                <div class="card h-100 bg-light" >
-                    <div class="d-flex  flex-md-row" style="height: 250px;">
-                        <img src="assets/img/parcour03.jpeg" alt="Téléconsultation"
-                             style="width: 175px; height: 100%; object-fit: cover;">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title">Téléconsultation :</h5>
-                            <p class="card-text">
-                                Un module de téléconsultation permet aux médecins de consulter leurs patients à distance, offrant une expérience fluide et sécurisée.
-                            </p>
-                        </div>
+            <hr class="my-2">
+            <p class="card-text small address-text">
+                <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+            </p>
+            <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+            <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
+            <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
+        </div>
+        <div class="card p-2 justify-content-between">
+            <div class = "d-flex column-md ml-auto">
+                <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                <div class="d-flex flex-column mb-3 card_header">
+                    <div class="p-2 card-name">
+                        <h3>Mr Mohamed MBAREK</h3>
+                    </div>
+                    <div class="p-2 card-description">
+                        <small>Psychologue</small>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-sm-12 col-lg-4 mb-4">
-                <div class="card h-100 bg-light" >
-                    <div class="d-flex" style="height: 250px;">
-                        <img src="assets/img/parcour04.jpg" alt="Téléconsultation"
-                             style="width: 175px; height: 100%; object-fit: cover;">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title">Téléconsultation :</h5>
-                            <p class="card-text">
-                                Un module de téléconsultation permet aux médecins de consulter leurs patients à distance, offrant une expérience fluide et sécurisée.
-                            </p>
-                        </div>
+            <hr class="my-2">
+            <p class="card-text small address-text">
+                <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+            </p>
+            <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+            <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
+            <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
+        </div>
+        <div class="card p-2 justify-content-between">
+            <div class = "d-flex column-md ml-auto">
+                <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                <div class="d-flex flex-column mb-3 card_header">
+                    <div class="p-2 card-name">
+                        <h3>Mr Mohamed MBAREK</h3>
+                    </div>
+                    <div class="p-2 card-description">
+                        <small>Psychologue</small>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12 col-sm-12 col-lg-4 mb-4">
-                <div class="card h-100 bg-light" >
-                    <div class="d-flex" style="height: 250px;">
-                        <img src="assets/img/parcour05.jpg" alt="Téléconsultation"
-                             style="width: 175px; height: 100%; object-fit: cover;">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title">Téléconsultation :</h5>
-                            <p class="card-text">
-                                Un module de téléconsultation permet aux médecins de consulter leurs patients à distance, offrant une expérience fluide et sécurisée.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12 col-sm-12 col-lg-4 mb-4">
-                <div class="card h-100 bg-light" >
-                    <div class="d-flex" style="height: 250px;">
-                        <img src="assets/img/parcour06.png" alt="Téléconsultation"
-                             style="width: 175px; height: 100%; object-fit: cover;">
-                        <div class="card-body d-flex flex-column justify-content-center">
-                            <h5 class="card-title">Téléconsultation :</h5>
-                            <p class="card-text">
-                                Un module de téléconsultation permet aux médecins de consulter leurs patients à distance, offrant une expérience fluide et sécurisée.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+            <hr class="my-2">
+            <p class="card-text small address-text">
+                <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+            </p>
+            <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+            <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
+            <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
         </div>
     </div>
-
-</div>
+    <div class="text-center container-voir-plus">
+        <a href="#" class="btn btn-light btn-voir-plus">Voir plus</a>
+    </div>
+</section>
+<section class="domains ">
+    <h2>Nos domaines d'intervention</h2>
+    <div class="grid-domains row row-cols-4 gy-4">
+        <div class="domain-item col"><img src="assets/img/addiction.png" alt="Dépression"><span>Dépression</span></div>
+        <div class="domain-item col"><img src="assets/img/anxiety.png" alt="Anxiété"><span>Anxiété</span></div>
+        <div class="domain-item col"><img src="assets/img/crise.png" alt="Crise d'angoisse"><span>Crise d'angoisse</span></div>
+        <div class="domain-item col"><img src="assets/img/conflict.png" alt="Conflits relationnels"><span>Conflits relationnels</span></div>
+        <div class="domain-item col"><img src="assets/img/addictologie.png" alt="Addictologie"><span>Addictologie</span></div>
+        <div class="domain-item col"><img src="assets/img/pathologies.png" alt="Pathologies mentales"><span>Pathologies mentales</span></div>
+        <div class="domain-item col"><img src="assets/img/relaxation.png" alt="Relaxation"><span>Relaxation</span></div>
+        <div class="domain-item col"><img src="assets/img/developpement.png" alt="Développement personnel"><span>Développement personnel</span></div>
+    </div>
+</section>
 <!-- Accordion -->
-<section class="bg-white container rounded-3 h-100 p-3 mt-5">
+<section class="bg-white rounded-3 h-100 p-3">
     <div class="container">
 
         <div class="section-header ">
@@ -308,7 +626,7 @@
 </section>
 <!-- Fin Accordion-->
 <!-- Notre magazine de santé -->
-<section class="bg-white container p-2 mt-3 rounded ">
+<section class="bg-white p-2 mt-3 rounded">
     <div class="row m-3">
         <span class="col-lg-9 fw-bold mb-3 col-sm-9 col-9 text-dark text-start">Notre magazine de santé</span>
         <button class=" col-lg-3 col-sm-3 col-3 bg-transparent border-0">
@@ -318,7 +636,7 @@
 
     <div class="card-magazine row ml-5 justify-content-center d-none d-sm-flex">
         <div class="card col-lg-3 m-2 rounded" style="width: 300px;
-  ;padding: 0%;">
+;padding: 0%;">
             <img src="/assets/img/01.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
             <div class="card-body">
                 <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make up
@@ -332,7 +650,7 @@
             </div>
         </div>
         <div class="card col-lg-3 m-2 rounded " style="width: 300px;
-        ;padding: 0%;">
+      ;padding: 0%;">
             <img src="/assets/img/02.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
             <div class="card-body">
                 <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make up
@@ -347,7 +665,7 @@
             </div>
         </div>
         <div class="card col-lg-3 m-2 rounded" style="width: 300px;
-              ;padding: 0%;">
+            ;padding: 0%;">
             <img src="/assets/img/03.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
             <div class="card-body">
                 <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make up
@@ -363,7 +681,7 @@
             </div>
         </div>
         <div class="card col-lg-3 m-2 rounded" style="width: 300px;
-                    ;padding: 0%;">
+                  ;padding: 0%;">
             <img src="/assets/img/04.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
             <div class="card-body">
                 <p class="fw-bold mb-3 text-dark text-start">Some quick example text to build on the card title and make up
@@ -461,19 +779,9 @@
         </div>
     </div>
 </section>
-<!-- Footer -->
-<!--  -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
-<script>
-    const myCarousel = document.querySelector('#cardCarousel');
-    const carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 2000,
-        ride: 'carousel'
-    });
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </body>
-
 </html>
+
