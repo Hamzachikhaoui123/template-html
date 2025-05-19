@@ -3,206 +3,600 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professionnels de la Santé Mentale</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css"> <link type="image/x-icon" href="./assets/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="./assets/css/gotham-rounded.css">
+    <link rel="stylesheet" href="./assets/css/feather.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<style>
-    body {
-        font-family: sans-serif;
-        background-color: #f8f9fa; /* Light grey background similar to image */
-    }
+    <title>Santé mentale - Siladoc</title>
+    <style>
+        body {
+            color: #333;
+            background: #F8F8F8;
+            /* margin: 30px; Bootstrap container will handle spacing */
+            padding-top: 70px; /* Adjust if your navbar is fixed and has a specific height */
+        }
 
-    .container {
-        background-color: #ffffff; /* White background for the main content area */
-        padding: 30px;
-        border-radius: 15px; /* Rounded corners for the container */
-        box-shadow: 0 0 20px rgba(0,0,0,0.05); /* Subtle shadow */
-    }
+        .btn-seconnecter {
+            background-color: #008D93;
+            padding: 8px 15px; /* Adjusted padding slightly */
+            color: white;
+            font-weight: bold;
+            border: 1px solid #008D93; /* Added border for consistency */
+        }
 
-    .section-header h2 {
-        font-size: 1.5rem; /* Adjust size as needed */
-        font-weight: 600;
-        color: #333;
-    }
+        .btn-seconnecter:hover {
+            background-color: #007a7f; /* Darken slightly on hover */
+            border-color: #007a7f;
+            color: white;
+        }
 
-    .section-header a i {
-        font-size: 1.2rem; /* Adjust arrow size */
-    }
+        .yellow-container {
+            font-family: sans-serif;
+            border-radius: 40px;
+            background-color: #F8F4D0;
+            margin-top: 30px; /* Reduced margin-top */
+            padding: 30px; /* Adjusted padding */
+        }
 
-    .card {
-        border: 1px solid #e0e0e0; /* Light border for cards */
-        border-radius: 15px; /* Rounded corners for cards */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Subtle shadow for cards */
-        transition: transform 0.2s; /* Smooth hover effect */
-    }
+        .white-container {
+            font-family: sans-serif;
+            border-radius: 40px;
+            background-color: white;
+            margin-top: 60px;
+            padding: 50px 30px; /* Adjusted padding for responsiveness */
+        }
 
-    .card:hover {
-        transform: translateY(-5px); /* Slight lift on hover */
-    }
+        .hero-content h1 {
+            font: normal normal bold 40px/1.2 "Gotham Rounded", sans-serif; /* Added line-height and fallback font */
+            letter-spacing: 0px;
+            color: #000000;
+            text-align: left;
+        }
 
-    .professional-icon {
-        width: 60px; /* Adjust size as needed */
-        height: 60px;
-        border: 2px solid #eee;
-        /* Using placeholder, you'd replace src in HTML */
-    }
+        .hero-content h2 {
+            font: normal normal bold 32px/1.2 "Gotham Rounded", sans-serif; /* Added line-height and fallback font */
+            letter-spacing: 0px;
+            color: #008080;
+            margin-top: 20px;
+            text-align: left;
+        }
 
-    .card-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #333;
-    }
+        .hero-content p {
+            /* width: 490px; /* Let Bootstrap columns handle width */
+            font: normal normal 300 20px/1.5 "Gotham Rounded", sans-serif; /* Adjusted line-height and fallback font */
+            letter-spacing: 0px;
+            color: #707070;
+            text-align: left;
+            margin-top: 30px; /* Adjusted margin */
+        }
 
-    .card-subtitle {
-        font-size: 0.9rem;
-        color: #555;
-    }
+        .badges-container { /* Renamed from .badges for clarity */
+            margin-top: 40px; /* Adjusted margin */
+            gap: 20px; /* Reduced gap for better fit */
+        }
 
-    .address-text, .tel-text {
-        font-size: 0.8rem;
-        color: #666;
-        line-height: 1.4;
-        min-height: 50px; /* Ensure consistent height for text blocks */
-    }
+        .custom-badge { /* Renamed from .badge to avoid conflict with Bootstrap's .badge */
+            background: #fff;
+            padding: 20px;
+            width: 100%; /* Make badges responsive within their column */
+            max-width: 220px; /* Max width for badges */
+            min-height: 200px; /* Ensure consistent height */
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Better content distribution */
+        }
 
-    .btn-custom-disabled {
-        background-color: #f0f0f0; /* Light grey background */
-        border-color: #e0e0e0;
-        color: #aaa; /* Light grey text */
-        font-size: 0.9rem;
-        border-radius: 8px;
-        padding: 8px 12px;
-    }
+        .custom-badge img {
+            height: 70px;
+            width: auto;
+            margin: 14px auto 0; /* Adjusted margin for centering */
+        }
 
-    .btn-custom-disabled:hover {
-        background-color: #e9e9e9;
-        color: #aaa;
-    }
+        .custom-badge h3 {
+            margin: 15px 0 5px; /* Adjusted margins */
+            font-size: 20px;
+            line-height: 1.2;
+            font-family: "Gotham Rounded Bold", sans-serif;
+            color: #707070;
+        }
 
-    .btn-custom-primary {
-        background-color: #17a2b8; /* Teal color from image (adjust as needed) */
-        border-color: #17a2b8;
-        color: white;
-        font-size: 0.9rem;
-        border-radius: 8px;
-        padding: 8px 12px;
-    }
+        .custom-badge p small {
+            font-size: 0.85rem;
+            color: #333;
+            line-height: 1.3;
+        }
 
-    .btn-custom-primary:hover {
-        background-color: #138496;
-        border-color: #117a8b;
-    }
+        .hero-image-bg { /* Styles for the background image container */
+            min-height: 500px; /* Minimum height */
+            background-size: cover;
+            background-position: center center;
+            border-radius: 40px;
+            position: relative; /* For positioning the phone image */
+            overflow: hidden; /* To ensure rounded corners apply to background */
+        }
 
-    .btn-voir-plus {
-        background-color: #e9ecef; /* Light grey like the disabled button */
-        border-color: #ced4da;
-        color: #495057; /* Darker grey text */
-        padding: 10px 30px;
-        font-size: 1rem;
-        font-weight: 500;
-        border-radius: 8px;
-    }
+        .phone-img-overlay { /* Styles for the phone image */
+            position: absolute;
+            bottom: -20px; /* Adjust as needed to match the image */
+            right: -20px;  /* Adjust as needed to match the image */
+            width: 60%; /* Responsive width */
+            max-width: 300px; /* Max width for the phone */
+            height: auto;
+            z-index: 10;
+        }
+        @media (max-width: 767.98px) {
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            .hero-content h2 {
+                font-size: 26px;
+            }
+            .hero-content p {
+                font-size: 18px;
+            }
+            .phone-img-overlay {
+                width: 50%;
+                bottom: -10px;
+                right: -10px;
+            }
+            .hero-image-bg {
+                min-height: 350px;
+            }
+            .custom-badge {
+                max-width: 100%;
+                min-height: auto;
+                margin-bottom: 20px;
+            }
+            .badges-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
 
-    .btn-voir-plus:hover {
-        background-color: #d3d9df;
-        border-color: #b8c0c7;
-    }
 
-    /* Responsive adjustments if needed */
-    @media (max-width: 767px) {
         .section-header h2 {
-            font-size: 1.3rem;
+            margin: 0;
+            font-size: 28px;
+            line-height: 34px;
+            font-family: "Gotham Rounded Bold", sans-serif;
+            color: #000000;
+            text-align: center;
         }
-        .address-text, .tel-text {
-            min-height: auto; /* Allow text blocks to resize on smaller screens */
-        }
-    }
-</style>
-<body>
 
-<div class="container mt-5">
+        .section-header a i {
+            font-size: 24px;
+            line-height: 29px;
+            color: #707070;
+        }
+
+        .cards-container { /* Renamed for clarity */
+            margin-top: 40px; /* Adjusted */
+        }
+
+        .custom-card { /* Renamed to avoid conflict with Bootstrap's .card */
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            /* width: 360px; Let Bootstrap columns handle width */
+            /* height: 430px; Height will be content-driven or use Bootstrap height classes */
+            border: 1px solid #DDDDDD;
+            border-radius: 40px;
+            padding: 30px 25px; /* Adjusted padding */
+            text-align: left;
+            display: flex; /* Added for flex content */
+            flex-direction: column; /* Added for flex content */
+            justify-content: space-between; /* Added for flex content */
+            margin-bottom: 30px; /* Add space between cards on smaller screens */
+        }
+
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-card img.avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 20px;
+            margin-right: 15px; /* Added margin for spacing */
+        }
+        .card-header-content { /* Wrapper for name and description */
+            flex-grow: 1;
+        }
+
+        .custom-card h3 {
+            margin: 0 0 5px 0; /* Adjusted margin */
+            font-size: 20px;
+            line-height: 1.2;
+            font-family: "Gotham Rounded Bold", sans-serif;
+            color: #000000;
+        }
+
+        .custom-card small { /* Targeting small specifically for role */
+            font-size: 16px;
+            line-height: 1.2;
+            font-family: "Gotham Rounded light", sans-serif;
+            color: #707070;
+        }
+
+        .custom-card hr {
+            border-top: 1px solid #dfdfdf; /* Lighter horizontal rule */
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .address-text, .tel-text {
+            margin-bottom: 10px; /* Added margin */
+            font-size: 16px;
+            line-height: 1.4; /* Adjusted line-height */
+            font-family: "Gotham Rounded light", sans-serif;
+            color: #707070;
+        }
+
+        .btn-custom-disabled {
+            background-color: #f0f0f0;
+            border-color: #DDDDDD;
+            color: #aaa;
+            font-size: 0.9rem;
+            border-radius: 10px; /* Matched primary button */
+            padding: 10px 12px; /* Increased padding */
+        }
+
+        .btn-custom-disabled:hover {
+            background-color: #e9e9e9;
+            color: #aaa;
+        }
+
+        .btn-custom-primary {
+            background-color: #008D93;
+            border: 1px solid #008D93; /* Matched background */
+            color: white;
+            font-size: 0.9rem;
+            border-radius: 10px;
+            padding: 10px 12px; /* Increased padding */
+        }
+
+        .btn-custom-primary:hover {
+            background-color: #007a7f; /* Darken slightly */
+            border-color: #007a7f;
+            color: white;
+        }
+
+        .container-voir-plus {
+            margin-top: 40px;
+        }
+
+        .btn-voir-plus {
+            background-color: #e9ecef;
+            border-color: #ced4da;
+            color: #495057;
+            padding: 10px 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 8px;
+            /* width: 1530px; /* Remove fixed width, let it be natural or use Bootstrap width classes */
+            /* height: 48px; /* Height will be determined by padding */
+            display: inline-block; /* To allow text-center to work on the parent */
+        }
+
+        .btn-voir-plus:hover {
+            background-color: #d3d9df;
+            border-color: #b8c0c7;
+        }
+
+        .domains {
+            margin-top: 60px;
+            padding-bottom: 60px; /* Added padding at the bottom */
+        }
+
+        .domains h2 {
+            margin-bottom: 40px; /* Added margin below title */
+            font-size: 28px;
+            line-height: 34px;
+            font-family: "Gotham Rounded Bold", sans-serif;
+            color: #000000;
+            text-align: center;
+        }
+
+        .grid-domains {
+            /* margin-top: 44px; /* This is handled by Bootstrap's gy-4 */
+        }
+
+        .domain-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 120px; /* Keep fixed height if desired, or make responsive */
+        }
+
+        .domain-item img {
+            width: 100%;
+            height: 100%; /* Make image fill the item */
+            object-fit: cover;
+            filter: brightness(60%);
+            transition: filter .3s;
+        }
+
+        .domain-item:hover img {
+            filter: brightness(80%);
+        }
+
+        .domain-item span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            text-align: center; /* Ensure text is centered if it wraps */
+            width: 90%; /* Prevent text from touching edges */
+        }
+        .logox-img { /* Ensure logo isn't too large */
+            max-height: 40px; /* Adjust as needed */
+        }
+
+        /* Responsive adjustments for medium and smaller screens */
+        @media (max-width: 991.98px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+            .hero-content h2 {
+                font-size: 28px;
+            }
+            .hero-content p {
+                font-size: 18px;
+            }
+            .phone-img-overlay {
+                width: 50%;
+                max-width: 250px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-top: 56px; /* Adjust if navbar height changes on mobile */
+            }
+            .yellow-container {
+                margin-top: 20px;
+                padding: 20px;
+            }
+            .hero-content {
+                text-align: center; /* Center text on smaller screens */
+            }
+            .hero-content h1, .hero-content h2, .hero-content p {
+                text-align: center;
+            }
+            .badges-container {
+                justify-content: center;
+                flex-wrap: wrap; /* Allow badges to wrap */
+            }
+            .custom-badge {
+                flex-basis: 45%; /* Two badges per row roughly */
+                margin-bottom: 20px;
+            }
+            .hero-image-bg {
+                min-height: 300px; /* Adjust height for mobile */
+                margin-top: 30px; /* Add space above image on mobile */
+            }
+            .phone-img-overlay {
+                position: relative; /* Stack phone image below text on small screens */
+                display: block;
+                margin: 20px auto 0; /* Center it */
+                width: 70%;
+                max-width: 280px;
+                bottom: auto;
+                right: auto;
+            }
+            .section-header h2 {
+                font-size: 24px;
+            }
+            .btn-voir-plus {
+                width: 100%; /* Make button full width on small screens */
+            }
+            .grid-domains .domain-item { /* For domain items on small screens */
+                height: 100px;
+            }
+        }
+        @media (max-width: 575.98px) {
+            .custom-badge {
+                flex-basis: 100%; /* One badge per row on extra small screens */
+            }
+            .hero-content h1 {
+                font-size: 28px;
+            }
+            .hero-content h2 {
+                font-size: 22px;
+            }
+            .hero-content p {
+                font-size: 16px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./home.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./inscription.html">Inscrivez-vous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Nous Contacter</a>
+                </li>
+            </ul>
+            <a href="./login.html" class="btn btn-seconnecter ms-lg-3">Se connecter</a>
+        </div>
+    </div>
+</header>
+
+<main class="container yellow-container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 hero-content">
+            <h1>Prenez soin de votre<br> santé mentale,</h1>
+            <h2>Grâce à la consultation vidéo<br>(Téléconsultation)</h2>
+            <p>Il peut parfois être difficile de trouver le moment optimun pour prendre soin de sa santé mentale, la téléconsultation peut vous y aider. Plusieurs spécialités dont l’exercice est protégé et réglementé peuvent vous accompagner sur ce sujet.</p>
+            <div class="d-flex flex-wrap badges-container">
+                <div class="custom-badge">
+                    <h3>Confidentialité</h3>
+                    <p><small>Conformité avec les normes</small></p>
+                    <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo" class="img-fluid">
+                </div>
+                <div class="custom-badge ms-md-3">
+                    <h3>Données sécurisées</h3>
+                    <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="hero-image-bg" style="background-image: url('assets/img/Sante Mentale/psy header.jpg');
+background-image: url('assets/img/Sante Mentale/psy header.jpg');">
+            </div>
+        </div>
+    </div>
+</main>
+
+<section class="white-container container">
     <div class="section-header d-flex justify-content-between align-items-center mb-4">
         <h2>Les professionnels de la santé mentale</h2>
         <a href="#" class="text-secondary">
-            <i class="fas fa-chevron-right"></i> </a>
+            <i class="fas fa-chevron-right"></i>
+        </a>
     </div>
-
-    <div class="row">
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card h-100">
-                <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/80/E0E0E0/808080?text=Icon" alt="User Icon" class="professional-icon rounded-circle mb-3">
-                    <h5 class="card-title mb-1">Mr Mohamed MBAREK</h5>
-                    <p class="card-subtitle text-muted mb-2">Psychologue</p>
-                    <p class="card-text small address-text">
-                        Adresse: Av. ... de la République 8050, centre farah manar Ville 2090, Ariana Tunisie
-                    </p>
-                    <p class="card-text small tel-text">Tél: +1234567 Mob: +0987654</p>
-                    <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
-                    <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
+    <div class="row cards-container">
+        <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="custom-card h-100">
+                <div class="d-flex align-items-start mb-3">
+                    <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                    <div class="card-header-content">
+                        <h3>Mr Mohamed MBAREK</h3>
+                        <small>Psychologue</small>
+                    </div>
+                </div>
+                <hr class="my-2">
+                <p class="card-text small address-text">
+                    <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+                </p>
+                <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+                <div class="mt-auto"> <button class="btn btn-custom-disabled w-100 mb-2" disabled>Voir profil</button>
+                    <button class="btn btn-custom-primary w-100">Prendre rendez-vous</button>
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card h-100">
-                <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/80/E0E0E0/808080?text=Icon" alt="User Icon" class="professional-icon rounded-circle mb-3">
-                    <h5 class="card-title mb-1">Mr Mohamed MBAREK</h5>
-                    <p class="card-subtitle text-muted mb-2">Psychologue</p>
-                    <p class="card-text small address-text">
-                        Adresse: Av. ... de la République 8050, centre farah manar Ville 2090, Ariana Tunisie
-                    </p>
-                    <p class="card-text small tel-text">Tél: +1234567 Mob: +0987654</p>
-                    <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
-                    <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="custom-card h-100">
+                <div class="d-flex align-items-start mb-3">
+                    <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                    <div class="card-header-content">
+                        <h3>Mr Mohamed MBAREK</h3>
+                        <small>Psychologue</small>
+                    </div>
+                </div>
+                <hr class="my-2">
+                <p class="card-text small address-text">
+                    <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+                </p>
+                <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+                <div class="mt-auto">
+                    <button class="btn btn-custom-disabled w-100 mb-2" disabled>Voir profil</button>
+                    <button class="btn btn-custom-primary w-100">Prendre rendez-vous</button>
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card h-100">
-                <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/80/E0E0E0/808080?text=Icon" alt="User Icon" class="professional-icon rounded-circle mb-3">
-                    <h5 class="card-title mb-1">Mr Mohamed MBAREK</h5>
-                    <p class="card-subtitle text-muted mb-2">Psychologue</p>
-                    <p class="card-text small address-text">
-                        Adresse: Av. ... de la République 8050, centre farah manar Ville 2090, Ariana Tunisie
-                    </p>
-                    <p class="card-text small tel-text">Tél: +1234567 Mob: +0987654</p>
-                    <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
-                    <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="custom-card h-100">
+                <div class="d-flex align-items-start mb-3">
+                    <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                    <div class="card-header-content">
+                        <h3>Mr Mohamed MBAREK</h3>
+                        <small>Psychologue</small>
+                    </div>
+                </div>
+                <hr class="my-2">
+                <p class="card-text small address-text">
+                    <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+                </p>
+                <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+                <div class="mt-auto">
+                    <button class="btn btn-custom-disabled w-100 mb-2" disabled>Voir profil</button>
+                    <button class="btn btn-custom-primary w-100">Prendre rendez-vous</button>
                 </div>
             </div>
         </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card h-100">
-                <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/80/E0E0E0/808080?text=Icon" alt="User Icon" class="professional-icon rounded-circle mb-3">
-                    <h5 class="card-title mb-1">Mr Mohamed MBAREK</h5>
-                    <p class="card-subtitle text-muted mb-2">Psychologue</p>
-                    <p class="card-text small address-text">
-                        Adresse: Av. ... de la République 8050, centre farah manar Ville 2090, Ariana Tunisie
-                    </p>
-                    <p class="card-text small tel-text">Tél: +1234567 Mob: +0987654</p>
-                    <button class="btn btn-sm btn-custom-disabled btn-block mb-2" disabled>Voir profile</button>
-                    <button class="btn btn-sm btn-custom-primary btn-block">Prendre rendez-vous</button>
+        <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="custom-card h-100">
+                <div class="d-flex align-items-start mb-3">
+                    <img src="assets/img/user-avatar.png" alt="Avatar" class="avatar">
+                    <div class="card-header-content">
+                        <h3>Mr Mohamed MBAREK</h3>
+                        <small>Psychologue</small>
+                    </div>
+                </div>
+                <hr class="my-2">
+                <p class="card-text small address-text">
+                    <b>Adresse:</b> Av. Habib Bourguiba, Ariana 8090, centre farah Ariana Ville 2080 Ariana Tunisie
+                </p>
+                <p class="card-text small tel-text"><b>Tél :</b> 26897420 <b>Mob :</b> 24809389</p>
+                <div class="mt-auto">
+                    <button class="btn btn-custom-disabled w-100 mb-2" disabled>Voir profil</button>
+                    <button class="btn btn-custom-primary w-100">Prendre rendez-vous</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="text-center mt-3 mb-5">
-        <button class="btn btn-voir-plus">Voir plus</button>
+    <div class="text-center container-voir-plus">
+        <a href="#" class="btn btn-voir-plus">Voir plus</a>
     </div>
+</section>
 
-</div>
+<section class="domains container">
+    <h2>Nos domaines d'intervention</h2>
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-4 gx-3 grid-domains">
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/addiction.png" alt="Dépression"><span>Dépression</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/anxiety.png" alt="Anxiété"><span>Anxiété</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/crise.png" alt="Crise d'angoisse"><span>Crise d'angoisse</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/conflict.png" alt="Conflits relationnels"><span>Conflits relationnels</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/addictologie.png" alt="Addictologie"><span>Addictologie</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/pathologies.png" alt="Pathologies mentales"><span>Pathologies mentales</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/relaxation.png" alt="Relaxation"><span>Relaxation</span></div>
+        </div>
+        <div class="col">
+            <div class="domain-item"><img src="assets/img/developpement.png" alt="Développement personnel"><span>Développement personnel</span></div>
+        </div>
+    </div>
+</section>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
