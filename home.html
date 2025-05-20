@@ -16,6 +16,7 @@
 <style>
   hero-content{
     justify-content: unset;
+    width: 490px;
   }
   .hero-content h1 {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
@@ -51,16 +52,17 @@
   }
   .hero-image {
     position: relative;
-    width: 100%;
+    width: 490px;
+    height: 630px;
     margin-left: auto;
     overflow: hidden;
+    margin-top: auto;
   }
   .header-img {
     position: absolute;
-    top: 0;
-    right: 0;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    height: 100%;
     object-fit: cover;
 
   }
@@ -343,6 +345,18 @@
       /* Adjusted for positioning */
 
     }
+    .header-card{
+      display: none;
+      visibility: hidden;
+    }
+    .hero-content{
+      width: 328px;
+    }
+    .hero-image {
+      width: 348px;
+      height: 453px;
+    }
+
   }
 
   @media screen and (max-width:600px) {
@@ -394,6 +408,10 @@
       align-items: center;
       padding: 0.5rem 1rem;
     }
+    .header-card{
+      display: none;
+      visibility: hidden;
+    }
   }
 </style>
 
@@ -419,8 +437,8 @@
 <!--</header>-->
 <div class="d-flex flex-row">
   <section class=""style="">
-    <div class="d-flex flex-row bg-white rounded-5 p-5 pb-0 pe-0   text-center">
-      <div class="hero-content">
+    <div class="d-flex flex-row bg-white rounded-5 ps-5 p-0   text-center">
+      <div class="hero-content pt-5 mt-auto">
         <h1 class="fw-bold text-start text-black style-title">
           Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
         <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
@@ -452,8 +470,8 @@
     </div>
   </section>
 
-  <section class="">
-    <div class="card yellow mb-5">
+  <section class="ms-4" style="max-width: 600px;">
+    <div class="card yellow header-card mb-5 border-0">
       <h3 class="text-start w-50">Prenez soin de votre santé mentale</h3>
       <p class="w-50">Grâce à la consultation vidéo (Téléconsultation)</p>
 
@@ -463,7 +481,7 @@
         </button>
       </div>
     </div>
-    <div class="card blue ">
+    <div class="card blue header-card border-0 ">
       <h2 class="text-start w-50">Digitaliser votre cabinet médical</h2>
       <p class="w-50">Planification de rendez-vous, partage de documents, interface intuitive.
       </p>

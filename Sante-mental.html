@@ -76,8 +76,6 @@
   }
   .badge img {
     height: 70px;
-    width: auto;
-    margin-top: auto;
   }
   .badge h3 {
     font-size: 20px;
@@ -89,7 +87,6 @@
     overflow-wrap: break-word;
     overflow: visible;
     text-overflow: clip;
-    margin-top: 11px;
   }
   .badge p {
     font-size: 0.85rem;
@@ -101,24 +98,37 @@
     height: 776px;
     margin-left: auto;
     overflow: hidden;
+    z-index: 1;
+
   }
   .header-img {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     width: 835px;
     height: 100%;
     object-fit: cover;
-
+    z-index: 1
+  }
+  .phone-container {
+    position: relative;
+    width: 359px;
+    height: 684px;
+    overflow: hidden;
+    z-index: 2;
+    margin-right: -127px;
   }
   .phone-img {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 359px;
-    height: auto;
-
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
   }
   .section-header{
-    padding: 0!important;
+    padding: 0 !important;
   }
   .section-header h2 {
     margin: 0;
@@ -401,7 +411,6 @@
       <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
     </div>
   </header>
-
   <!-- Hero Section -->
   <Main class="d-flex flex-row mt-5 text-center ps-5 align-items-center rounded-5 yellow-container opacity-100 justify-content-center pe-0">
     <div class="hero-content">
@@ -409,23 +418,27 @@
       <h2>Grâce à la consultation vidéo<br>(Téléconsultation)</h2>
       <p>Il peut parfois être difficile de trouver le moment optimun pour prendre soin de sa santé mentale, la téléconsultation peut vous y aider. Plusieurs spécialités dont l’exercice est protégé et réglementé peuvent vous accompagner sur ce sujet.</p>
       <div class="d-flex gap-3 mt-4">
-        <div class="badge bg-white p-3 text-center d-flex flex-column">
+        <div class="badge bg-white p-3 text-center d-flex flex-column rounded-5 text-center">
           <h3 class="m-0 mt-4">Confidentialité</h3>
           <p class="m-0"><small>Conformité avec les normes</small></p>
-          <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo" class="mb-3">
+          <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo" class="mb-3 mt-auto">
         </div>
-        <div class="badge bg-white p-3 text-center d-flex flex-column">
+        <div class="badge bg-white p-3 text-center d-flex flex-column rounded-5 text-center">
           <h3 class="m-0 mt-2">Données sécurisées</h3>
-          <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo" class="mb-3">
+          <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo" class="mb-3 mt-auto">
         </div>
       </div>
     </div>
-    <div class="hero-image  rounded-5">
-      <img src="assets/img/Sante Mentale/psy header.jpg" alt="Famille allongée" class="header-img">
+    <div class="d-flex flex-row ms-auto">
+    <div class="phone-container">
+      <img src="assets/img/Sante Mentale/psy ad1.png" alt="Consultation vidéo" class="phone-img d-flex">
     </div>
-      <img src="assets/img/Sante Mentale/psy ad.png" alt="Consultation vidéo" class="phone-img">
+    <div class="hero-image  rounded-5">
+      <img src="assets/img/Sante Mentale/psy header.jpg" alt="Famille allongée" class="header-img d-flex">
+    </div>
+    </div>
   </Main>
-  <section class="white-container ">
+  <section class="white-container bg-white mt-5 text-center p-5 align-items-center rounded-5 opacity-100 justify-content-center ps-auto">
     <div class="section-header d-flex justify-content-between align-items-center mb-4">
       <h2>Les professionnels de la santé mentale</h2>
       <a href="#" class="text-secondary">
@@ -524,7 +537,7 @@
       <div class="domain-item"><img src="assets/img/addiction.png" alt="Dépression"><span>Dépression</span></div>
     </div>
       <div class="col">
-        <div class="domain-item"><img src="assets/img/anxiety.png" alt="Anxiété"><span>Anxiété</span></div>
+        <div class="domain-item"><img src="assets/img/sant/anxiety.png" alt="Anxiété"><span>Anxiété</span></div>
       </div>
       <div class="col">
         <div class="domain-item"><img src="assets/img/crise.png" alt="Crise d'angoisse"><span>Crise d'angoisse</span></div>
