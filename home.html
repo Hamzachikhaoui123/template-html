@@ -345,32 +345,47 @@
       padding: 0.5rem 1rem;
     }
   }
+  .hero-image {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    overflow: hidden;
+  }
+  .header-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
 </style>
 
 <body>
   <!-- Header -->
-  <header class="navbar bg-white fixed-top "> 
+  <header class="navbar bg-white fixed-top ">
     <div class="container">
-        <button class="menu-toggle" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <div class="d-block align-items-center">
-            <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
-        </div>
-        <nav class="nav-links">
-            <a href="./home.html">Accueil</a>
-            <a href="./inscription.html">Inscrivez-vous</a>
-            <a href="#">Nous Contacter</a>
-        </nav>
-        <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="d-block align-items-center">
+        <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+      </div>
+      <nav class="nav-links">
+        <a href="./home.html">Accueil</a>
+        <a href="./inscription.html">Inscrivez-vous</a>
+        <a href="#">Nous Contacter</a>
+      </nav>
+      <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
     </div>
-</header>
+  </header>
   <div class="row m-1 m-sm-2 m-lg-5">
     <section class="col-lg-6  col-xl-7 col-sm-12 col-md-12">
-      <div class="row  bg-white rounded">
-        <section class="col-lg-7  p-2 rounded">
+      <div class="d-flex flex-sm-column  rounded">
+        <section class="p-2 rounded">
           <h1 class="fw-bold text-start text-black style-title">
             Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
           <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
@@ -379,7 +394,6 @@
             <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
             <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
             <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-
             <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
             <div class="trois-point">
               <span>...</span>
@@ -396,8 +410,13 @@
             </div>
           </div>
         </section>
+        <div class="hero-image">
+          <img class="header-img" src="assets/img/siladoc01.png" alt="Médecin">
+          </div>
+        <!-- <div class="col-lg-5">
+          <img class="description-site-center w-100 d-none d-lg-block" src="assets/img/siladoc01.png" alt="Médecin">
 
-        <img class="description-site-center col-lg-5" src="assets/img/siladoc01.png" alt="Médecin">
+        </div> -->
       </div>
     </section>
 
