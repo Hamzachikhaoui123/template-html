@@ -16,7 +16,6 @@
   body {
     color: #333;
     background: #F8F8F8;
-    margin: 30px;
     }
   .btn-seconnecter {
     background-color: #008D93;
@@ -31,31 +30,9 @@
   }
 
   .yellow-container {
-    text-align: center;
-    padding-left: 40px;
-    font-family: sans-serif;
-    align-items: center;
-    border-radius: 40px;
-    opacity: 1;
     background-color: #F8F4D0;
-    justify-content: center;
-    margin-top: 60px;
-    padding-right: 0 !important;
-
   }
   .white-container {
-    text-align: center;
-    padding: 50px 55px 50px 55px;
-    font-family: sans-serif;
-    align-items: center;
-    border-radius: 40px;
-    gap: 40px;
-    background-position: center center;
-    border-radius: 40px;
-    opacity: 1;
-    background-color: white;
-    margin-top: 60px;
-    justify-items: center;
   }
   .hero-content{
     justify-content: unset;
@@ -92,30 +69,17 @@
     opacity: 1;
     margin-top: 40px;
   }
-  .badges {
-    display: flex;
-    gap: 30px;
-    margin-top: 84px;
-  }
   .badge {
-    background: #fff;
-    padding: 16px;
     width: 200px;
     height: 200px;
-    border-radius: 40px;
-    text-align: center;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
   }
   .badge img {
     height: 70px;
     width: auto;
     margin-top: auto;
-    margin-bottom: 14px;
   }
   .badge h3 {
-    margin: 0;
     font-size: 20px;
     line-height: 24px;
     font-family: "Gotham Rounded Bold";
@@ -128,9 +92,8 @@
     margin-top: 11px;
   }
   .badge p {
-    margin: 0;
     font-size: 0.85rem;
-    color: #333;
+    color: #707070;
   }
   .hero-image {
     position: relative;
@@ -138,7 +101,6 @@
     height: 776px;
     margin-left: auto;
     overflow: hidden;
-    border-radius: 40px;
   }
   .header-img {
     position: absolute;
@@ -419,7 +381,7 @@
   }
 
 </style>
-<body>
+<body class="m-lg-5 m-sm-0 m-md-5 text-center">
   <!-- Header / Navbar -->
   <header class="navbar ">
     <div class="container">
@@ -441,24 +403,24 @@
   </header>
 
   <!-- Hero Section -->
-  <Main class="d-flex flex-row mb-3  yellow-container">
+  <Main class="d-flex flex-row mt-5 text-center ps-5 align-items-center rounded-5 yellow-container opacity-100 justify-content-center pe-0">
     <div class="hero-content">
       <h1>Prenez soin de votre<br> santé mentale,</h1>
       <h2>Grâce à la consultation vidéo<br>(Téléconsultation)</h2>
       <p>Il peut parfois être difficile de trouver le moment optimun pour prendre soin de sa santé mentale, la téléconsultation peut vous y aider. Plusieurs spécialités dont l’exercice est protégé et réglementé peuvent vous accompagner sur ce sujet.</p>
       <div class="d-flex gap-3 mt-4">
-        <div class="badge bg-white p-3 rounded-6 text-center">
-          <h3 class="">Confidentialité</h3>
-          <p ><small>Conformité avec les normes</small></p>
-          <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo">
+        <div class="badge bg-white p-3 text-center d-flex flex-column">
+          <h3 class="m-0 mt-4">Confidentialité</h3>
+          <p class="m-0"><small>Conformité avec les normes</small></p>
+          <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo" class="mb-3">
         </div>
-        <div class="badge bg-white p-3 text-center">
-          <h3>Données sécurisées</h3>
-          <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo">
+        <div class="badge bg-white p-3 text-center d-flex flex-column">
+          <h3 class="m-0 mt-2">Données sécurisées</h3>
+          <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo" class="mb-3">
         </div>
       </div>
     </div>
-    <div class="hero-image">
+    <div class="hero-image  rounded-5">
       <img src="assets/img/Sante Mentale/psy header.jpg" alt="Famille allongée" class="header-img">
     </div>
       <img src="assets/img/Sante Mentale/psy ad.png" alt="Consultation vidéo" class="phone-img">
