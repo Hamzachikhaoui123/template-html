@@ -14,6 +14,56 @@
   <title>Document</title>
 </head>
 <style>
+  hero-content{
+    justify-content: unset;
+  }
+  .hero-content h1 {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal bold 40px Gotham Rounded;
+    letter-spacing: 0px;
+    color: #000000;
+  }
+  .hero-content h2 {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-gotham-rounded);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-000000);
+    text-align: left;
+    font: normal normal bold 32px Gotham Rounded;
+    letter-spacing: 0px;
+    color: #008080;
+    margin-top: 20px;
+  }
+  .hero-content p {
+    left: 195px;
+    width: 490px;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-20) / var(--unnamed-line-spacing-24) var(--unnamed-font-family-gotham-rounded);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-707070);
+    text-align: left;
+    font: normal normal 300 20px / 24px Gotham Rounded;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+    margin-top: 40px;
+  }
+  .hero-image {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    overflow: hidden;
+  }
+  .header-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
   .img-doctor {
     width: 50px;
     height: 40px;
@@ -367,10 +417,10 @@
 <!--    <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>-->
 <!--  </div>-->
 <!--</header>-->
-<div class="row mt-5 m-sm-2 m-lg-5">
-  <section class="col-lg-6  col-xl-7 col-sm-12 col-md-12">
-    <div class="row  bg-white rounded-5 ps-5">
-      <section class="col-lg-7  p-2 rounded">
+<div class="d-flex flex-row">
+  <section class=""style="">
+    <div class="d-flex flex-row bg-white rounded-5 p-5 pb-0 pe-0   text-center">
+      <div class="hero-content">
         <h1 class="fw-bold text-start text-black style-title">
           Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
         <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
@@ -395,13 +445,14 @@
             <button>Rechercher</button>
           </div>
         </div>
-      </section>
-
-      <img class="description-site-center col-lg-5" src="assets/img/siladoc01.png" alt="Médecin">
+      </div>
+      <div class="hero-image">
+      <img class="header-img" src="assets/img/siladoc01.png" alt="Médecin">
+      </div>
     </div>
   </section>
 
-  <section class="col-lg-6 col-xl-4 col-sm-12 col-md-12 mt-1 mt-sm-3">
+  <section class="">
     <div class="card yellow mb-5">
       <h3 class="text-start w-50">Prenez soin de votre santé mentale</h3>
       <p class="w-50">Grâce à la consultation vidéo (Téléconsultation)</p>
@@ -425,7 +476,7 @@
 
   </section>
 </div>
-<div class="parcours-sante container my-5">
+<div class="parcours-sante  my-5">
   <span class="title-parcours">Le parcours de santé Siladoc :</span>
 
   <div class="parcours-content d-flex justify-content-center gap-4 flex-lg-wrap">
@@ -496,7 +547,7 @@
 </div>
 
 <section class="py-4">
-  <div class="container d-flex flex-wrap flex-md-nowrap justify-content-center gap-3">
+  <div class=" d-flex flex-wrap flex-md-nowrap justify-content-center gap-3">
 
     <div
             class="d-flex align-items-center flex-md-column flex-lg-row flex-xlg-row justify-content-between p-3 bg-white rounded-4 shadow-sm"
