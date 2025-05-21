@@ -66,9 +66,7 @@
     opacity: 1;
   }
 
-
-
-  @media screen and (min-width:1024px) {
+  @media screen and (min-width:1441px) {
     .style-title {
       width: 490px;
       height: 144px;
@@ -183,6 +181,127 @@
       justify-content: flex-end;
       align-items: center;
     }
+    .width-section{
+      width: 55%;
+    }
+  }
+
+  @media screen and (min-width:1024px) and (max-width:1440px) {
+    .style-title {
+    
+      line-height: 48px;
+      font-family: 'Gotham Rounded';
+      letter-spacing: 0;
+      opacity: 1;
+    }
+
+    .p-4-custom {
+      padding: 40px;
+    }
+
+    .center-icon {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      background: #008d93;
+      width: 150px;
+      height: 150px;
+      padding: 26px;
+      border-radius: 50px;
+      right: 20px;
+    }
+
+    .parcours-sante {
+      text-align: center;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
+      align-items: center;
+      border-radius: 20px;
+      gap: 40px;
+      margin-top: 25px;
+      background-position: center center;
+      border-radius: 40px;
+      opacity: 1;
+    }
+
+    .bloc-parcours {
+      background: #f8f8f8;
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      font-size: 0.95rem;
+      text-align: center;
+
+    }
+
+    .title-parcours {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .parcours-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .bloc-left,
+    .bloc-right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 300px;
+    }
+
+    .container-siladoc {
+      display: none;
+    }
+
+    .directory-card {
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+      border: 1px solid #DDDDDD;
+      border-radius: 40px;
+      opacity: 0.7;
+      height: 220px;
+      /* Keep fixed height */
+      width: 80%;
+    }
+
+    .card-header h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.3;
+      font-family: "Gotham Rounded Bold";
+      background-color: transparent;
+    }
+
+    .card-footer {
+      padding: 0.5rem 1rem;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .width-section{
+      width: 55%;
+    }
   }
 
   @media screen and (min-width:601px) and (max-width:768px) {
@@ -212,7 +331,6 @@
     }
 
     .style-title {
-      width: 490px;
       height: 144px;
       font-size: 40px;
       line-height: 48px;
@@ -293,13 +411,18 @@
       /* Adjusted for positioning */
 
     }
+    .width-section{
+      width: 100%;
+    }
   }
 
   @media screen and (max-width:600px) {
     .description-site-center {
       display: none
     }
-
+    .width-section{
+    width: 100%;
+  }
     .parcours-sante {
       display: none;
     }
@@ -345,6 +468,7 @@
       padding: 0.5rem 1rem;
     }
   }
+ 
   .hero-image {
     position: relative;
     width: 100%;
@@ -364,7 +488,7 @@
 
 <body>
   <!-- Header -->
-  <header class="navbar bg-white fixed-top ">
+  <header class="navbar bg-white ">
     <div class="container">
       <button class="menu-toggle" aria-label="Toggle menu">
         <span></span>
@@ -382,10 +506,10 @@
       <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
     </div>
   </header>
-  <div class="row m-1 m-sm-2 m-lg-5">
-    <section class="col-lg-6  col-xl-7 col-sm-12 col-md-12">
-      <div class="d-flex flex-sm-column  rounded">
-        <section class="p-2 rounded">
+  <div class="container d-flex flex-lg-row flex-md-column  flex-column mt-5">
+    <section class=""style="">
+      <div class="d-flex  bg-white gap-2 rounded-5 px-lg-4 px-sm-4 px-3   text-center">
+        <div class="hero-content pt-3 mt-auto">
           <h1 class="fw-bold text-start text-black style-title">
             Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
           <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
@@ -394,6 +518,7 @@
             <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
             <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
             <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
+  
             <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
             <div class="trois-point">
               <span>...</span>
@@ -401,39 +526,35 @@
           </div>
           <div class="d-flex flex-column mb-5">
             <input type="text" class="form-control mb-3" placeholder="Choisir une spécialité">
-
+  
             <div class="search-bar">
               <input type="text" class="form-control" placeholder="Tunis">
               <input type="text" class="form-control" placeholder="Tunis">
-
+  
               <button>Rechercher</button>
             </div>
           </div>
-        </section>
+        </div>
         <div class="hero-image">
-          <img class="header-img" src="assets/img/siladoc01.png" alt="Médecin">
-          </div>
-        <!-- <div class="col-lg-5">
-          <img class="description-site-center w-100 d-none d-lg-block" src="assets/img/siladoc01.png" alt="Médecin">
-
-        </div> -->
+        <img class="header-img d-none d-md-block" src="assets/img/siladoc01.png" alt="Médecin">
+        </div>
       </div>
     </section>
-
-    <section class="col-lg-6 col-xl-4 col-sm-12 col-md-12 mt-1 mt-sm-3">
-      <div class="card yellow mb-5">
-        <h3 class="text-start w-50">Prenez soin de votre santé mentale</h3>
-        <p class="w-50">Grâce à la consultation vidéo (Téléconsultation)</p>
-
+  
+    <section class="ms-0 ms-md-4 mt-4 mt-md-3 mt-lg-0 gap-3 gap-lg-0 d-flex flex-row flex-md-row flex-lg-column width-section" >
+      <div class="card yellow header-card mb-0 mb-lg-3 border-0">
+        <h4 class="text-start w-50">Prenez soin de votre santé mentale</h4>
+        <p  class="w-50">Grâce à la consultation vidéo (Téléconsultation)</p>
+  
         <div>
           <button class="icon-button">
             <i class="feather-chevron-right"></i>
           </button>
         </div>
       </div>
-      <div class="card blue ">
-        <h2 class="text-start w-50">Digitaliser votre cabinet médical</h2>
-        <p class="w-50">Planification de rendez-vous, partage de documents, interface intuitive.
+      <div class="card blue header-card border-0 ">
+        <h4 class="text-start w-50">Digitaliser votre cabinet médical</h4>
+        <p  class="w-50">Planification de rendez-vous, partage de documents, interface intuitive.
         </p>
         <div>
           <button class="icon-button">
@@ -441,7 +562,7 @@
           </button>
         </div>
       </div>
-
+  
     </section>
   </div>
   <div class="parcours-sante container my-5">
@@ -477,7 +598,7 @@
       </div>
     </div>
   </div>
-  <div class=" container-siladoc bg-white rounded-3 p-3 w-100" style="max-width: 400px;">
+  <div class=" container container-siladoc bg-white rounded-3 p-3 w-100" style="max-width: 400px;">
     <h2>Le parcours de santé Siladoc :</h2>
     <div class="row g-3">
       <div class="col-6">
@@ -514,7 +635,7 @@
 
   </div>
 
-  <section class="py-4">
+  <section class=" container py-4">
     <div class="container d-flex flex-wrap flex-md-nowrap justify-content-center gap-3">
 
       <div
@@ -572,7 +693,7 @@
       </div>
     </div>
   </section>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row g-3 ">
       <!-- First Column -->
       <div class="col-6 col-sm-6 col-md-6 col-lg-3">
@@ -632,7 +753,7 @@
     </div>
   </div>
   <!-- Accordion -->
-  <section class="bg-white rounded-3 h-100 p-3">
+  <section class="bg-white container rounded-3 mt-3 h-100 p-3">
     <div class="container">
 
       <div class="section-header ">
@@ -756,7 +877,7 @@
   </section>
   <!-- Fin Accordion-->
   <!-- Notre magazine de santé -->
-  <section class="bg-white p-2 mt-3 rounded">
+  <section class=" container bg-white p-2 mt-3 rounded-4">
     <div class="row m-3">
       <span class="col-lg-9 fw-bold mb-3 col-sm-9 col-9 text-dark text-start">Notre magazine de santé</span>
       <button class=" col-lg-3 col-sm-3 col-3 bg-transparent border-0">
