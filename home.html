@@ -14,27 +14,35 @@
   <title>Document</title>
 </head>
 <style>
+  body{
+    background-color: #F8F8F8;
+    overflow: hidden;
+    font-family: "Gotham Rounded";
+  }
+  p {
+    width: 490px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+    color: #707070;
+    opacity: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: visible;
+    text-overflow: clip;
+  }
   .img-doctor {
     width: 50px;
-    height: 40px;
-    border-radius: 0.5rem;
+    height: 50px;
+    object-fit: cover;
+    margin-left: -10px;
   }
 
   .trois-point {
     width: 50px;
-    height: 40px;
-    border-radius: 0.5rem;
-    background-color: wheat;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    height: 50px;
+    margin-left: -10px;
   }
-
-  body {
-    background-color: #F8F8F8;
-    margin: 30px;
-  }
-
   .btn-seconnecter {
     background-color: #008D93;
     padding: 8px;
@@ -468,31 +476,17 @@
     }
   }
  
-  .hero-image {
-    position: relative;
-    width: 100%;
-    margin-left: auto;
-    overflow: hidden;
-  }
-  .header-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 
-  }
   .border-color{
    border-color:#DDDDDD ; 
   }
 </style>
 
-<body>
+<body class="mx-lg-3 mx-sm-0 mx-md-3 align-items-center">
   <!-- Header -->
   <header class="navbar bg-transparent ">
     <div class="container">
-     
+
       <div class="d-flex gap-2 align-items-center">
         <button class="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           <span></span>
@@ -522,13 +516,13 @@
         <span class="bg-transparent  rounded-2 px-4 py-1  text-start border  text-secondary border-color">Nous Contacter</span>
         <span class="rounded-2 px-4 py-1  text-start border  text-secondary border-color" style="background-color: #D0F6F8;">Pour les pro de santé</span>
 
-        
+
 
       </div>
-   
+
     </div>
     <div class="offcanvas-footer">
-     
+
       <div class="d-flex flex-column gap-2">
         <span class="bg-light  rounded-2  py-1 fw-bold text-center border  text-dark border-color">العربية</span>
         <span class="rounded-2  py-1  text-center border  text-white border-color" style="background-color: #008D93;">Se connecter</span>
@@ -540,39 +534,39 @@
   </div>
   <div class="container d-flex flex-lg-row flex-md-column  flex-column mt-1">
     <section class=""style="">
-      <div class="d-flex  bg-white gap-2 rounded-5 px-lg-4 px-sm-4 px-3   text-center">
+      <div class="d-flex  bg-white gap-2 rounded-5 ps-lg-4 ps-sm-4 ps-3   text-center">
         <div class="hero-content pt-3 mt-auto">
           <h1 class="fw-bold text-start text-black style-title">
             Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
           <p>Découvrez les meilleurs praticiens et établissements de santé (pharmacies, laboratoires, cliniques, etc.) à
             côté de chez vous.</p>
-          <div class="d-flex justify-content my-3">
-            <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-            <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-            <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-  
-            <img src="./assets/img/doctor-13.jpg" alt="doctor" class="img-doctor">
-            <div class="trois-point">
-              <span>...</span>
+          <div class="d-flex justify-content-start my-3">
+            <img src="./assets/img/doctor-13.jpg" alt="doctor" class="ms-0 img-doctor rounded-3 border">
+            <img src="./assets/img/doctor-15.jpg" alt="doctor" class="img-doctor rounded-3 border">
+            <img src="./assets/img/doctor-16.jpg" alt="doctor" class="img-doctor rounded-3 border">
+            <img src="./assets/img/doctor-23.jpg" alt="doctor" class="img-doctor rounded-3 border">
+            <img src="./assets/img/doctor-24.jpg" alt="doctor" class="img-doctor rounded-3 border">
+            <div class="trois-point text-center bg-light d-flex align-items-center justify-content-center rounded-3 border">
+              <span class="text-center">...</span>
             </div>
           </div>
           <div class="d-flex flex-column mb-5">
-            <input type="text" class="form-control mb-3" placeholder="Choisir une spécialité">
-  
+            <input type="text" class="form-control mb-3 ps-4 bg-light rounded-3" placeholder="Choisir une spécialité">
+
             <div class="search-bar">
-              <input type="text" class="form-control" placeholder="Tunis">
-              <input type="text" class="form-control" placeholder="Tunis">
-  
-              <button>Rechercher</button>
+              <input type="text" class="form-control ps-4 bg-light rounded-3" placeholder="Tunis">
+              <input type="text" class="form-control ps-4 bg-light rounded-3" placeholder="Tunisie">
+
+              <button class="rounded-3">Rechercher</button>
             </div>
           </div>
         </div>
-        <div class="hero-image">
-        <img class="header-img d-none d-md-block" src="assets/img/siladoc01.png" alt="Médecin">
+        <div class=" position-relative w-100 ms-auto">
+        <img class=" w-100 position-absolute bottom-0 right-0 h-auto d-none d-md-block" src="assets/img/siladoc01.png" alt="Médecin">
         </div>
       </div>
     </section>
-  
+
     <section class="ms-0 ms-md-4 mt-4 mt-md-3 mt-lg-0 gap-3 gap-lg-0 d-flex flex-column flex-md-row flex-sm-column flex-lg-column width-section" >
       <div class="card yellow header-card mb-0 mb-lg-3 border-0">
         <h4 class="text-start w-50">Prenez soin de votre santé mentale</h4>
