@@ -819,7 +819,7 @@ select {
 
 
   .menu-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 4px;
     background: none;
@@ -909,7 +909,7 @@ select {
 
 
   .menu-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 4px;
     background: none;
@@ -1002,7 +1002,7 @@ select {
 
 
   .menu-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 4px;
     background: none;
@@ -1151,7 +1151,7 @@ select {
 
 
   .menu-toggle {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 4px;
     background: none;

@@ -300,7 +300,7 @@
       align-items: center;
     }
     .width-section{
-      width: 55%;
+      width: 58%;
     }
   }
 
@@ -331,7 +331,6 @@
     }
 
     .style-title {
-      height: 144px;
       font-size: 40px;
       line-height: 48px;
       font-family: 'Gotham Rounded';
@@ -484,18 +483,22 @@
     object-fit: cover;
 
   }
+  .border-color{
+   border-color:#DDDDDD ; 
+  }
 </style>
 
 <body>
   <!-- Header -->
-  <header class="navbar bg-white ">
+  <header class="navbar bg-transparent ">
     <div class="container">
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="d-block align-items-center">
+     
+      <div class="d-flex gap-2 align-items-center">
+        <button class="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
       </div>
       <nav class="nav-links">
@@ -506,7 +509,36 @@
       <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
     </div>
   </header>
-  <div class="container d-flex flex-lg-row flex-md-column  flex-column mt-5">
+  <div class="offcanvas offcanvas-start w-25 p-3" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column gap-2">
+        <span class="bg-transparent  rounded-2 px-4 py-1 fw-bold text-start border  text-secondary border-color">Accueil</span>
+        <span class="bg-transparent  rounded-2 px-4 py-1  text-start border  text-secondary border-color">Inscrivez-vous</span>
+        <span class="rounded-2 px-4 py-1  text-start border  text-secondary border-color" style="background-color: #F8F4D0;">Santé Mentale</span>
+        <span class="bg-transparent  rounded-2 px-4 py-1  text-start border  text-secondary border-color">Nous Contacter</span>
+        <span class="rounded-2 px-4 py-1  text-start border  text-secondary border-color" style="background-color: #D0F6F8;">Pour les pro de santé</span>
+
+        
+
+      </div>
+   
+    </div>
+    <div class="offcanvas-footer">
+     
+      <div class="d-flex flex-column gap-2">
+        <span class="bg-light  rounded-2  py-1 fw-bold text-center border  text-dark border-color">العربية</span>
+        <span class="rounded-2  py-1  text-center border  text-white border-color" style="background-color: #008D93;">Se connecter</span>
+      </div>
+      <div class="d-flex flex-column">
+        <span class="text-start fw-bold">Suivez nous sur :</span>
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex flex-lg-row flex-md-column  flex-column mt-1">
     <section class=""style="">
       <div class="d-flex  bg-white gap-2 rounded-5 px-lg-4 px-sm-4 px-3   text-center">
         <div class="hero-content pt-3 mt-auto">
@@ -541,7 +573,7 @@
       </div>
     </section>
   
-    <section class="ms-0 ms-md-4 mt-4 mt-md-3 mt-lg-0 gap-3 gap-lg-0 d-flex flex-row flex-md-row flex-lg-column width-section" >
+    <section class="ms-0 ms-md-4 mt-4 mt-md-3 mt-lg-0 gap-3 gap-lg-0 d-flex flex-column flex-md-row flex-sm-column flex-lg-column width-section" >
       <div class="card yellow header-card mb-0 mb-lg-3 border-0">
         <h4 class="text-start w-50">Prenez soin de votre santé mentale</h4>
         <p  class="w-50">Grâce à la consultation vidéo (Téléconsultation)</p>
