@@ -809,11 +809,7 @@ select {
 
 
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+
 
 
 
@@ -901,11 +897,6 @@ select {
     opacity: 1;
   }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 
 
   .menu-toggle {
@@ -993,11 +984,7 @@ select {
 
 
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+  
 
 
 
@@ -1097,11 +1084,7 @@ select {
     display: none;
   }
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
+
 
 
   h2 {
