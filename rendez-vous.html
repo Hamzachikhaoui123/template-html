@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+  body {
+    background-color: #F8F8F8;
+  }
     .stepper {
       display: flex;
       justify-content: space-between;
@@ -43,13 +46,18 @@
     }
 
     .step.active .circle {
-      background-color: #0d6efd;
+      background-color: #008D93;
     }
 
     .step.completed .circle {
-      background-color: #198754;
+      background-color: #008D93;
     }
-
+    .step.completed p {
+      color: #008D93;
+    }
+    .step.active p {
+      color: #008D93;
+    }
     .step p {
       margin-top: 10px;
       font-size: 14px;
@@ -63,26 +71,9 @@
   </style>
 </head>
 <body>
-    <header class="navbar ">
-        <div class="container">
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="d-block align-items-center">
-                <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
-            </div>
-            <nav class="nav-links">
-                <a href="./home.html">Accueil</a>
-                <a href="./inscription.html">Inscrivez-vous</a>
-                <a href="#">Nous Contacter</a>
-            </nav>
-            <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
-        </div>
-    </header>
-  <div class="container">
-    <div class="stepper" id="stepper">
+    
+  <div class="container bg-white rounded-3">
+    <div class="stepper border-bottom py-3" id="stepper">
       <div class="step active">
         <div class="circle"></div>
         <p>Rendez-vous</p>
@@ -100,11 +91,29 @@
         <p>Validation</p>
       </div>
     </div>
+   <div class="d-flex flex-row w-75">
+    <div class="d-flex flex-column  border-end p-3">
+      <div class="d-flex">
+        <div class="user-avatar">
+            <img src="./assets/img/user-avatar.png" style="width: 100px; height: 100px;" class="img-fluid rounded-5"
+                alt="">
+        </div>
+        <div class="m-2">
+            <h5 class="fw-bold ">Mr Mohamed MBAREK</h5>
+            Psychologue
+        </div>
+    </div>
+    <div class="d-flex justify-content-start gap-2">
+      <strong>Adresse : </strong><div class="w-50"> 44, avenue de l'environnement, El Aouina Médicale, cabinet A6L'aouina 2045 Tunis Tunisie
+      </div>
+    </div>
+    </div>
+   </div>
 
-    <div class="buttons">
+    <!-- <div class="buttons">
       <button class="btn btn-primary me-2" onclick="prevStep()">Précédent</button>
       <button class="btn btn-success" onclick="nextStep()">Suivant</button>
-    </div>
+    </div> -->
   </div>
 
   <script>
