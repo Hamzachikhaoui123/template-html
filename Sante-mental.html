@@ -36,19 +36,16 @@
     .yellow-container {
         background-color: #F8F4D0;
         max-width: 1640px;
-        min-width: 1318px;
         overflow: hidden;
     }
 
     .white-container {
         max-width: 1640px;
-        min-width: 1318px;
         overflow: hidden;
     }
 
     .transparent-container {
         max-width: 1640px;
-        min-width: 1318px;
         overflow: hidden;
     }
 
@@ -68,7 +65,7 @@
     }
 
     .badges {
-        width: 430px;
+        max-width: 430px;
     }
 
     .badge {
@@ -165,17 +162,14 @@
     @media screen and (min-width: 769px) and (max-width: 1910px) {
         .yellow-container {
             max-width: 1318px;
-            min-width: 716px;
         }
 
         .white-container {
             max-width: 1318px;
-            min-width: 716px;
         }
 
         .transparent-container {
             max-width: 1318px;
-            min-width: 716px;
         }
         .hero-content h1 {
             width: 411px;
@@ -227,18 +221,15 @@
     @media screen and (min-width: 601px) and (max-width: 768px) {
         .yellow-container {
             max-width: 716px;
-            min-width: 362px;
             max-height: 619px;
         }
 
         .white-container {
             max-width: 716px;
-            min-width: 362px;
         }
 
         .transparent-container {
             max-width: 716px;
-            min-width: 362px;
         }
 
         .hero-content h1 {
@@ -305,13 +296,15 @@
     @media screen and (max-width: 600px) {
         .yellow-container {
             overflow: unset !important;
-            max-width: 362px;
+            min-width: 362px;
         }
 
         .white-container {
+            min-width: 362px;
         }
 
         .transparent-container {
+            min-width: 362px;
         }
 
         .hero-image {
