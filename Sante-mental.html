@@ -35,58 +35,26 @@
 
     .yellow-container {
         background-color: #F8F4D0;
-        max-width: 1640px;
         overflow: hidden;
     }
 
     .white-container {
-        max-width: 1640px;
         overflow: hidden;
     }
 
     .transparent-container {
-        max-width: 1640px;
         overflow: hidden;
     }
 
-    .hero-content h1 {
-        width: 490px;
-    }
 
     .hero-content h2 {
-        width: 490px;
         color: #008080;
     }
 
-    .hero-content p {
-        font-size: 20px;
-        line-height: 24px;
-        width: 490px;
-    }
-
-    .badges {
-        max-width: 430px;
-    }
-
     .badge {
-        width: 200px;
-        height: 200px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
-    .badge img {
-        height: 70px;
-    }
-
-    .badge h5 {
-        font-size: 20px;
-        line-height: 24px;
-    }
-
-    .badge p {
-        font-size: 14px;
-        line-height: 16px;
-    }
 
     .hero-image {
         overflow: hidden;
@@ -94,15 +62,9 @@
 
     .header-img {
         object-fit: cover;
-        aspect-ratio: 835 / 776;
-        max-height: 776px;
-        min-height: 654px;
     }
 
     .phone-img {
-        margin-right: -70px;
-        min-height: 654px;
-        max-height: 684px;
         object-fit: cover;
         z-index: 2;
     }
@@ -158,6 +120,70 @@
     .domain-item span {
         z-index: 2;
         margin-right: -178px;
+    }
+    @media screen and (min-width: 1911px) {
+
+        .yellow-container {
+            max-width: 1640px;
+        }
+
+        .white-container {
+            max-width: 1640px;
+        }
+
+        .transparent-container {
+            max-width: 1640px;
+        }
+
+        .hero-content h1 {
+            width: 490px;
+        }
+
+        .hero-content h2 {
+            width: 490px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            line-height: 24px;
+            width: 490px;
+        }
+
+        .badges {
+            max-width: 430px;
+        }
+
+        .badge {
+            width: 200px;
+            height: 200px;
+        }
+
+        .badge img {
+            height: 70px;
+        }
+
+        .badge h5 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .badge p {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .header-img {
+            aspect-ratio: 835 / 776;
+            max-height: 776px;
+            min-height: 654px;
+        }
+
+        .phone-img {
+            margin-right: -70px;
+            min-height: 654px;
+            max-height: 684px;
+        }
+
     }
     @media screen and (min-width: 769px) and (max-width: 1910px) {
         .yellow-container {
@@ -393,7 +419,7 @@
 <!-- Hero Section -->
 <Main class="mt-5 container-lg yellow-container rounded-5 p-0">
     <div class="d-flex gap-0 flex-row align-items-center">
-        <div class=" text-start hero-content p-lg-5 p-md-4 p-sm-3 p-3">
+        <div class=" text-start hero-content p-lg-5 p-md-4 p-sm-3 p-3 mx-auto">
             <h1 class="text-start text-break fw-bold text-wrap">Prenez soin de votre santé mentale,</h1>
             <h2 class="mt-3 text-start text-break fw-bold text-wrap">Grâce à la consultation vidéo
                 (Téléconsultation)</h2>
