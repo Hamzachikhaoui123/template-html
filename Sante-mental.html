@@ -35,65 +35,26 @@
 
     .yellow-container {
         background-color: #F8F4D0;
-        max-width: 1640px;
-        min-width: 362px;
-
+        overflow: hidden;
     }
 
     .white-container {
-        max-width: 1640px;
-        min-width: 362px;
         overflow: hidden;
     }
 
     .transparent-container {
-        max-width: 1640px;
-        min-width: 362px;
         overflow: hidden;
     }
 
-    .hero-content h1 {
-        max-width: 411px;
-    }
 
     .hero-content h2 {
-        max-width: 411px;
         color: #008080;
     }
 
-    .hero-content p {
-        font-size: 20px;
-        line-height: 24px;
-        max-width: 411px;
-    }
-
-    .badges {
-        max-width: 430px;
-    }
-
     .badge {
-        max-width: 200px;
-        min-width: 152px;
-        max-height: 200px;
-        min-height: 152px;
-        aspect-ratio: 200 / 200;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
-    .badge img {
-        max-height: 70px;
-        min-height: 52px;
-    }
-
-    .badge h5 {
-        font-size: 20px;
-        line-height: 24px;
-    }
-
-    .badge p {
-        font-size: 14px;
-        line-height: 16px;
-    }
 
     .hero-image {
         overflow: hidden;
@@ -101,15 +62,9 @@
 
     .header-img {
         object-fit: cover;
-        aspect-ratio: 835 / 776;
-        max-height: 776px;
-        min-height: 619px;
     }
 
     .phone-img {
-        margin-left: -127px;
-        min-height: 619px;
-        max-height: 684px;
         object-fit: cover;
         z-index: 2;
     }
@@ -166,36 +121,156 @@
         z-index: 2;
         margin-right: -178px;
     }
+    @media screen and (min-width: 1911px) {
 
+        .yellow-container {
+            max-width: 1640px;
+        }
+
+        .white-container {
+            max-width: 1640px;
+        }
+
+        .transparent-container {
+            max-width: 1640px;
+        }
+
+        .hero-content h1 {
+            width: 490px;
+        }
+
+        .hero-content h2 {
+            width: 490px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            line-height: 24px;
+            width: 490px;
+        }
+
+        .badges {
+            max-width: 430px;
+        }
+
+        .badge {
+            width: 200px;
+            height: 200px;
+        }
+
+        .badge img {
+            height: 70px;
+        }
+
+        .badge h5 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .badge p {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .header-img {
+            aspect-ratio: 835 / 776;
+            max-height: 776px;
+            min-height: 654px;
+        }
+
+        .phone-img {
+            margin-right: -70px;
+            min-height: 654px;
+            max-height: 684px;
+        }
+
+    }
+    @media screen and (min-width: 769px) and (max-width: 1910px) {
+        .yellow-container {
+            max-width: 1318px;
+            max-height: 654px;
+        }
+
+        .white-container {
+            max-width: 1318px;
+        }
+
+        .transparent-container {
+            max-width: 1318px;
+        }
+        .hero-content h1 {
+            width: 411px;
+        }
+
+        .hero-content h2 {
+            width: 411px;
+        }
+
+        .hero-content p {
+            width: 411px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .header-img {
+            aspect-ratio: 650 / 654;
+            max-height: 654px;
+            min-height: 619px;
+        }
+
+        .phone-img {
+            margin-right: -110px;
+            max-height: 654px;
+            min-height: 619px;
+        }
+
+        .badges {
+            width: 370px;
+        }
+
+        .badge {
+            width: 175px;
+            height: 175px;
+        }
+
+        .badge img {
+            height: 60px;
+        }
+
+        .badge h5 {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .badge p {
+            width: 124px;
+        }
+    }
     @media screen and (min-width: 601px) and (max-width: 768px) {
         .yellow-container {
-            min-width: 716px;
+            max-width: 716px;
             max-height: 619px;
         }
 
         .white-container {
-            min-width: 716px;
+            max-width: 716px;
         }
 
         .transparent-container {
-            min-width: 716px;
+            max-width: 716px;
         }
 
         .hero-content h1 {
 
-            min-width: 319px;
-            max-width: 319px;
+            width: 319px;
 
         }
 
         .hero-content h2 {
-            min-width: 319px;
-            max-width: 319px;
+            width: 319px;
         }
 
         .hero-content p {
-            min-width: 319px;
-            max-width: 319px;
+            width: 319px;
             font-size: 14px;
             line-height: 16px;
         }
@@ -208,16 +283,18 @@
         .phone-img {
             margin-right: -110px;
             max-height: 619px;
-            height: 100%;
+        }
+        .badges {
+            width: 319px;
         }
 
         .badge {
-            max-width: 152px;
-            max-height: 152px;
+            height: 152px;
+            width: 152px;
         }
 
         .badge img {
-            max-height: 53px;
+            height: 52px;
         }
 
         .badge h5 {
@@ -227,8 +304,7 @@
         }
 
         .badge p {
-            max-width: 121px;
-            min-width: 121px;
+            width: 121px;
         }
 
         .domain-item {
@@ -247,13 +323,15 @@
     @media screen and (max-width: 600px) {
         .yellow-container {
             overflow: unset !important;
-            max-height: 573px;
+            min-width: 362px;
         }
 
         .white-container {
+            min-width: 362px;
         }
 
         .transparent-container {
+            min-width: 362px;
         }
 
         .hero-image {
@@ -270,29 +348,26 @@
         }
 
         .badge {
-            max-width: 152px;
-            max-height: 152px;
+            width: 152px;
+            height: 152px;
         }
 
         .badge img {
-            max-height: 53px;
+            height: 52px;
         }
 
         .hero-content h1 {
 
-            min-width: 319px;
-            max-width: 319px;
+            width: 319px;
 
         }
 
         .hero-content h2 {
-            min-width: 319px;
-            max-width: 319px;
+            width: 319px;
         }
 
         .hero-content p {
-            min-width: 319px;
-            max-width: 319px;
+            width: 319px;
             font-size: 14px;
             line-height: 16px;
         }
@@ -304,8 +379,7 @@
         }
 
         .badge p {
-            max-width: 121px;
-            min-width: 121px;
+            width: 121px;
         }
 
         .domain-item {
