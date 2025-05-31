@@ -100,10 +100,6 @@
 
     .domain-item {
         overflow: hidden;
-        max-width: 360px;
-        min-width: 162px;
-        max-height: 140px;
-        min-height: 80px;
     }
 
     .domain-item img {
@@ -119,7 +115,7 @@
 
     .domain-item span {
         z-index: 2;
-        margin-right: -178px;
+        margin-right: -1000px;
     }
     @media screen and (min-width: 1911px) {
 
@@ -179,9 +175,17 @@
         }
 
         .phone-img {
-            margin-right: -70px;
+            margin-right: -80px;
             min-height: 654px;
             max-height: 684px;
+        }
+        .domain-item {
+            max-width: 360px;
+            max-height: 140px;
+        }
+        .domain-item span {
+            font-size: 20px;
+            line-height: 24px;
         }
 
     }
@@ -219,7 +223,7 @@
         }
 
         .phone-img {
-            margin-right: -110px;
+            margin-right: -117px;
             max-height: 654px;
             min-height: 619px;
         }
@@ -243,6 +247,14 @@
         }
         .badge p {
             width: 124px;
+        }
+        .domain-item {
+            max-width: 312px;
+            max-height: 140px;
+        }
+        .domain-item span {
+            font-size: 20px;
+            line-height: 24px;
         }
     }
     @media screen and (min-width: 601px) and (max-width: 768px) {
@@ -310,11 +322,9 @@
         .domain-item {
             min-width: 212px;
             max-height: 80px;
-            border: solid 1px #DDDDDD;
         }
 
         .domain-item span {
-            margin-right: -178px;
             font-size: 14px;
             line-height: 17px;
         }
@@ -383,13 +393,11 @@
         }
 
         .domain-item {
-            max-width: 162px;
+            min-width: 162px;
             max-height: 80px;
-            border: solid 1px #DDDDDD;
         }
 
         .domain-item span {
-            margin-right: -178px;
             font-size: 14px;
             line-height: 17px;
         }
@@ -428,13 +436,13 @@
                 Plusieurs spécialités dont l’exercice est protégé et réglementé peuvent vous accompagner sur ce
                 sujet.</p>
             <div class="d-flex flex-row gap-3 mt-5 badges">
-                <div class="badge bg-white p-3 pe-1 me-auto d-flex flex-column rounded-5 col-lg6-6">
+                <div class="badge bg-white p-3 pe-lg-3 pe-1 mx-auto d-flex flex-column rounded-5 col-lg6-6">
                     <h5 class="m-0 mt-3 text-start text-break fw-bold text-secondary text-wrap">Confidentialité</h5>
                     <p class="m-0 text-start text-break fw-light text-secondary text-wrap">Conformité aux normes</p>
                     <img src="assets/img/protection-données-1024x421.jpg" alt="INPDP Logo"
                          class="mb-3 mt-auto w-auto">
                 </div>
-                <div class="badge bg-white p-3 d-flex flex-column rounded-5 col-lg-6 ">
+                <div class="badge bg-white p-3 mx-auto d-flex flex-column rounded-5 col-lg-6 ">
                     <h5 class="m-0 mt-2 text-center text-break fw-bold text-secondary text-wrap">Données sécurisées</h5>
                     <img src="assets/img/Logo-ANCS-10.png" alt="ANCS Logo" class="mb-2 mt-auto w-auto">
                 </div>
@@ -606,45 +614,45 @@
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-2 g-4 justify-content-center mt-md-2 mt-lg-4 mt-ms-3 mt-2">
         <div class="col">
             <div class="domain-item w-100 h-100 bg-white d-flex flex-row border rounded-4 "><span
-                    class="col-6 mt-auto mb-auto ps-xl-4 ps-3 text-start fw-bold fs-5">Dépression</span><img
+                    class="col-6 my-auto ps-xl-4 ps-3 text-start fw-bold">Dépression</span><img
                     src="assets/img/Sante Mentale/addiction.png" class="w-100 h-100 ms-auto" alt="Dépression"></div>
         </div>
         <div class="col">
             <div class="domain-item w-100 h-100 bg-white d-flex flex-row border rounded-4"><span
-                    class="col-6 mt-auto mb-auto ps-xl-4 ps-3 text-start fw-bold fs-5">Anxiété</span><img
+                    class="col-6 my-auto ps-xl-4 ps-3 text-start fw-bold">Anxiété</span><img
                     src="assets/img/Sante Mentale/anxiety.png" class="w-100 h-100 ms-auto" alt="Anxiété"></div>
         </div>
         <div class="col">
             <div class="domain-item w-100 h-100 bg-white d-flex flex-row border rounded-4"><span
-                    class="col-6 mt-auto mb-auto ps-xl-4 ps-3 text-start fw-bold fs-5">Crise<br>d'angoisse</span><img
+                    class="col-6 my-auto ps-xl-4 ps-3 text-start fw-bold">Crise<br>d'angoisse</span><img
                     src="assets/img/Sante Mentale/crise.png" class="w-100 h-100 ms-auto" alt="Crise d'angoisse"></div>
         </div>
         <div class="col">
             <div class="domain-item w-100 h-100 bg-white d-flex flex-row border rounded-4"><span
-                    class="col-6 mt-auto mb-auto ps-xl-4 ps-3 text-start fw-bold fs-5">Conflits<br>relationnels</span><img
+                    class="col-6 my-auto ps-xl-4 ps-3 text-start fw-bold">Conflits<br>relationnels</span><img
                     src="assets/img/Sante Mentale/conflict.png" class="w-100 h-100 ms-auto" alt="Conflits relationnels">
             </div>
         </div>
         <div class="col">
             <div class="domain-item w-100 h-100 bg-white d-flex flex-row border rounded-4"><span
-                    class="col-6 mt-auto mb-auto ps-xl-4 ps-3 text-start fw-bold fs-5">Addictologie</span><img
+                    class="col-6 my-auto ps-xl-4 ps-3 text-start fw-bold">Addictologie</span><img
                     src="assets/img/Sante Mentale/addictologie.png" class="w-100 h-100 ms-auto" alt="Addictologie">
             </div>
         </div>
         <div class="col">
             <div class="domain-item w-100 h-100 bg-white d-flex flex-row border rounded-4"><span
-                    class="col-6 mt-auto mb-auto ps-xl-4 ps-3 text-start fw-bold fs-5">Pathologies<br>mentales</span><img
+                    class="col-6 my-auto ps-xl-4 ps-3 text-start fw-bold">Pathologies<br>mentales</span><img
                     src="assets/img/Sante Mentale/pathologies.png" class="w-100 h-100 ms-auto"
                     alt="Pathologies mentales"></div>
         </div>
         <div class="col">
             <div class="domain-item w-100 h-100 bg-white d-flex flex-row border rounded-4"><span
-                    class="col-6 mt-auto mb-auto ps-xl-4 ps-3 text-start fw-bold fs-5">Relaxation</span><img
+                    class="col-6 my-auto ps-xl-4 ps-3 text-start fw-bold">Relaxation</span><img
                     src="assets/img/Sante Mentale/relaxation.png" class="w-100 h-100 ms-auto" alt="Relaxation"></div>
         </div>
         <div class="col">
             <div class="domain-item w-100 h-100 bg-white d-flex flex-row border rounded-4"><span
-                    class="col-6 mt-auto mb-auto ps-xl-4 ps-3 text-start fw-bold fs-5">Développement<br>personnel</span><img
+                    class="col-6 my-auto ps-xl-4 ps-3 text-start fw-bold">Développement<br>personnel</span><img
                     src="assets/img/Sante Mentale/developpement.png" class="w-100 h-100 ms-auto"
                     alt="Développement personnel"></div>
         </div>
