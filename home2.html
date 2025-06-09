@@ -14,6 +14,12 @@
     <title>Document</title>
 </head>
 <style>
+    .container-fluid{
+        min-width: 362px !important;
+    }
+    section{
+        min-width: 362px !important;
+    }
     .img-doctor {
         max-width: 50px;
         aspect-ratio: 1 / 1;
@@ -64,7 +70,6 @@
         background-size: auto 100%;
         padding: 20px;
         flex: 1 1 auto !important;
-        height: 300px;
     }
 
     .card.blue {
@@ -75,7 +80,6 @@
         background-size: auto 100%;
         padding: 20px;
         flex: 1 1 auto !important;
-        height: 300px;
     }
 
     @media screen and (min-width:1441px) {
@@ -541,9 +545,9 @@
         </div>
     </div>
 </div>
-<div class="container-fluid d-flex flex-lg-row flex-md-column  flex-column mt-1">
-    <section class=""style="">
-        <div class="d-flex  flex-row bg-white gap-2 rounded-5 px-lg-4 px-sm-4 px-3 hero-container mt-auto  text-center mx-auto">
+<Main class="container-fluid row">
+    <section class="col-8"style="">
+        <div class="d-flex flex-row bg-white rounded-5 px-lg-4 px-sm-4 px-3 hero-container text-center mx-auto mt-3">
             <div class="hero-content pt-3 mt-auto mx-auto mt-auto">
                 <h1 class="fw-bold text-start text-black style-title">
                     Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
@@ -574,8 +578,8 @@
         </div>
     </section>
 
-    <section class="ms-0 ms-md-4 mt-4 mt-md-3 mt-lg-0 gap-3 gap-lg-0 d-flex flex-column flex-md-row flex-sm-column flex-lg-column width-section" >
-        <div class="card yellow header-card mb-0 mb-lg-3 border-0 rounded-5 col-12 col-md-6 col-lg-12">
+    <section class="mx-auto col row " >
+        <div class="card yellow header-card mb-0 border-0 rounded-5 col mt-3">
             <h4 class="text-start w-50">Prenez soin de votre santé mentale</h4>
             <p  class="w-50">Grâce à la consultation vidéo (Téléconsultation)</p>
 
@@ -585,7 +589,7 @@
                 </button>
             </div>
         </div>
-        <div class="card blue header-card  border-0 rounded-5 col-12 col-md-6 col-lg-12 ">
+        <div class="card blue header-card  border-0 rounded-5 col mt-3">
             <h4 class="text-start w-50">Digitaliser votre cabinet médical</h4>
             <p  class="w-50">Planification de rendez-vous, partage de documents, interface intuitive.
             </p>
@@ -597,7 +601,7 @@
         </div>
 
     </section>
-</div>
+</Main>
 <div class="parcours-sante container my-5">
     <span class="title-parcours">Le parcours de santé Siladoc :</span>
 

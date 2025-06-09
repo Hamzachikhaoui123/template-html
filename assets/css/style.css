@@ -2442,29 +2442,8 @@ section {
   align-items: center;
 }
 
-.col {
-  padding: 12px;
-  padding-left: 30px;
-  opacity: 0.65;
-  background-color: var(--danger-light);
-  border: 1px solid var(--secondary);
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  color: rgb(0, 0, 0);
-  font-size: 18px;
-  width: 90%;
-  font-weight: bold;
-}
 
-.col.active {
-  background-color: var(--danger);
-  color: white;
-}
 
-.col:hover {
-  background-color: var(--danger);
-  color: white;
-}
 
 
 
