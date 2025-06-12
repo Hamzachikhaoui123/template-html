@@ -60,34 +60,57 @@
         background-color: #008D93;
 
     }
-    .card.yellow {
+    .yellow {
         background-color: #F8F4D0;
+    }
+    .yellow-content{
+    }
+    .yellow-image{
         background-image: url('assets/img/psy001.png');
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: auto 100%;
-        padding: 20px;
         flex: 1 1 auto !important;
-        max-height: 630px;
+        object-fit: cover;
+        aspect-ratio: 544 / 300;
+        max-height: 300px;
+        min-height: 193px;
+        max-width: 544px;
+        min-width: 362px;
     }
 
-    .card.blue {
+    .blue {
         background-color: #D0F6F8;
+    }
+    .blue-content{
+        margin-right: -200px;
+    }
+    .blue-image{
         background-image: url(/assets/img/digit.png);
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: auto 100%;
-        padding: 20px;
         flex: 1 1 auto !important;
-        max-height: 630px;
+        object-fit: cover;
+        aspect-ratio: 544 / 300;
+        max-height: 300px;
+        min-height: 193px;
+        max-width: 544px;
+        min-width: 362px;
     }
 
     @media screen and (min-width:1441px) {
-        .style-title {
-            width: 490px;
-            height: 144px;
+        .hero-content h1{
             font-size: 40px;
             line-height: 48px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px;
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
@@ -203,10 +226,18 @@
     }
 
     @media screen and (min-width:1024px) and (max-width:1440px) {
-        .style-title {
-
-            line-height: 48px;
-            font-family: 'Gotham Rounded';
+        .hero-content h1{
+            font-size: 34px;
+            line-height: 40px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 28px;
+            font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
         }
@@ -346,10 +377,18 @@
             display: none;
         }
 
-        .style-title {
-            font-size: 40px;
-            line-height: 48px;
-            font-family: 'Gotham Rounded';
+        .hero-content h1 {
+            font-size: 28px;
+            line-height: 34px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
         }
@@ -432,6 +471,22 @@
     }
 
     @media screen and (max-width:600px) {
+        .hero-content h1 {
+            font-size: 28px;
+            line-height: 30px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+
         .description-site-center {
             display: none
         }
@@ -493,15 +548,10 @@
         aspect-ratio: 490 / 630;
         max-height: 630px;
         min-height: 453px;
+        max-width: 490px;
         min-width: 348px;
     }
     .hero-content{
-
-    }
-    .hero-content p{
-        font-size: 20px;
-        font-weight: 300;
-        line-height: 24px;
     }
     .border-color{
         border-color:#DDDDDD ;
@@ -559,9 +609,9 @@
     </div>
 </div>
 <Main class="container-fluid row">
-    <section class="col col-xxl-8 col-lg-12 col-md-12"style="">
-        <div class="d-flex flex-row bg-white rounded-5 px-lg-4 px-sm-4 px-3  text-center mx-auto mt-3" style="max-height: 630px;">
-            <div class="hero-content pt-3 mt-auto mx-auto">
+    <section class="col col-xxl-8 col-xl-8 col-lg-7 col-md-12 p-0"style="">
+        <div class="d-flex flex-row bg-white mb-0 border-0 rounded-5  text-center mx-auto">
+            <div class="hero-content p-4 p-xxl-5 p-xl-5 p-lg-5 p-md-4 p-sm-4">
                 <h1 class="fw-bold text-start text-black style-title">
                     Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
                 <p class="text-start text-break fw-light text-secondary text-wrap">Découvrir les meilleurs praticiens et établissements de santé (pharmacies - laboratoires ’analyse - centres de radiologie -cliniques ...) à coté de chez vous.</p>
@@ -573,7 +623,7 @@
                     <img src="./assets/img/doctor-24.jpg" alt="doctor" class="img-doctor rounded-4 border w-100 h-auto">
                     <div class="icon-button-s rounded-4 border me-auto"><i class="feather-more-horizontal"></i></div>
                 </div>
-                <div class="d-flex flex-column mb-5">
+                <div class="d-flex flex-column mb-4 mb-xxl-3 mb-xl-3 mb-lg-4 mb-md-4 mb-sm-4">
                     <input type="text" class="form-control mb-3 ps-4 bg-light rounded-3" placeholder="Choisir une spécialité">
 
                     <div class="search-bar">
@@ -589,21 +639,28 @@
         </div>
     </section>
 
-    <section class="mx-auto col row " >
-        <div class="card yellow header-card mb-0 border-0 rounded-5 col mt-3">
-            <h4 class="text-start w-50">Prenez soin de votre santé mentale</h4>
-            <p  class="w-50">Grâce à la consultation vidéo (Téléconsultation)</p>
-
+    <section class="mx-auto col-xxl col-xl col-lg-5 row gap-md-3 p-0" >
+        <div class="card yellow p-0 d-flex flex-row mb-0 border-0 rounded-5 col col-lg-6 col-md-5 text-center mx-auto">
+            <div class="yellow-content p-4 p-xxl-5 p-xl-5 p-lg-5 p-md-4 p-sm-4">
+            <h4 class="text-start">Prenez soin de votre santé mentale</h4>
+            <p  class="">Grâce à la consultation vidéo (Téléconsultation)</p>
+            </div>
+            <div class="yellow-image mt-auto mx-auto w-100 h-auto">
+            </div>
             <div>
                 <button class="icon-button">
                     <i class="feather-chevron-right"></i>
                 </button>
             </div>
         </div>
-        <div class="card blue header-card  border-0 rounded-5 col mt-3">
-            <h4 class="text-start w-50">Digitaliser votre cabinet médical</h4>
-            <p  class="w-50">Planification de rendez-vous, partage de documents, interface intuitive.
+        <div class="card blue py-0 w-100 d-flex flex-row mb-0 border-0 rounded-5 col col-lg-6 col-md-5 text-center mx-auto mt-3 px-lg-4 px-sm-4 px-3">
+            <div class="blue-content pt-3">
+            <h4 class="text-start">Digitaliser votre cabinet médical</h4>
+            <p  class="">Planification de rendez-vous, partage de documents, interface intuitive.
             </p>
+            </div>
+            <div class="blue-image mt-auto mx-auto w-100 h-auto">
+            </div>
             <div>
                 <button class="icon-button">
                     <i class="feather-chevron-right"></i>
