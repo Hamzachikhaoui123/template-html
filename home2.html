@@ -62,44 +62,30 @@
     }
     .yellow {
         background-color: #F8F4D0;
-    }
-    .yellow-content{
-    }
-    .yellow-image{
         background-image: url('assets/img/psy001.png');
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: auto 100%;
         flex: 1 1 auto !important;
-        object-fit: cover;
-        aspect-ratio: 289 / 354;
-        max-height: 300px;
-        min-height: 193px;
-        max-width: 245px;
-        min-width: 158px;
-        border-bottom-right-radius: 2rem;
+        aspect-ratio: 544 / 300;
+    }
+    .yellow-content{
+
     }
 
     .blue {
         background-color: #D0F6F8;
-    }
-    .blue-content{
-    }
-    .blue-image{
         background-image: url(/assets/img/digit.png);
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: auto 100%;
         flex: 1 1 auto !important;
-        object-fit: cover;
-        aspect-ratio: 260 / 369;
-        max-height: 300px;
-        min-height: 193px;
-        max-width: 211px;
-        min-width: 136px;
+        aspect-ratio: 544 / 300;
     }
-
-    @media screen and (min-width:1441px) {
+    .blue-content{
+    }
+    /* Extra-extra large only (≥1400px) */
+    @media screen and (min-width: 1400px) {
         .hero-content h1{
             font-size: 40px;
             line-height: 48px;
@@ -114,6 +100,33 @@
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
+        }
+        .s-2 h4{
+            font-size: 28px;
+            line-height: 34px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 50px;
+            width: 50px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 24px;
+            line-height: 29px;
         }
 
         .p-4-custom {
@@ -224,8 +237,8 @@
             width: 55%;
         }
     }
-
-    @media screen and (min-width:1024px) and (max-width:1440px) {
+    /* Extra large only (≥1200px and <1400px) */
+    @media screen and (min-width: 1200px) and (max-width: 1399.98px) {
         .hero-content h1{
             font-size: 34px;
             line-height: 40px;
@@ -240,6 +253,33 @@
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
+        }
+        .s-2 h4{
+            font-size: 24px;
+            line-height: 34px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 50px;
+            width: 50px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 24px;
+            line-height: 29px;
         }
 
         .p-4-custom {
@@ -350,8 +390,8 @@
             width: 58%;
         }
     }
-
-    @media screen and (min-width:601px) and (max-width:768px) {
+    /* Medium and Small only*/
+    @media screen and (min-width:576px) and (max-width:1199.98px) {
         .description-site-center {
             width: 50%;
             left: 25%;
@@ -391,6 +431,33 @@
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
+        }
+        .s-2 h4{
+            font-size: 20px;
+            line-height: 24px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 50px;
+            width: 50px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 24px;
+            line-height: 29px;
         }
 
         .parcours-sante {
@@ -469,8 +536,8 @@
             width: 100%;
         }
     }
-
-    @media screen and (max-width:600px) {
+    /*Extra Small only*/
+    @media screen and (max-width:575.98px) {
         .hero-content h1 {
             font-size: 28px;
             line-height: 30px;
@@ -485,6 +552,33 @@
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
+        }
+        .s-2 h4{
+            font-size: 20px;
+            line-height: 24px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 30px;
+            width: 30px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 20px;
+            line-height: 24px;
         }
 
         .description-site-center {
@@ -546,9 +640,7 @@
         flex: 1 1 auto !important;
         object-fit: cover;
         aspect-ratio: 490 / 630;
-        max-height: 630px;
         min-height: 453px;
-        max-width: 490px;
         min-width: 348px;
     }
     .hero-content{
@@ -608,14 +700,14 @@
         </div>
     </div>
 </div>
-<Main class="container-fluid row">
-    <section class="col col-xxl-8 col-xl-8 col-lg-7 col-md-12 p-0"style="">
+<Main class="container-fluid row gap-3">
+    <section class="col col-xxl-8 col-xl-7 col-lg-12 col-md-12 p-0"style="">
         <div class="d-flex flex-row bg-white mb-0 border-0 rounded-5 text-center mx-auto">
-            <div class="hero-content my-auto p-4 p-xxl-5 p-xl-5 p-lg-5 p-md-4 p-sm-4">
-                <h1 class="fw-bold text-start text-black style-title">
+            <div class="hero-content p-4 p-xxl-5 p-xl-4 p-lg-4 p-md-4 p-sm-4 d-flex flex-column">
+                <h1 class="fw-bold text-start text-black my-3">
                     Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
-                <p class="text-start text-break fw-light text-secondary text-wrap">Découvrir les meilleurs praticiens et établissements de santé (pharmacies - laboratoires ’analyse - centres de radiologie -cliniques ...) à coté de chez vous.</p>
-                <div class="d-flex justify-content-start my-3">
+                <p class="text-start text-break fw-light text-secondary text-wrap mt-auto">Découvrir les meilleurs praticiens et établissements de santé (pharmacies - laboratoires ’analyse - centres de radiologie -cliniques ...) à coté de chez vous.</p>
+                <div class="d-flex justify-content-start mt-3">
                     <img src="./assets/img/doctor-13.jpg" alt="doctor" class="ms-0 img-doctor rounded-4 border w-100 h-auto">
                     <img src="./assets/img/doctor-15.jpg" alt="doctor" class="img-doctor rounded-4 border w-100 h-auto">
                     <img src="./assets/img/doctor-16.jpg" alt="doctor" class="img-doctor rounded-4 border w-100 h-auto">
@@ -623,7 +715,7 @@
                     <img src="./assets/img/doctor-24.jpg" alt="doctor" class="img-doctor rounded-4 border w-100 h-auto">
                     <div class="icon-button-s rounded-4 border me-auto"><i class="feather-more-horizontal"></i></div>
                 </div>
-                <div class="d-flex flex-column mb-4 mb-xxl-3 mb-xl-3 mb-lg-4 mb-md-4 mb-sm-4">
+                <div class="d-flex flex-column mb-4 mb-xxl-3 mb-xl-3 mb-lg-4 mb-md-4 mb-sm-4 mt-3">
                     <input type="text" class="form-control mb-3 ps-4 bg-light rounded-3" placeholder="Choisir une spécialité">
 
                     <div class="search-bar">
@@ -639,28 +731,28 @@
         </div>
     </section>
 
-    <section class="mx-auto col-xxl col-xl col-lg-5 row gap-md-3 p-0" >
-        <div class="card yellow p-0 d-flex flex-row mb-0 border-0 rounded-5 col col-lg-11 col-md-5 text-center mx-auto">
-            <div class="yellow-content ps-4 ps-xxl-5 ps-xl-5 ps-lg-5 ps-md-4 ps-sm-4 py-4 py-xxl-5 py-xl-5 py-lg-5 py-md-4 py-sm-4 pe-0">
-            <h4 class="text-start">Prenez soin de votre santé mentale</h4>
-            <p  class="">Grâce à la consultation vidéo (Téléconsultation)</p>
-                <button class="icon-button">
-                    <i class="feather-chevron-right"></i>
-                </button>
-            </div>
-            <div class="yellow-image mt-auto w-100 h-auto">
+    <section class="mx-auto col-xxl col-xl col-lg-12 row gap-md-3 p-0 s-2" >
+        <div class="card yellow p-0 d-flex flex-row mb-0 border-0 rounded-5 col col-xl-6 col-lg-5 col-md-5 text-center mx-auto">
+            <div class="yellow-content d-flex flex-column p-4">
+            <h4 class="fw-bold text-start text-black my-3">Prenez soin de votre santé mentale</h4>
+            <p  class="text-start text-break fw-light text-secondary text-wrap w-50 mt-auto">Grâce à la consultation vidéo (Téléconsultation)</p>
+                <div class="mt-3">
+                    <button class="icon-button-custom d-flex justify-content-center align-items-center">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="card blue p-0 d-flex flex-row mb-0 border-0 rounded-5 col col-lg-11 col-md-5 text-center mx-auto">
-            <div class="blue-content ps-4 ps-xxl-5 ps-xl-5 ps-lg-5 ps-md-4 ps-sm-4 py-4 py-xxl-5 py-xl-5 py-lg-5 py-md-4 py-sm-4 pe-0">
-            <h4 class="text-start">Digitaliser votre cabinet médical</h4>
-            <p  class="">Planification de rendez-vous, partage de documents, interface intuitive.
+        <div class="card blue p-0 d-flex flex-row mb-0 border-0 rounded-5 col col-xl-6 col-lg-5 col-md-5 text-center mx-auto">
+            <div class="blue-content d-flex flex-column p-4">
+            <h4 class="fw-bold text-start text-black my-3">Digitaliser votre cabinet médical</h4>
+            <p  class="text-start text-break fw-light text-secondary text-wrap w-50 mt-auto">Planification de rendez-vous, partage de documents, interface intuitive.
             </p>
-                <button class="icon-button">
+                <div class="mt-3">
+                <button class="icon-button-custom d-flex justify-content-center align-items-center">
                     <i class="feather-chevron-right"></i>
                 </button>
-            </div>
-            <div class="blue-image mt-auto w-100 h-auto">
+                </div>
             </div>
         </div>
 
