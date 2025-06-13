@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link type="image/x-icon" href="./assets/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="./assets/css/gotham-rounded.css">
+    <link rel="stylesheet" href="./assets/css/feather.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<style>
+
+    .container-fluid{
+        min-width: 362px !important;
+    }
+    section{
+        min-width: 362px !important;
+    }
+    .img-doctor {
+        max-width: 50px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin-left: -10px;
+        border-radius: 12px;
+    }
+    .icon-button-s {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 50px;
+        max-height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        margin-left: -10px;
+        background-color: #F8F8F8;
+        opacity: 1;
+    }
+    .icon-button-s i {
+        font-size: 20px;
+        color: #707070;
+    }
+
+    body {
+        background-color: #F8F8F8;
+    }
+
+    .btn-seconnecter {
+        background-color: #008D93;
+        padding: 8px;
+        color: white;
+        font-weight: bold;
+        border: #008D93;
+    }
+
+    .btn-seconnecter:hover {
+        background-color: #008D93;
+
+    }
+    .yellow {
+        background-color: #F8F4D0;
+        background-image: url('assets/img/psy001arab.png');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: auto 100%;
+        flex: 1 1 auto !important;
+        aspect-ratio: 544 / 300;
+    }
+    .yellow-content{
+
+    }
+
+    .blue {
+        background-color: #D0F6F8;
+        background-image: url('/assets/img/digit-arab.png');
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: auto 100%;
+        flex: 1 1 auto !important;
+        aspect-ratio: 544 / 300;
+    }
+    .blue-content{
+    }
+    /* Extra-extra large only (≥1400px) */
+    @media screen and (min-width: 1920px) {
+        .hero-content h1{
+            font-size: 40px;
+            line-height: 48px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 h4{
+            font-size: 28px;
+            line-height: 34px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 50px;
+            width: 50px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .p-4-custom {
+            padding: 40px;
+        }
+
+        .center-icon {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            background: #008d93;
+            width: 150px;
+            height: 150px;
+            padding: 26px;
+            border-radius: 50px;
+            right: 20px;
+        }
+
+        .parcours-sante {
+            text-align: center;
+            padding: 40px 20px;
+            font-family: sans-serif;
+            background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
+            align-items: center;
+            border-radius: 20px;
+            gap: 40px;
+            margin-top: 25px;
+            background-position: center center;
+            border-radius: 40px;
+            opacity: 1;
+        }
+
+        .bloc-parcours {
+            background: #f8f8f8;
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+            text-align: center;
+
+        }
+
+        .title-parcours {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .parcours-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .bloc-left,
+        .bloc-right {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 300px;
+        }
+
+        .container-siladoc {
+            display: none;
+        }
+
+        .directory-card {
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            border: 1px solid #DDDDDD;
+            border-radius: 40px;
+            opacity: 0.7;
+            height: 220px;
+            /* Keep fixed height */
+            width: 80%;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.3;
+            font-family: "Tajawal Bold";
+            background-color: transparent;
+        }
+
+        .card-footer {
+            padding: 0.5rem 1rem;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .width-section{
+            width: 55%;
+        }
+    }
+    /* Extra large only (≥1200px and <1400px) */
+    @media screen and (min-width: 1440px) and (max-width: 1919.98px) {
+        .hero-content h1{
+            font-size: 34px;
+            line-height: 40px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 h4{
+            font-size: 24px;
+            line-height: 34px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 22px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 50px;
+            width: 50px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .p-4-custom {
+            padding: 40px;
+        }
+
+        .center-icon {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            background: #008d93;
+            width: 150px;
+            height: 150px;
+            padding: 26px;
+            border-radius: 50px;
+            right: 20px;
+        }
+
+        .parcours-sante {
+            text-align: center;
+            padding: 40px 20px;
+            font-family: sans-serif;
+            background: #ffff url(/assets/img/bg2.png) 0 0 no-repeat;
+            align-items: center;
+            border-radius: 20px;
+            gap: 40px;
+            margin-top: 25px;
+            background-position: center center;
+            border-radius: 40px;
+            opacity: 1;
+        }
+
+        .bloc-parcours {
+            background: #f8f8f8;
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+            text-align: center;
+
+        }
+
+        .title-parcours {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .parcours-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .bloc-left,
+        .bloc-right {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 300px;
+        }
+
+        .container-siladoc {
+            display: none;
+        }
+
+        .directory-card {
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            border: 1px solid #DDDDDD;
+            border-radius: 40px;
+            opacity: 0.7;
+            height: 220px;
+            /* Keep fixed height */
+            width: 80%;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.3;
+            font-family: "Tajawal Bold";
+            background-color: transparent;
+        }
+
+        .card-footer {
+            padding: 0.5rem 1rem;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .width-section{
+            width: 58%;
+        }
+    }
+    /* Medium and Small only*/
+    @media screen and (min-width:576px) and (max-width:1439.98px) {
+        .yellow{
+            max-height: 300px;
+            min-height: 193px;
+        }
+        .blue{
+            max-height: 300px;
+            min-height: 193px;
+        }
+        .description-site-center {
+            width: 50%;
+            left: 25%;
+            position: relative;
+            bottom: 50px;
+        }
+
+        .center-icon {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            background: #008d93;
+            width: 150px;
+            height: 150px;
+            padding: 26px;
+            border-radius: 50px;
+        }
+
+        .container-siladoc {
+            display: none;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;
+            line-height: 34px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .img-doctor {
+            max-width: 30px;
+            max-height: 30px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            margin-left: -5px;
+            border-radius: 8px;
+        }
+        .icon-button-s {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 30px;
+            max-height: 30px;
+            min-width: 30px;
+            min-height: 30px;
+            margin-left: -5px;
+            background-color: #F8F8F8;
+            opacity: 1;
+        }
+        .icon-button-s i {
+            font-size: 20px;
+            color: #707070;
+        }
+        .s-2 h4{
+            font-size: 20px;
+            line-height: 24px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 30px;
+            width: 30px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .parcours-sante {
+            text-align: center;
+            padding: 40px 20px;
+            font-family: sans-serif;
+            background: #ffff;
+            align-items: center;
+            margin-left: 30px;
+            width: 95%;
+            margin-top: 25px;
+            border-radius: 40px;
+            opacity: 1;
+        }
+
+        .bloc-left,
+        .bloc-right {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 300px;
+        }
+
+        .bloc-parcours {
+            background: #f8f8f8;
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+            text-align: center;
+            width: 222px;
+        }
+
+        .parcours-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .directory-card {
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            border: 1px solid #DDDDDD;
+            border-radius: 25px;
+            opacity: 0.7;
+            height: auto;
+            /* Keep fixed height */
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.3;
+            font-family: "Tajawal Bold";
+            background-color: transparent;
+        }
+
+        .card-footer {
+            padding: 0.5rem 1rem;
+            position: absolute;
+            bottom: 20px;
+            /* Adjusted for positioning within the card */
+            right: 20px;
+            /* Adjusted for positioning */
+
+        }
+        .width-section{
+            width: 100%;
+        }
+    }
+    /*Extra Small only*/
+    @media screen and (max-width:575.98px) {
+        .yellow{
+            max-height: 300px;
+            min-height: 193px;
+        }
+        .blue{
+            max-height: 300px;
+            min-height: 193px;
+        }
+        .hero-content h1 {
+            font-size: 28px;
+            line-height: 30px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 h4{
+            font-size: 20px;
+            line-height: 24px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 16px;
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 30px;
+            width: 30px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        .description-site-center {
+            display: none
+        }
+        .width-section{
+            width: 100%;
+        }
+        .parcours-sante {
+            display: none;
+        }
+
+        .btn-seconnecter {
+            display: none;
+        }
+
+        .icon-button {
+            display: none;
+        }
+
+        .directory-card {
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            border: 1px solid #DDDDDD;
+            border-radius: 25px;
+            opacity: 0.7;
+            height: 135px;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 0.8rem;
+            font-family: "Tajawal Bold";
+            text-align: justify;
+        }
+
+        .card-footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+    }
+    .hero-image {
+        background-image: url('assets/img/siladoc01.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: auto 100%;
+        flex: 1 1 auto !important;
+        object-fit: cover;
+        aspect-ratio: 490 / 630;
+        min-height: 453px;
+        min-width: 348px;
+    }
+    .hero-content{
+    }
+    .border-color{
+        border-color:#DDDDDD ;
+    }
+</style>
+
+<body class="mx-5">
+<!-- Header -->
+<header class="navbar bg-transparent ">
+    <div class="container">
+
+        <div class="d-flex gap-2 align-items-center">
+            <button class="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+        </div>
+        <nav class="nav-links">
+            <a href="./home.html" class="text-decoration-underline">Accueil</a>
+            <a href="./inscription.html">Inscrivez-vous</a>
+            <a href="#">Nous Contacter</a>
+        </nav>
+        <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
+    </div>
+</header>
+<div class="offcanvas offcanvas-start w-25 p-3" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+        <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="d-flex flex-column gap-2">
+            <span class="bg-transparent  rounded-2 px-4 py-1 fw-bold text-end border  text-secondary border-color">Accueil</span>
+            <span class="bg-transparent  rounded-2 px-4 py-1  text-end border  text-secondary border-color">Inscrivez-vous</span>
+            <span class="rounded-2 px-4 py-1  text-end border  text-secondary border-color" style="background-color: #F8F4D0;">Santé Mentale</span>
+            <span class="bg-transparent  rounded-2 px-4 py-1  text-end border  text-secondary border-color">Nous Contacter</span>
+            <span class="rounded-2 px-4 py-1  text-end border  text-secondary border-color" style="background-color: #D0F6F8;">Pour les pro de santé</span>
+
+
+
+        </div>
+
+    </div>
+    <div class="offcanvas-footer">
+
+        <div class="d-flex flex-column gap-2">
+            <span class="bg-light  rounded-2  py-1 fw-bold text-center border  text-dark border-color">العربية</span>
+            <span class="rounded-2  py-1  text-center border  text-white border-color" style="background-color: #008D93;">Se connecter</span>
+        </div>
+        <div class="d-flex flex-column">
+            <span class="text-end fw-bold">Suivez nous sur :</span>
+        </div>
+    </div>
+</div>
+<Main class="container-fluid row gap-3">
+    <section class="mx-auto col-xxl col-xl col-lg-12 row gap-3 gap-md-3 p-0 s-2" >
+        <div class="card yellow p-0 mb-0 border-0 rounded-5 col col-xl-6 col-lg-5 col-md-5 text-center mx-auto">
+            <div class="yellow-content d-flex flex-column h-100 p-2 p-xxl-3 p-xl-3 p-lg-2 p-md-2">
+                <h4 class="fw-bold text-end text-black my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">اعتني بصحتك النفسية</h4>
+                <p  class="ms-auto text-end text-break fw-light text-secondary text-wrap w-50 my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">بفضل الاستشارة عبر الفيديو (الاستشارة عن بعد)</p>
+                <div class="mt-auto mb-3 ms-auto">
+                    <button class="icon-button-custom d-flex justify-content-center align-items-center">
+                        <i class="feather-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="card blue p-0 mb-0 border-0 rounded-5 col col-xl-6 col-lg-5 col-md-5 text-center mx-auto">
+            <div class="blue-content d-flex flex-column h-100  p-2 p-xxl-3 p-xl-3 p-lg-2 p-md-2">
+                <h4 class="fw-bold text-end text-black my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">رقمنة عيادتك الطبية</h4>
+                <p  class="ms-auto text-end text-break fw-light text-secondary text-wrap w-50 my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">وظائف مثل جدولة المواعيد، مشاركة الملفات بشكل آمن، وواجهة استخدام سهلة..
+                </p>
+                <div class="mt-auto ms-auto mb-3">
+                    <button class="icon-button-custom d-flex justify-content-center align-items-center">
+                        <i class="feather-chevron-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="col col-xxl-8 col-xl-8 col-lg-12 col-md-12 p-0"style="">
+        <div class="d-flex flex-row bg-white mb-0 border-0 rounded-5 text-center">
+            <div class="hero-image d-none d-md-block mt-auto  w-100 h-auto">
+            </div>
+            <div class="hero-content pe-4 pe-xxl-5 pe-xl-4 pe-lg-4 pe-md-3 py-3 py-xxl-4 py-xl-3 py-lg-3 py-md-2   d-flex flex-column">
+                <h1 class="fw-bold text-end text-black my-3">
+                    ابحث عن موعد مع طبيب أو أخصائي رعاية صحية</h1>
+                <p class="text-end text-break fw-light text-secondary text-wrap mt-auto">اكتشف أفضل الممارسين والمؤسسات الصحية (الصيدليات - مختبرات التحاليل - مراكز الأشعة - العيادات، الخ) بالقرب منك.</p>
+                <div class="d-flex flex-column mb-4 mb-xxl-3 mb-xl-3 mb-lg-4 mb-md-4 mb-sm-4 mt-3">
+                    <input type="text" class="form-control text-end mb-lg-3 mb-md-2 mb-sm-2 mb-2 pe-3 pe-xxl-4 pe-xl-4 pe-lg-3 pe-md-3 bg-light rounded-3" placeholder="البحث حسب الاختصاص">
+
+                    <div class="search-bar">
+                        <input type="text" class="form-control text-end pe-3 pe-xxl-4 pe-xl-4 pe-lg-3 pe-md-3 bg-light rounded-3" placeholder="بحث حسب البلد">
+                        <input type="text" class="form-control text-end pe-3 pe-xxl-4 pe-xl-4 pe-lg-3 pe-md-3 bg-light rounded-3" placeholder="بحث حسب المدينة">
+
+                        <button>بحث</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</Main>
+<div class="parcours-sante container my-5">
+    <span class="title-parcours">Le parcours de santé Siladoc :</span>
+
+    <div class="parcours-content d-flex justify-content-center gap-4 flex-lg-wrap">
+        <div class="bloc-left d-flex flex-column gap-4">
+            <div class="bloc-parcours"> Prendre <br> <strong> un rendez-vous</strong> en ligne</div>
+            <div class="bloc-parcours ms-lg-5">Consultation <strong>en ligne</strong> ou en
+                cabinet</div>
+            <div class="bloc-parcours"><strong>Prescription</strong> : Médocs, Analyses, Radiologies ...</div>
+        </div>
+
+
+        <div class="center-icon">
+            <a href="https://www.siladoc.com">
+                <div class="icon">
+                    <svg class="heart-main" viewBox="0 0 512 512" width="100" title="heart">
+                        <path class="st0"
+                              d="M177.8,96.2c-59-17.5-120.9,16.2-138.4,75.1s16.2,120.9,75.1,138.4s120.9-16.2,138.4-75.1
+                c3.3-11.3,5.1-20.4,4.9-31.6c0-61.5,49.9-111.4,111.4-111.4S480.5,141.5,480.5,203c0,35.9-17,67.9-43.5,88.3L261.4,422.1l-52.6-41.5"
+                              stroke="#ffffff" stroke-width="55" fill="none" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+        <div class="bloc-right d-flex flex-column gap-4">
+            <div class="bloc-parcours">Votre <strong>rapport médical</strong><br>envoyer au médecin</div>
+            <div class="bloc-parcours me-lg-5  "><strong>Partager</strong> votre
+                dossier<br>avec un autre médecin</div>
+            <div class="bloc-parcours">Dossier envoyé <br> à votre <strong>Assurance</strong></div>
+        </div>
+    </div>
+</div>
+<div class=" container container-siladoc bg-white rounded-3 p-3 w-100" style="max-width: 400px;">
+    <h2>Le parcours de santé Siladoc :</h2>
+    <div class="row g-3">
+        <div class="col-6">
+            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
+                Prendre un rendez-vous en ligne
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
+                Votre rapport médical envoyer au médecin
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
+                Consultation en ligne ou en cabinet
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
+                Partager votre dossier avec un autre médecin
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
+                Prescription : Médocs, Analyses, Radiologies ...
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="bg-light rounded-3 p-2 text-center shadow-sm small h-100 d-flex flex-column justify-content-center">
+                Dossier envoyé à votre Assurance
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section class=" container py-4">
+    <div class="container d-flex flex-wrap flex-md-nowrap justify-content-center gap-3">
+
+        <div
+                class="d-flex align-items-center flex-md-column flex-lg-row flex-xlg-row justify-content-between p-3 bg-white rounded-4 shadow-sm"
+                style="width: 400px;">
+            <div class="text-end">
+                <span class="fw-bold text-dark d-block">Confidentialité</span>
+                <small class="text-muted">Conformité aux normes</small>
+            </div>
+            <img src="./assets/img/protection-données-1024x421.jpg" alt="Confidentialité" class="img-fluid"
+                 style="width: 100px;">
+        </div>
+
+        <div
+                class="d-flex align-items-center flex-lg-row flex-md-column flex-xlg-row justify-content-between p-3 bg-white rounded-4 shadow-sm"
+                style="width: 400px;">
+            <div class="text-end">
+                <span class="fw-bold text-dark d-block">Protection des</span>
+                <small class="text-muted">données de santé.</small>
+            </div>
+            <img src="assets/img/Logo-ANCS-10.png" alt="INPDP" class="img-fluid" style="width: 100px;">
+        </div>
+
+        <div
+                class="d-flex align-items-center flex-row flex-lg-row flex-xlg-row flex-md-column justify-content-between p-3 bg-white rounded-4 shadow-sm"
+                style="width: 400px;">
+            <div class="text-end">
+                <span class="fw-bold text-dark d-block">Paiement</span>
+                <small class="text-muted">sécurisé</small>
+            </div>
+            <img src="assets/img/konnect.png" alt="ANCS" class="img-fluid">
+        </div>
+
+    </div>
+</section>
+<section class="container my-5">
+    <div class="row bg-white rounded-4 shadow-sm p-4 align-items-center">
+        <!-- Carte du monde -->
+        <div class="col-lg-8 col-md-6 mb-4 mb-lg-0">
+            <img src="./assets/img/maps.svg" alt="Carte du monde" class="img-fluid">
+        </div>
+        <!-- Titre + contenu -->
+        <div class="col-12 col-lg-4 col-md-6  text-left ">
+            <!-- col-12 for small screens, col-md-4 for medium screens and larger -->
+            <h2 class="h4 fw-bold mb-3 text-dark text-end">
+                Pourquoi choisir la Tunisie<br>pour vos soins
+            </h2>
+            <ul class="list-unstyled text-dark small">
+                <li>– Établissements de santé avec des technologies de pointe</li>
+                <li>– Médecins et professionnels de santé hautement qualifiés</li>
+                <li>– Qualité exceptionnelle des services de santé</li>
+                <li>– Temps d’attente très réduit</li>
+                <li>– Infrastructure touristique très confortable</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row g-3 ">
+        <!-- First Column -->
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+            <div class="card directory-card" style="background-image: url('assets/img/polyc.png');">
+                <div class="card-header bg-transparent border-0">
+                    <h3>Annuaire<br>des polycliniques</h3>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-end align-items-center">
+                    <button class="icon-button">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+            <div class="card directory-card" style="background-image: url('assets/img/pharmacie.png');">
+                <div class="card-header bg-transparent border-0">
+                    <h3>Annuaire<br>des pharmacies</h3>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-end align-items-center">
+                    <button class="icon-button">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Column -->
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+            <div class="card directory-card" style="background-image: url('assets/img/centres.jpg');">
+                <div class="card-header bg-transparent border-0">
+                    <h3>Annuaire<br>des centres médical</h3>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-end align-items-center">
+                    <button class="icon-button">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fourth Column -->
+        <div class="col-6 col-sm-6 col-md-6 col-lg-3">
+            <div class="card directory-card" style="background-image: url('assets/img/labo.jpg');">
+                <div class="card-header bg-transparent border-0">
+                    <h3>Annuaire<br>des Laboratoires d’Analyses</h3>
+                </div>
+                <div class="card-footer bg-transparent border-0 d-flex justify-content-end align-items-center">
+                    <button class="icon-button">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Accordion -->
+<section class="bg-white container rounded-3 mt-3 h-100 p-3">
+    <div class="container">
+
+        <div class="section-header ">
+
+            <div class="row ">
+                <div class="col-lg-6">
+                    <iframe width="100%" height="315" style="    border-radius: 0.5rem;"
+                            src="https://www.youtube.com/embed/PmQFG4LEPZs?si=IcZ_9ra3t9knpkPp&amp;controls=0"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="accordion " id="accordionExample">
+                        <div class="accordion-item mb-3 rounded">
+                            <h2 class="accordion-header custom-radius">
+                                <button class="accordion-button rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Comment Siladoc peut-il m’aider ?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Siladoc, Solution de numérisation de parcours de
+                                        soin.</strong>
+                                    Chaque patient pourra consulter un annuaire des praticiens et
+                                    demander un RDV.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button  rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Comment je peux avoir un compte sur Siladoc?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Enregistrement d'un compte directement sur Siladoc.</strong>
+                                    il suffit de créer un compte sur Siladoc en utilisant un email
+                                    ou un numéro de téléphone mobile et un mot de passe pour
+                                    accéder au site et profiter de l'espace patient.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Qui sont les praticiens sur Siladoc?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Sur<strong> Siladoc </strong>, Vous pouvez consulter des
+                                    médecins généralistes, des psychiatres, des dermatologues, des
+                                    pédiatres, des endocrinologues, des gynécologues et des
+                                    gastro-entérologues. Ces médecins sont tous Docteurs en
+                                    médecine, inscrits au Conseil National de l'Ordre des Médecins
+                                    en TUNISIE (CNOM), et exercent en TUNISIE. Ils sont
+                                    spécialement formés à la télé-consultation pour vous écouter,
+                                    vous aider et vous prendre en charge au mieux. Ils répondent
+                                    bien sûr aux standards requis pour faire de la
+                                    télé-consultation, pratique en attente d'approbation par les
+                                    autorités tunisienne . </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                    C'est quoi la precription éléctronique ou E-PRECRIPTION?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>
+                                        La prescription Electronique ou E-PRESCRITION. </strong>E-Prescription ou ordonnance
+                                    électronique,
+                                    unique et
+                                    sécurisé, pour une meilleure expérience du patient.
+                                    E-PRESCRIPTION: Presription de médicament - Prescription
+                                    d'analyse biologique - Prescription radiologie
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button rounded bg-light collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                                    L'application Siladoc ne fonctionne pas, que dois-je faire ?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>
+                                        En cas de problème de démarrage de l'application
+                                        mobile.</strong>
+                                    Si vous n'arrivez pas à vous connecter à votre application
+                                    Siladoc, ou que l'application ne fonctionne pas correctement,
+                                    vous pouvez : Vérifier d'avoir une bonne connexion Internet.
+                                    Si vous n'utilisez pas de connexion Wi-Fi, assurez-vous que
+                                    l'application Siladoc utilise vos données mobiles, Vérifier
+                                    que votre téléphone est à jour puis mettre à jour
+                                    l'application Siladoc via playstore ou Google Play, et
+                                    redémarrer l'application.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+<!-- Fin Accordion-->
+<!-- Notre magazine de santé -->
+<section class=" container bg-white p-2 mt-3 rounded-4">
+    <div class="row m-3">
+        <span class="col-lg-9 fw-bold mb-3 col-sm-9 col-9 text-dark text-end">Notre magazine de santé</span>
+        <button class=" col-lg-3 col-sm-3 col-3 bg-transparent border-0">
+            <i class="feather-chevron-right"></i>
+        </button>
+    </div>
+
+    <div class="card-magazine row ml-5 justify-content-center d-none d-sm-flex">
+        <div class="card col-lg-3 m-2 rounded" style="width: 300px;
+;padding: 0%;">
+            <img src="/assets/img/01.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
+            <div class="card-body">
+                <p class="fw-bold mb-3 text-dark text-end">Some quick example text to build on the card title and make up
+                    the bulk of the card’s
+                <div class="d-flex justify-content-between align-items-center p-1">
+                    <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+                    <button class="icon-button ">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card col-lg-3 m-2 rounded " style="width: 300px;
+      ;padding: 0%;">
+            <img src="/assets/img/02.jpeg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
+            <div class="card-body">
+                <p class="fw-bold mb-3 text-dark text-end">Some quick example text to build on the card title and make up
+                    the bulk of the card’s
+                    content.</p>
+                <div class="d-flex justify-content-between align-items-center p-1">
+                    <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+                    <button class="icon-button ">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card col-lg-3 m-2 rounded" style="width: 300px;
+            ;padding: 0%;">
+            <img src="/assets/img/03.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
+            <div class="card-body">
+                <p class="fw-bold mb-3 text-dark text-end">Some quick example text to build on the card title and make up
+                    the bulk of the card’s
+                    content.</p>
+
+                <div class="d-flex justify-content-between align-items-center p-1">
+                    <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+                    <button class="icon-button ">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card col-lg-3 m-2 rounded" style="width: 300px;
+                  ;padding: 0%;">
+            <img src="/assets/img/04.jpg" class="card-img-top" style="height: 150px; object-fit: cover;" alt="...">
+            <div class="card-body">
+                <p class="fw-bold mb-3 text-dark text-end">Some quick example text to build on the card title and make up
+                    the bulk of the card’s
+                    content.</p>
+                <!-- <div class="d-flex justify-content-between align-items-center p-1">
+                  <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+                  <button class="icon-button ">
+                    <i class="feather-chevron-right"></i>
+                  </button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Carousel pour mobile -->
+    <div id="cardCarousel" class="carousel slide d-block d-sm-none" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Card 1 -->
+            <div class="carousel-item active">
+                <div class="card mx-auto" style="width: 90%;">
+                    <img src="/assets/img/01.jpg" class="card-img-top" alt="Image 1" style="height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <p class="fw-bold mb-3 text-dark text-end">Some quick example text to build on the card title and make
+                            up
+                            the bulk of the card’s
+                        <div class="d-flex justify-content-between align-items-center p-1">
+                            <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+                            <button class="icon-button" style="display: inline-block;">
+                                <i class="feather-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width: 90%;">
+                    <img src="/assets/img/02.jpeg" class="card-img-top" alt="Image 2" style="height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <p class="fw-bold mb-3 text-dark text-end">Some quick example text to build on the card title and make
+                            up
+                            the bulk of the card’s
+                            content.</p>
+                        <div class="d-flex justify-content-between align-items-center p-1">
+                            <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+                            <button class="icon-button" style="display: inline-block;">
+                                <i class="feather-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width: 90%;">
+                    <img src="/assets/img/03.jpg" class="card-img-top" alt="Image 3" style="height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <p class="fw-bold mb-3 text-dark text-end">Some quick example text to build on the card title and make
+                            up
+                            the bulk of the card’s
+                            content.</p>
+
+                        <div class="d-flex justify-content-between align-items-center p-1">
+                            <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+                            <button class="icon-button" style="display: inline-block;">
+                                <i class="feather-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="carousel-item">
+                <div class="card mx-auto" style="width: 90%;">
+                    <img src="/assets/img/04.jpg" class="card-img-top" alt="Image 4" style="height: 150px; object-fit: cover;">
+                    <div class="card-body">
+                        <p class="fw-bold mb-3 text-dark text-end">Some quick example text to build on the card title and make
+                            up
+                            the bulk of the card’s
+                            content.</p>
+                        <div class="d-flex justify-content-between  align-items-center p-1">
+                            <p class="mb-0">Lentement mais sûrement, les gens reconnaissent les bienfaits de la médecine ...</p>
+                            <button class="icon-button" style="display: inline-block;">
+                                <i class="feather-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<!--  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+<script>
+    const myCarousel = document.querySelector('#cardCarousel');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 2000,
+        ride: 'carousel'
+    });
+</script>
+
+
+
+<script src="assets/js/accordion.js"></script>
+<script>
+    var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+    navItems.forEach(function (e, i) {
+        e.addEventListener("click", function (e) {
+            navItems.forEach(function (e2, i2) {
+                e2.classList.remove("mobile-bottom-nav__item--active");
+            })
+            this.classList.add("mobile-bottom-nav__item--active");
+        });
+    });
+</script>
+<script src="assets/js/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
+</body>
+
+</html>
