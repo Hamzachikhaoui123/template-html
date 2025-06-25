@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link type="image/x-icon" href="./assets/favicon.ico" rel="icon">
+    <link rel="stylesheet" href="./assets/css/gotham-rounded.css">
+    <link rel="stylesheet" href="./assets/css/feather.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<style>
+    .img-doctor {
+        max-width: 50px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin-left: -10px;
+        border-radius: 12px;
+    }
+    .icon-button-s {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 50px;
+        max-height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+        margin-left: -10px;
+        background-color: #F8F8F8;
+        opacity: 1;
+    }
+    .icon-button-s i {
+        font-size: calc((20  / 1920) * 100vw);
+        color: #707070;
+    }
+
+    body {
+        background-color: #F8F8F8;
+    }
+
+    .btn-seconnecter {
+        background-color: #008D93;
+        padding: 8px;
+        color: white;
+        font-weight: bold;
+        border: #008D93;
+    }
+
+    .btn-seconnecter:hover {
+        background-color: #008D93;
+
+    }
+    .yellow {
+        background-color: #F8F4D0;
+        background-image: url('assets/img/psy001.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: auto 100%;
+        flex: 1 1 auto !important;
+        /* aspect-ratio: 544 / 300; */
+    }
+
+    .blue {
+        background-color: #D0F6F8;
+        background-image: url('assets/img/digit.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: auto 100%;
+        flex: 1 1 auto !important;
+        /* aspect-ratio: 544 / 300; */
+    }
+
+    /* Extra-extra large only (≥1400px) */
+    @media screen and (min-width: 1400px) {
+        .hero-image {
+            max-width: calc((490 / 1920) * 100vw)
+        }
+        .hero-content h1{
+            font-size: calc((40 / 1920) * 100vw);
+            line-height: calc((48 / 1920) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+            
+        }
+        .hero-content p{
+            font-size: calc((20 / 1920) * 100vw);
+            line-height: calc((24 / 1920)*100vw);
+            font-weight: 300;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content input{
+            font-size: calc((16 / 1920) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+        }
+        .hero-content button{
+            font-size: calc((16 / 1920) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+        }
+        .s-2 h4{
+            font-size: calc((28 / 1920) * 100vw);
+            line-height: calc((34 / 1920) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{                       
+            font-size: calc((16  / 1920) * 100vw);
+            line-height: calc((19 / 1920) * 100vw);
+            font-weight: 300;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 50px;
+            width: 50px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 24px;
+        }
+
+        
+    }
+    /* Extra large only (≥1200px and <1400px) */
+    @media screen and (min-width: 1200px) and (max-width:1400px)  {
+        .hero-image {
+            max-width: 490px;
+        }
+        .hero-content h1{
+            font-size: calc((28 / 768) * 100vw);
+            line-height: calc((34 / 768) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: calc((16  / 768) * 100vw);
+            line-height: calc((19 / 768) * 100vw);
+            font-weight: 300;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 h4{
+            font-size: calc((24 / 768) * 100vw);   
+            line-height: calc((34 / 768) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: calc((14  / 768) * 100vw);
+            line-height: calc((16 / 768) * 100vw);
+            font-weight: 300;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 50px;
+            width: 50px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: 24px;
+        }
+    }
+    /* Medium and Small only*/
+    @media screen and (min-width:576px) and (max-width:1200px) {
+        .hero-image {
+            max-width: calc((348 / 768) * 100vw)
+        }
+        .yellow{
+            max-height: 300px;
+            min-height: 193px;
+        }
+        .blue{
+            max-height: 300px;
+            min-height: 193px;
+        }
+        .hero-content h1 {
+            font-size: calc((28 / 768) * 100vw);
+            line-height: calc((34 / 768) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: calc((16  / 768) * 100vw);
+            line-height: calc((19 / 768) * 100vw);
+            font-weight: 300;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .img-doctor {
+            max-width: 30px;
+            max-height: 30px;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            margin-left: -5px;
+            border-radius: 8px;
+        }
+        .icon-button-s {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 30px;
+            max-height: 30px;
+            min-width: 30px;
+            min-height: 30px;
+            margin-left: -5px;
+            background-color: #F8F8F8;
+            opacity: 1;
+        }
+        .icon-button-s i {
+            font-size: calc((20  / 768) * 100vw);
+            color: #707070;
+        }
+        .s-2 h4{
+            font-size: calc((20 / 768) * 100vw);
+            line-height: calc((24 / 768) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: calc((14  / 768) * 100vw);
+            line-height: calc((16 / 768) * 100vw);
+            font-weight: 300;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 30px;
+            width: 30px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: calc((20  / 768) * 100vw);
+        }
+    }
+    /*Extra Small only*/
+    @media screen and (max-width:576px) {
+        .yellow{
+            max-height: 300px;
+            min-height: 193px;
+        }
+        .blue{
+            max-height: 300px;
+            min-height: 193px;
+        }
+        .hero-content h1 {
+            font-size: calc((28  / 375) * 100vw);
+            line-height: calc((30 / 375) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .hero-content p{
+            font-size: calc((16  / 375) * 100vw);
+            line-height: calc((19 / 375) * 100vw);
+            font-weight: 300;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 h4{
+            font-size: calc((20  / 375) * 100vw);
+            line-height: calc((24 / 375) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .s-2 p{
+            font-size: calc((14  / 375) * 100vw);
+            line-height: calc((16 / 375) * 100vw);
+            font-weight: 300;
+            font-family: 'Gotham Rounded', sans-serif;
+            letter-spacing: 0;
+            opacity: 1;
+        }
+        .icon-button-custom{
+            height: 30px;
+            width: 30px;
+            background: #F8F8F8 0% 0% no-repeat padding-box;
+            opacity: 1;
+            border: 1px solid #DDDDDD;
+            border-radius: 0.5rem;
+        }
+        .icon-button-custom i {
+            font-size: calc((20  / 640) * 100vw);
+        }
+
+        
+        .btn-seconnecter {
+            display: none;
+        }
+
+        .icon-button {
+            display: none;
+        }   
+    }
+
+    .hero-image {
+        background-image: url('assets/img/siladoc01.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+        flex: 1 1 auto !important;
+        object-fit: cover;
+        aspect-ratio: 490 / 630;
+        min-height: 453px;
+        /* max-width: 490px; */
+    }
+    .border-color{
+        border-color:#DDDDDD ;
+    }
+</style>
+
+<body class="mx-lg-5 mx-md-3">
+<!-- Header -->
+<header class="navbar bg-transparent ">
+    <div class="container">
+        <div class="d-flex gap-2 align-items-center">
+            <button class="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+        </div>
+        <div class="d-flex flex-row align-items-center gap-3">
+        <nav class="nav-links">
+            <a href="./home.html" class="text-decoration-underline">Accueil</a>
+            <a href="./inscription.html">Inscrivez-vous</a>
+            <a href="#">Nous Contacter</a>
+        </nav>
+        <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
+        </div>
+
+    </div>
+</header>
+<div class="offcanvas offcanvas-start w-25 p-3" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+        <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="d-flex flex-column gap-2">
+            <span class="bg-transparent  rounded-2 px-4 py-1 fw-bold text-start border  text-secondary border-color">Accueil</span>
+            <span class="bg-transparent  rounded-2 px-4 py-1  text-start border  text-secondary border-color">Inscrivez-vous</span>
+            <span class="rounded-2 px-4 py-1  text-start border  text-secondary border-color" style="background-color: #F8F4D0;">Santé Mentale</span>
+            <span class="bg-transparent  rounded-2 px-4 py-1  text-start border  text-secondary border-color">Nous Contacter</span>
+            <span class="rounded-2 px-4 py-1  text-start border  text-secondary border-color" style="background-color: #D0F6F8;">Pour les pro de santé</span>
+
+
+
+        </div>
+
+    </div>
+    <div class="offcanvas-footer">
+
+        <div class="d-flex flex-column gap-2">
+            <span class="bg-light  rounded-2  py-1 fw-bold text-center border  text-dark border-color">العربية</span>
+            <span class="rounded-2  py-1  text-center border  text-white border-color" style="background-color: #008D93;">Se connecter</span>
+        </div>
+        <div class="d-flex flex-column">
+            <span class="text-start fw-bold">Suivez nous sur :</span>
+        </div>
+    </div>
+</div>
+<Main class="container-fluid mx-auto row gap-3 gap-xxl-4 gap-xl-3 gap-md-3">
+    <section class="col col-xxl-8 col-xl-12 col-lg-12 col-md-12 p-0 m-0"style="">
+        <div class="d-flex flex-row bg-white mb-0 border-0 rounded-5 text-center mx-auto">
+            <div class="hero-content w-100 pt-md-4 ps-md-4 pb-md-4 pe-md-0 p-4 justify-content-center d-flex flex-column gap-3">
+                <h1 class="fw-bold text-start text-black my-3">
+                    Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
+                <p class="text-start text-break fw-light text-secondary text-wrap ">Découvrir les meilleurs praticiens et établissements de santé (pharmacies - laboratoires ’analyse - centres de radiologie -cliniques ...) à coté de chez vous.</p>
+                <div class="d-flex justify-content-start">
+                    <img src="./assets/img/doctor-13.jpg" alt="doctor" class="ms-0 img-doctor  border w-100 h-auto">
+                    <img src="./assets/img/doctor-15.jpg" alt="doctor" class="img-doctor border w-100 h-auto">
+                    <img src="./assets/img/doctor-16.jpg" alt="doctor" class="img-doctor border w-100 h-auto">
+                    <img src="./assets/img/doctor-23.jpg" alt="doctor" class="img-doctor border w-100 h-auto">
+                    <img src="./assets/img/doctor-24.jpg" alt="doctor" class="img-doctor border w-100 h-auto">
+                    <div class="icon-button-s border me-auto"><i class="feather-more-horizontal"></i></div>
+                </div>
+                <div class="d-flex flex-column mb-4 mb-xxl-3 mb-xl-3 mb-lg-4 mb-md-4 mb-sm-4 mt-3">
+                    <input type="text" class="form-control mb-lg-3 mb-md-2 mb-sm-2 mb-2 ps-4 ps-xxl-5 ps-xl-4 ps-lg-4 ps-md-3 bg-light rounded-3" placeholder="Choisir une spécialité">
+
+                    <div class="search-bar">
+                        <input type="text" class="form-control ps-4 ps-xxl-5 ps-xl-4 ps-lg-4 ps-md-3 bg-light rounded-3" placeholder="Tunis">
+                        <input type="text" class="form-control  ps-4 ps-xxl-5 ps-xl-4 ps-lg-4 ps-md-3 bg-light rounded-3" placeholder="Tunis">
+
+                        <button>Rechercher</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image d-none d-md-block mt-auto w-100 h-auto">
+            </div>
+        </div>
+    </section>
+
+    <section class="col-xxl col-xl col-lg-12 row gap-3 gap-xxl-4 gap-xl-3 gap-md-3 p-0 m-0 s-2" >
+        <div class="card yellow p-0 mb-0 border-0 rounded-5 col col-xxl-6 col-xl-5 col-lg-5 col-md-5 text-center">
+            <div class="yellow-content d-flex flex-column h-100 p-2 p-xxl-3 p-xl-3 p-lg-2 p-md-2">
+            <h4 class="fw-bold text-start text-black my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">Prenez soin de votre santé mentale</h4>
+            <p  class="text-start text-break fw-light text-secondary text-wrap w-50 my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">Grâce à la consultation vidéo (Téléconsultation)</p>
+                <div class="mt-auto mb-3 ">
+                    <button class="icon-button-custom d-flex justify-content-center align-items-center">
+                        <i class="feather-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="card blue p-0 mb-0 border-0 rounded-5 col col-xxl-6 col-lg-5 col-md-5 text-center">
+            <div class="blue-content d-flex flex-column h-100  p-2 p-xxl-3 p-xl-3 p-lg-2 p-md-2">
+            <h4 class="fw-bold text-start text-black my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">Digitaliser votre cabinet médical</h4>
+            <p  class="text-start text-break fw-light text-secondary text-wrap w-50 my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">Planification de rendez-vous, partage de documents, interface intuitive.
+            </p>
+                <div class="mt-auto mb-3">
+                <button class="icon-button-custom d-flex justify-content-center align-items-center">
+                    <i class="feather-chevron-right"></i>
+                </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</Main>
+
+<!--  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+<script>
+    const myCarousel = document.querySelector('#cardCarousel');
+    const carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 2000,
+        ride: 'carousel'
+    });
+</script>
+
+
+
+<script src="assets/js/accordion.js"></script>
+<script>
+    var navItems = document.querySelectorAll(".mobile-bottom-nav__item");
+    navItems.forEach(function (e, i) {
+        e.addEventListener("click", function (e) {
+            navItems.forEach(function (e2, i2) {
+                e2.classList.remove("mobile-bottom-nav__item--active");
+            })
+            this.classList.add("mobile-bottom-nav__item--active");
+        });
+    });
+</script>
+<script src="assets/js/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
+</body>
+
+</html>
