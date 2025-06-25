@@ -81,19 +81,25 @@
     /* Extra-extra large only (≥1400px) */
     @media screen and (min-width: 1920px) {
         .hero-content h1{
-            font-size: 40px;
-            line-height: 48px;
+            font-size: calc((44 / 1920) * 100vw);
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
         }
         .hero-content p{
-            font-size: 20px;
+            font-size: calc((24 / 1920) * 100vw);
             font-weight: 300;
-            line-height: 24px;
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
+        }
+        .hero-content input{
+            font-size: calc((16 / 1920) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
+        }
+        .hero-content button{
+            font-size: calc((16 / 1920) * 100vw);
+            font-family: 'Gotham Rounded', sans-serif;
         }
         .s-2 h4{
             font-size: 28px;
@@ -684,7 +690,7 @@
     }
 </style>
 
-<body class="mx-5">
+<body class="mx-5 px-5">
 <!-- Header -->
 <header class="navbar bg-transparent ">
     <div class="container">
@@ -737,7 +743,7 @@
 <Main class="container-fluid row gap-3 gap-xxl-4 gap-xl-3 gap-md-3">
     <section class="col col-xxl-8 col-xl-12 col-lg-12 col-md-12 p-0 m-0"style="">
         <div class="d-flex flex-row bg-white mb-0 border-0 rounded-5 text-center mx-auto">
-            <div class="hero-content ps-4 ps-xxl-5 ps-xl-4 ps-lg-4 ps-md-3 py-3 py-xxl-4 py-xl-3 py-lg-3 py-md-2   d-flex flex-column">
+            <div class="hero-content w-100 p-4   d-flex flex-column">
                 <h1 class="fw-bold text-start text-black my-3">
                     Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
                 <p class="text-start text-break fw-light text-secondary text-wrap mt-auto">Découvrir les meilleurs praticiens et établissements de santé (pharmacies - laboratoires ’analyse - centres de radiologie -cliniques ...) à coté de chez vous.</p>
