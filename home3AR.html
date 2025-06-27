@@ -33,22 +33,20 @@
     }
     .yellow {
         background-color: #F8F4D0;
-        background-image: url('assets/img/psy001.png');
+        background-image: url('assets/img/psy001arab.png');
         background-repeat: no-repeat;
-        background-position: right bottom;
+        background-position: left bottom;
         background-size: auto 100%;
         flex: 1 1 auto !important;
-        /* aspect-ratio: 544 / 300; */
     }
 
     .blue {
         background-color: #D0F6F8;
-        background-image: url('assets/img/digit.png');
+        background-image: url('/assets/img/digit-arab.png');
         background-repeat: no-repeat;
-        background-position: right bottom;
+        background-position: left bottom;
         background-size: auto 100%;
         flex: 1 1 auto !important;
-        /* aspect-ratio: 544 / 300; */
     }
 
     .hero-image {
@@ -69,42 +67,42 @@
         /* Styles for xl and xxl screens */
     @media (min-width: 1200px) {
         .hero-image {
-            max-width: calc((490 / 1920) * 100vw)
+            max-width: calc((422 / 1400) * 100vw)
         }
         .hero-content h1{
-            font-size: calc((40 / 1920) * 100vw);
-            line-height: calc((48 / 1920) * 100vw);
+            font-size: calc((34 / 1400) * 100vw);
+            line-height: calc((40 / 1400) * 100vw);
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
             
         }
         .hero-content p{
-            font-size: calc((20 / 1920) * 100vw);
-            line-height: calc((24 / 1920)*100vw);
+            font-size: calc((20 / 1400) * 100vw);
+            line-height: calc((28 / 1400)*100vw);
             font-weight: 300;
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
         }
         .hero-content input{
-            font-size: calc((16 / 1920) * 100vw);
+            font-size: calc((16 / 1400) * 100vw);
             font-family: 'Gotham Rounded', sans-serif;
         }
         .hero-content button{
-            font-size: calc((16 / 1920) * 100vw);
+            font-size: calc((16 / 1400) * 100vw);
             font-family: 'Gotham Rounded', sans-serif;
         }
         .s-2 h4{
-            font-size: calc((28 / 1920) * 100vw);
-            line-height: calc((34 / 1920) * 100vw);
+            font-size: calc((24 / 1400) * 100vw);
+            line-height: calc((34 / 1400) * 100vw);
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
             opacity: 1;
         }
         .s-2 p{                       
-            font-size: calc((16  / 1920) * 100vw);
-            line-height: calc((19 / 1920) * 100vw);
+            font-size: calc((16  / 1400) * 100vw);
+            line-height: calc((22 / 1400) * 100vw);
             font-weight: 300;
             font-family: 'Gotham Rounded', sans-serif;
             letter-spacing: 0;
@@ -235,62 +233,108 @@
     }
 </style>
 
-<body class="mx-lg-5 mx-md-3">
+<body class="mx-5">
 <!-- Header -->
+<header class="navbar bg-transparent ">
+    <div class="container">
 
-<main class="container-fluid mx-auto row gap-3 gap-xxl-4 gap-xl-3 gap-md-3">
-    <section class="col col-xxl-8 col-xl-8 col-lg-12 col-md-12 p-0 m-0"style="">
-        <div class="d-flex flex-row bg-white mb-0 border-0 rounded-5 text-center mx-auto">
-            <div class="hero-content w-100 pt-md-4 ps-md-4 pb-md-4 pe-md-0 p-4 justify-content-center d-flex flex-column gap-3">
-                <h1 class="fw-bold text-start text-black my-3">
-                    Trouver un rendez-vous avec, un médecin ou un professionnel de santé</h1>
-                <p class="text-start text-break fw-light text-secondary text-wrap ">Découvrir les meilleurs praticiens et établissements de santé (pharmacies - laboratoires ’analyse - centres de radiologie -cliniques ...) à coté de chez vous.</p>
-                
+        <div class="d-flex gap-2 align-items-center">
+            <button class="menu-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+        </div>
+        <nav class="nav-links">
+            <a href="./home.html" class="text-decoration-underline">Accueil</a>
+            <a href="./inscription.html">Inscrivez-vous</a>
+            <a href="#">Nous Contacter</a>
+        </nav>
+        <a href="./login.html" class="btn btn-seconnecter d-none d-md-block">Se connecter</a>
+    </div>
+</header>
+<div class="offcanvas offcanvas-start w-25 p-3" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+        <img src="assets/img/logo web.png" alt="Logo web" class="logox-img">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="d-flex flex-column gap-2">
+            <span class="bg-transparent  rounded-2 px-4 py-1 fw-bold text-end border  text-secondary border-color">Accueil</span>
+            <span class="bg-transparent  rounded-2 px-4 py-1  text-end border  text-secondary border-color">Inscrivez-vous</span>
+            <span class="rounded-2 px-4 py-1  text-end border  text-secondary border-color" style="background-color: #F8F4D0;">Santé Mentale</span>
+            <span class="bg-transparent  rounded-2 px-4 py-1  text-end border  text-secondary border-color">Nous Contacter</span>
+            <span class="rounded-2 px-4 py-1  text-end border  text-secondary border-color" style="background-color: #D0F6F8;">Pour les pro de santé</span>
+
+
+
+        </div>
+
+    </div>
+    <div class="offcanvas-footer">
+
+        <div class="d-flex flex-column gap-2">
+            <span class="bg-light  rounded-2  py-1 fw-bold text-center border  text-dark border-color">العربية</span>
+            <span class="rounded-2  py-1  text-center border  text-white border-color" style="background-color: #008D93;">Se connecter</span>
+        </div>
+        <div class="d-flex flex-column">
+            <span class="text-end fw-bold">Suivez nous sur :</span>
+        </div>
+    </div>
+</div>
+<main class="container-fluid mx-auto row gap-3 gap-xxl-4 gap-xl-3 gap-md-3" style="direction: rtl;">
+    <section class="col col-xxl-8 col-xl-8 col-lg-12 col-md-12 p-0 m-0">
+        <div class="d-flex flex-row bg-white mb-0 border-0 rounded-5 text-center">
+            <div class="hero-content w-100 pt-md-4 pe-md-4 pb-md-4 ps-md-0 p-4 justify-content-center d-flex flex-column gap-3">
+                <h1 class="fw-bold text-end text-black my-3">
+                    ابحث عن موعد مع طبيب أو أخصائي رعاية صحية</h1>
+                <p class="text-end text-break fw-light text-secondary text-wrap">اكتشف أفضل الممارسين والمؤسسات الصحية (الصيدليات - مختبرات التحاليل - مراكز الأشعة - العيادات، الخ) بالقرب منك.</p>
                 <div class="d-flex flex-column mb-4 mb-xxl-3 mb-xl-3 mb-lg-4 mb-md-4 mb-sm-4 mt-3">
-                    <input type="text" class="form-control mb-lg-3 mb-md-2 mb-sm-2 mb-2 ps-4 ps-xxl-5 ps-xl-4 ps-lg-4 ps-md-3 bg-light rounded-3" placeholder="Choisir une spécialité">
+                    <input type="text" class="form-control text-end mb-lg-3 mb-md-2 mb-sm-2 mb-2 pe-3 pe-xxl-4 pe-xl-4 pe-lg-3 pe-md-3 bg-light rounded-3" placeholder="البحث حسب الاختصاص">
 
                     <div class="search-bar">
-                        <input type="text" class="form-control ps-4 ps-xxl-5 ps-xl-4 ps-lg-4 ps-md-3 bg-light rounded-3" placeholder="Tunis">
-                        <input type="text" class="form-control  ps-4 ps-xxl-5 ps-xl-4 ps-lg-4 ps-md-3 bg-light rounded-3" placeholder="Tunis">
+                        <input type="text" class="form-control text-end pe-3 pe-xxl-4 pe-xl-4 pe-lg-3 pe-md-3 bg-light rounded-3" placeholder="بحث حسب البلد">
+                        <input type="text" class="form-control text-end pe-3 pe-xxl-4 pe-xl-4 pe-lg-3 pe-md-3 bg-light rounded-3" placeholder="بحث حسب المدينة">
 
-                        <button>Rechercher</button>
+                        <button>بحث</button>
                     </div>
                 </div>
             </div>
-            <div class="hero-image d-none d-md-block mt-auto w-100 h-auto">
+            <div class="hero-image d-none d-md-block mt-auto  w-100 h-auto">
             </div>
         </div>
     </section>
-
-    <section class="col-xxl col-xl col-lg-12 row gap-3 gap-xxl-4 gap-xl-3 gap-md-3 p-0 m-0 s-2" >
-        <div class="card yellow p-0 mb-0 border-0 rounded-5 col col-xxl-6 col-xl-6 col-lg-5 col-md-5 text-center">
+    <section class="col-xxl col-xl col-lg-12 row gap-3 gap-md-3 p-0 s-2" >
+        <div class="card yellow p-0 mb-0 border-0 rounded-5 col col-xl-6 col-lg-5 col-md-5 text-center mx-auto">
             <div class="yellow-content d-flex flex-column h-100 p-2 p-xxl-3 p-xl-3 p-lg-2 p-md-2">
-            <h4 class="fw-bold text-start text-black my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">Prenez soin de votre santé mentale</h4>
-            <p  class="text-start text-break fw-light text-secondary text-wrap w-50 my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">Grâce à la consultation vidéo (Téléconsultation)</p>
-                <div class="mt-auto mb-3 ">
+                <h4 class="fw-bold text-end text-black my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">اعتني بصحتك النفسية</h4>
+                <p  class="ms-auto text-end text-break fw-light text-secondary text-wrap w-50 my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">بفضل الاستشارة عبر الفيديو (الاستشارة عن بعد)</p>
+                <div class="mt-auto mb-3 ms-auto">
                     <button class="icon-button-custom d-flex justify-content-center align-items-center">
-                        <i class="feather-chevron-right"></i>
+                        <i class="feather-chevron-left"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <div class="card blue p-0 mb-0 border-0 rounded-5 col col-xxl-6 col-xl-6 col-lg-5 col-md-5 text-center">
+        </div>
+        <div class="card blue p-0 mb-0 border-0 rounded-5 col col-xl-6 col-lg-5 col-md-5 text-center mx-auto">
             <div class="blue-content d-flex flex-column h-100  p-2 p-xxl-3 p-xl-3 p-lg-2 p-md-2">
-            <h4 class="fw-bold text-start text-black my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">Digitaliser votre cabinet médical</h4>
-            <p  class="text-start text-break fw-light text-secondary text-wrap w-50 my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">Planification de rendez-vous, partage de documents, interface intuitive.
-            </p>
-                <div class="mt-auto mb-3">
-                <button class="icon-button-custom d-flex justify-content-center align-items-center">
-                    <i class="feather-chevron-right"></i>
-                </button>
+                <h4 class="fw-bold text-end text-black my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">رقمنة عيادتك الطبية</h4>
+                <p  class="ms-auto text-end text-break fw-light text-secondary text-wrap w-50 my-2 my-xxl-2 my-xl-2 my-lg-2 my-md-2">وظائف مثل جدولة المواعيد، مشاركة الملفات بشكل آمن، وواجهة استخدام سهلة..
+                </p>
+                <div class="mt-auto ms-auto mb-3">
+                    <button class="icon-button-custom d-flex justify-content-center align-items-center">
+                        <i class="feather-chevron-left"></i>
+                    </button>
                 </div>
             </div>
         </div>
 
     </section>
+
 </main>
 
-<!--  -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
